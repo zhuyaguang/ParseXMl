@@ -120,6 +120,7 @@ func findXML(output string) error {
 				}
 			}
 		}
+		fmt.Printf("Delete %s \n", output)
 		}
 
 	return nil
