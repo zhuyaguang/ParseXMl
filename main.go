@@ -34,8 +34,6 @@ func main() {
 		fmt.Println(err.Error())
 	}
 
-	//r :=parse.ConvertToBase64("/Users/zhuyaguang/Desktop/output/30-S/20160330-1-001/1/CN302014000489733CN00003036247300SDBPZH20160330CN00J/000001.JPG")
-	//fmt.Println(r)
 
 	// Formatted string, such as "2h3m0.5s" or "4.503μs"
 	fmt.Println(duration)

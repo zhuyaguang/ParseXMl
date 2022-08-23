@@ -82,7 +82,9 @@ func Par0Xml(xmlPath ,output string,patentIndex int) error {
 		if AgentE !=nil{
 			patentOBJ.Agent = AgentE.Text()
 		}
-		patentOBJ.InstructionPic = FileToBase64(filepath.Dir(xmlPath))
+
+		// NLP模型训练中图片无法处理，暂时不放图片
+		// patentOBJ.InstructionPic = FileToBase64(filepath.Dir(xmlPath))
 	}
 
 	file, err := json.MarshalIndent(patentOBJ, "", " ")
@@ -301,7 +303,7 @@ func Par1Xml(xmlPath ,output string,patentIndex int) error {
 		Context:                context,
 		InstructionWithPicture: instructionWithPicture,
 		Implementation:         implementation,
-		InstructionPic: FileToBase64(filepath.Dir(xmlPath)),
+		//InstructionPic: FileToBase64(filepath.Dir(xmlPath)), NLP模型训练中图片无法处理，暂时不放图片
 		AbstractPic: "",
 	}
 	file, err := json.MarshalIndent(patentObj, "", " ")
