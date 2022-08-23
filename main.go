@@ -1,7 +1,6 @@
 package main
 
 import (
-	"archive/zip"
 	"flag"
 	"fmt"
 	xj "github.com/basgys/goxml2json"
@@ -9,6 +8,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"patentExtr/pkg"
 	"patentExtr/pkg/parse"
 	"path/filepath"
 	"strings"
@@ -47,16 +47,18 @@ func extracting1Xml(dirPath string, output string) error {
 		log.Fatal(err)
 	}
 	for _, f := range files {
-		// 办理第一层
+		// 办理第一层 文件夹目录含有 IMGS-30-S 或者 TXTS
 		if strings.Contains(f.Name(), "TXTS") || strings.Contains(f.Name(), "IMGS-30-S") {
 			patentType := f.Name()
 			fmt.Println("file-type", patentType)
+			// 进入 专利 目录
 			if f.IsDir() {
 				subfiles, err := ioutil.ReadDir(dirPath + "/" + patentType)
 				if err != nil {
 					log.Fatal(err)
 				}
 				for _, f := range subfiles {
+					// 进入 日期 目录
 					if f.IsDir() {
 						patentdir := f.Name()
 						fmt.Println("file-date", patentdir)
@@ -93,51 +95,6 @@ func extracting1Xml(dirPath string, output string) error {
 
 	return err
 
-}
-
-func Unzip(src, dest string) error {
-	r, err := zip.OpenReader(src)
-	if err != nil {
-		return err
-	}
-	defer r.Close()
-
-	for _, f := range r.File {
-		rc, err := f.Open()
-		if err != nil {
-			return err
-		}
-		defer rc.Close()
-
-		fpath := filepath.Join(dest, f.Name)
-		if f.FileInfo().IsDir() {
-			os.MkdirAll(fpath, f.Mode())
-
-		} else {
-			var fdir string
-			if lastIndex := strings.LastIndex(fpath, string(os.PathSeparator)); lastIndex > -1 {
-				fdir = fpath[:lastIndex]
-			}
-
-			err = os.MkdirAll(fdir, f.Mode())
-			if err != nil {
-				log.Fatal(err)
-				return err
-			}
-			f, err := os.OpenFile(
-				fpath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, f.Mode())
-			if err != nil {
-				return err
-			}
-			defer f.Close()
-
-			_, err = io.Copy(f, rc)
-			if err != nil {
-				return err
-			}
-		}
-	}
-	return nil
 }
 
 func findXML(output string) error {
@@ -191,6 +148,20 @@ func HandleWalk(output string, patentIndex int) error {
 
 	if err != nil {
 		return err
+	}
+	return nil
+}
+
+// Unzip will unzip zip file and return unzip files dir path
+func Unzip(zipFilePath string,output string)  error {
+	// 1. create tempDir to save unzip files
+	err := os.Mkdir(output,777)
+	if err != nil {
+		return  err
+	}
+	err = pkg.UnZip(zipFilePath, output)
+	if err != nil {
+		return  err
 	}
 	return nil
 }

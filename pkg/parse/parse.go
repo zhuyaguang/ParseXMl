@@ -15,6 +15,7 @@ import (
 
 var NUM = 0
 
+// Par0Xml 主要解析 30-S 类型的专利
 func Par0Xml(xmlPath ,output string,patentIndex int) error {
 	fmt.Println("xml path -----",xmlPath,output,patentIndex)
 
@@ -103,6 +104,7 @@ func Par0Xml(xmlPath ,output string,patentIndex int) error {
 }
 
 
+// Par1Xml 主要解析 10-A 10-B 20-U 类型的专利
 func Par1Xml(xmlPath ,output string,patentIndex int) error {
 	fmt.Println("xml path -----",xmlPath,output,patentIndex)
 	fileName :=filepath.Base(xmlPath)
