@@ -107,7 +107,20 @@ func findXML(output string) error {
 		if err != nil {
 			return err
 		}
-	}
+		// 解析完，清理下原始数据 output/30-S/日期目录
+		files, err := ioutil.ReadDir(output)
+		if err != nil {
+			log.Fatal(err)
+		}
+		for _, f := range files {
+			if f.IsDir() {
+				err := os.Remove(output+f.Name())
+				if err != nil {
+					log.Fatal(err)
+				}
+			}
+		}
+		}
 
 	return nil
 
