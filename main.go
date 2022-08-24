@@ -3,8 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	xj "github.com/basgys/goxml2json"
-	"io"
 	"io/ioutil"
 	"log"
 	"os"
@@ -76,8 +74,8 @@ func extractingXml(dirPath string, output string) error {
 								src := dirPath + "/" + patentType + "/" + patentdir + "/" + patentzip
 								if strings.Contains(patentType, "IMGS-30-S") {
 									// 解压 压缩包至 output 目录
-									output = output + "/30-S/" + patentdir + "/"
-									err = Unzip(src, output)
+									outputS := output + "/30-S/" + patentdir + "/"
+									err = Unzip(src, outputS)
 									if err != nil {
 										log.Fatal(err)
 									}
@@ -87,8 +85,8 @@ func extractingXml(dirPath string, output string) error {
 									//}
 
 								} else if strings.Contains(patentType, "TXTS-10-A") {
-									output = output + "/10-A/" + patentdir + "/"
-									err = Unzip(src, output)
+									outputA := output + "/10-A/" + patentdir + "/"
+									err = Unzip(src, outputA)
 									if err != nil {
 										log.Fatal(err)
 									}
@@ -97,8 +95,8 @@ func extractingXml(dirPath string, output string) error {
 									//	return err
 									//}
 								} else if strings.Contains(patentType, "TXTS-10-B") {
-									output = output + "/10-B/" + patentdir + "/"
-									err = Unzip(src, output+"/10-B/"+patentdir+"/")
+									outputB := output + "/10-B/" + patentdir + "/"
+									err = Unzip(src, outputB)
 									if err != nil {
 										log.Fatal(err)
 									}
@@ -107,8 +105,8 @@ func extractingXml(dirPath string, output string) error {
 									//	return err
 									//}
 								} else if strings.Contains(patentType, "TXTS-20-U") {
-									output = output + "/20-U/" + patentdir + "/"
-									err = Unzip(src, output+"/20-U/"+patentdir+"/")
+									outputU := output + "/20-U/" + patentdir + "/"
+									err = Unzip(src, outputU)
 									if err != nil {
 										log.Fatal(err)
 									}
@@ -132,7 +130,6 @@ func extractingXml(dirPath string, output string) error {
 	return err
 
 }
-
 
 func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
@@ -159,7 +156,7 @@ func removeDIR(output string) error {
 	}
 	for _, f := range files {
 		if f.IsDir() {
-			err := os.Remove(output + f.Name())
+			err := os.Remove(output + "/" + f.Name())
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -168,7 +165,6 @@ func removeDIR(output string) error {
 	fmt.Printf("Delete %s \n", output)
 	return err
 }
-
 
 func HandleWalk(output string, patentIndex int) error {
 	err := filepath.Walk(output, func(path string, info os.FileInfo, err error) error {
@@ -213,6 +209,7 @@ func HandleWalk(output string, patentIndex int) error {
 // Unzip will unzip zip file and return unzip files dir path
 func Unzip(zipFilePath string, output string) error {
 	// 1. create tempDir to save unzip files
+	fmt.Println("path", zipFilePath, output)
 	err := os.MkdirAll(output, 777)
 	if err != nil {
 		return err
@@ -222,55 +219,4 @@ func Unzip(zipFilePath string, output string) error {
 		return err
 	}
 	return nil
-}
-
-func copyFileContents(src, dst string) (err error) {
-	in, err := os.Open(src)
-	if err != nil {
-		return
-	}
-	defer in.Close()
-	out, err := os.Create(dst)
-	if err != nil {
-		return
-	}
-	defer func() {
-		cerr := out.Close()
-		if err == nil {
-			err = cerr
-		}
-	}()
-	if _, err = io.Copy(out, in); err != nil {
-		return
-	}
-	err = out.Sync()
-	return
-}
-
-func convertXML2Json(xmlPath, output, filename string) {
-	// convert xml to json
-	xmlFile, err := os.Open(xmlPath)
-	// if we os.Open returns an error then handle it
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	fmt.Println("Successfully Opened xml file")
-	// defer the closing of our xmlFile so that we can parse it later on
-	defer xmlFile.Close()
-
-	// read our opened xmlFile as a byte array.
-	byteValue, _ := ioutil.ReadAll(xmlFile)
-
-	xml := strings.NewReader(string(byteValue))
-	json, err := xj.Convert(xml)
-	if err != nil {
-		panic("That's embarrassing...")
-	}
-
-	f, err := os.Create(output + "/" + filename)
-	defer f.Close()
-
-	n3, err := f.WriteString(json.String())
-	fmt.Printf("wrote %d bytes\n", n3)
 }
