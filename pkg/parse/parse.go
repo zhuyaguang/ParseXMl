@@ -235,7 +235,7 @@ func Par1Xml(xmlPath, output string, patentIndex int) error {
 	instructionWithPicture := ""
 	implementation := ""
 	descriptionE := doc.FindElement("./PatentDocumentAndRelated/Description")
-	// 单独字段
+	// 单独字段,没有子字段
 	dE := doc.FindElement("./PatentDocumentAndRelated/Description/TechnicalField")
 
 	// 融合字段
@@ -265,21 +265,48 @@ func Par1Xml(xmlPath, output string, patentIndex int) error {
 				technicalField, technicalBackground, context, instructionWithPicture, implementation = ParDescribeArr(DescribeArr, patentIndex)
 			}
 
-		} else {
-			println("该专利 有单独都技术领域、技术背景字段", xmlPath)
+		} else
+		{
+			println("该专利 有单独都技术领域、技术背景等字段", xmlPath)
+			// 技术领域
 			if len(tfE) != 0 {
+				var tfEArr []string
 				for _, v := range tfE {
 					g := v.Text()
-					technicalField = technicalField + g
+					tfEArr =append(tfEArr,g)
 				}
+				technicalField = strings.Join(tfEArr,",")
 			}
-
+			// 技术背景
 			if len(baE) != 0 {
+				var baEArr []string
 				for _, v := range baE {
 					g := v.Text()
-					technicalBackground = technicalBackground + g
+					baEArr = append(baEArr,g)
 				}
+				technicalBackground = strings.Join(baEArr,",")
 			}
+			// 发明内容
+			if len(disE) != 0 {
+				var disEArr []string
+				for _, v := range disE {
+					g := v.Text()
+					disEArr = append(disEArr,g)
+				}
+				context = strings.Join(disEArr,",")
+			}
+
+			// 具体实施方式
+			if len(imE) != 0 {
+				var imEArr []string
+
+				for _, v := range imE {
+					g := v.Text()
+					imEArr = append(imEArr,g)
+				}
+				implementation = strings.Join(imEArr,",")
+			}
+
 		}
 	}
 

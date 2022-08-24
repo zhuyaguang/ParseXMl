@@ -156,7 +156,7 @@ func removeDIR(output string) error {
 	}
 	for _, f := range files {
 		if f.IsDir() {
-			err := os.Remove(output + "/" + f.Name())
+			err := os.RemoveAll(output + "/" + f.Name())
 			if err != nil {
 				log.Fatal(err)
 			}
