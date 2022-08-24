@@ -89,7 +89,7 @@ func extractingXml(dirPath string, output string) error {
 									outputA := output + "/10-A/" + patentdir + "/"
 									err = Unzip(src, outputA)
 									if err != nil {
-										log.Fatal(err)
+										fmt.Println(err)
 									}
 									//err := HandleWalk(output, 1)
 									//if err != nil {
