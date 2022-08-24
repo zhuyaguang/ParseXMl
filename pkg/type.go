@@ -1,37 +1,36 @@
 package pkg
 
 const PATENT1 = "中国外观设计专利授权公告标准化著录项目及切图数据" //30-S
-const PATENT2 = "中国发明专利申请公布标准化全文文本数据" //10-A
-const PATENT3 = "中国发明专利授权公告标准化全文文本数据" //10-B
-const PATENT4 = "中国实用新型专利授权公告标准化全文文本数据" //20-U
+const PATENT2 = "中国发明专利申请公布标准化全文文本数据"      //10-A
+const PATENT3 = "中国发明专利授权公告标准化全文文本数据"      //10-B
+const PATENT4 = "中国实用新型专利授权公告标准化全文文本数据"    //20-U
 
-var PatentType = [4]string{"中国外观设计专利授权公告标准化著录项目及切图数据","中国发明专利申请公布标准化全文文本数据","中国发明专利授权公告标准化全文文本数据","中国实用新型专利授权公告标准化全文文本数据"}
+var PatentType = [4]string{"中国外观设计专利授权公告标准化著录项目及切图数据", "中国发明专利申请公布标准化全文文本数据", "中国发明专利授权公告标准化全文文本数据", "中国实用新型专利授权公告标准化全文文本数据"}
 
 type Patent struct {
-    Name string
-    ApplicationNO string
-    ApplicationDate string
-    PublicationNO string
-    PublicationDate string
-    Applicant string
-    ApplicantAddress string
-    Inventors string
-    Abstract string
-    Claim string
-    MainClassificationNO string
-    ClassificationNO string
-    Agency string
-    Agent string
-    PatentType string
-    TechnicalField string
-    TechnicalBackground string
-    Context string
-    InstructionWithPicture        string
-    Implementation string
-    InstructionPic string
-    AbstractPic string
+	Name                   string
+	ApplicationNO          string
+	ApplicationDate        string
+	PublicationNO          string
+	PublicationDate        string
+	Applicant              string
+	ApplicantAddress       string
+	Inventors              string
+	Abstract               string
+	Claim                  string
+	MainClassificationNO   string
+	ClassificationNO       string
+	Agency                 string
+	Agent                  string
+	PatentType             string
+	TechnicalField         string
+	TechnicalBackground    string
+	Context                string
+	InstructionWithPicture string
+	Implementation         string
+	InstructionPic         string
+	AbstractPic            string
 }
-
 
 //`name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL COMMENT '名称',
 //`application_no` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL COMMENT '申请号',

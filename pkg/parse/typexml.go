@@ -3,7 +3,7 @@ package parse
 import "encoding/xml"
 
 type PatentDocumentAndRelated struct {
-	XMLName xml.Name `xml:"PatentDocumentAndRelated"`
+	XMLName     xml.Name `xml:"PatentDocumentAndRelated"`
 	Description Description
 }
 

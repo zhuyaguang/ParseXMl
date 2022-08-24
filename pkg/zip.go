@@ -28,7 +28,6 @@ func handleArchiveFiles(targetPath string, files []*zip.File) error {
 	for _, f := range files {
 		filePath := filepath.Join(targetPath, f.Name)
 
-
 		if !strings.HasPrefix(filePath, filepath.Clean(targetPath)+string(os.PathSeparator)) {
 			return fmt.Errorf("invalid file path")
 		}

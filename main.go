@@ -27,20 +27,22 @@ func main() {
 	duration := time.Since(start)
 
 	// 把专利数据解压到 output 目录
-	extracting1Xml(*dataAdd, *outputAdd)
+	extractingXml(*dataAdd, *outputAdd)
 
-	err :=findXML(*outputAdd)
-	if err!=nil{
+	fmt.Println(duration)
+
+	// 解析 XML 数据成 json 文件
+	err := findXML(*outputAdd)
+	if err != nil {
 		fmt.Println(err.Error())
 	}
-
 
 	// Formatted string, such as "2h3m0.5s" or "4.503μs"
 	fmt.Println(duration)
 
 }
 
-func extracting1Xml(dirPath string, output string) error {
+func extractingXml(dirPath string, output string) error {
 
 	files, err := ioutil.ReadDir(dirPath)
 	if err != nil {
@@ -73,13 +75,47 @@ func extracting1Xml(dirPath string, output string) error {
 								fmt.Println("file-zip", patentzip)
 								src := dirPath + "/" + patentType + "/" + patentdir + "/" + patentzip
 								if strings.Contains(patentType, "IMGS-30-S") {
-									Unzip(src, output+"/30-S/"+patentdir)
+									// 解压 压缩包至 output 目录
+									output = output + "/30-S/" + patentdir + "/"
+									err = Unzip(src, output)
+									if err != nil {
+										log.Fatal(err)
+									}
+									//err := HandleWalk(output, 0)
+									//if err != nil {
+									//	return err
+									//}
+
 								} else if strings.Contains(patentType, "TXTS-10-A") {
-									Unzip(src, output+"/10-A/"+patentdir)
+									output = output + "/10-A/" + patentdir + "/"
+									err = Unzip(src, output)
+									if err != nil {
+										log.Fatal(err)
+									}
+									//err := HandleWalk(output, 1)
+									//if err != nil {
+									//	return err
+									//}
 								} else if strings.Contains(patentType, "TXTS-10-B") {
-									Unzip(src, output+"/10-B/"+patentdir)
+									output = output + "/10-B/" + patentdir + "/"
+									err = Unzip(src, output+"/10-B/"+patentdir+"/")
+									if err != nil {
+										log.Fatal(err)
+									}
+									//err := HandleWalk(output, 2)
+									//if err != nil {
+									//	return err
+									//}
 								} else if strings.Contains(patentType, "TXTS-20-U") {
-									Unzip(src, output+"/20-U/"+patentdir)
+									output = output + "/20-U/" + patentdir + "/"
+									err = Unzip(src, output+"/20-U/"+patentdir+"/")
+									if err != nil {
+										log.Fatal(err)
+									}
+									//err := HandleWalk(output, 3)
+									//if err != nil {
+									//	return err
+									//}
 								}
 
 							}
@@ -97,6 +133,7 @@ func extracting1Xml(dirPath string, output string) error {
 
 }
 
+
 func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
 
@@ -107,25 +144,32 @@ func findXML(output string) error {
 		if err != nil {
 			return err
 		}
-		// 解析完，清理下原始数据 output/30-S/日期目录
-		files, err := ioutil.ReadDir(output)
-		if err != nil {
-			log.Fatal(err)
-		}
-		for _, f := range files {
-			if f.IsDir() {
-				err := os.Remove(output+f.Name())
-				if err != nil {
-					log.Fatal(err)
-				}
-			}
-		}
-		fmt.Printf("Delete %s \n", output)
-		}
+		removeDIR(output)
+	}
 
 	return nil
 
 }
+
+func removeDIR(output string) error {
+	// 解析完，清理下原始数据 output/30-S/日期目录
+	files, err := ioutil.ReadDir(output)
+	if err != nil {
+		log.Fatal(err)
+	}
+	for _, f := range files {
+		if f.IsDir() {
+			err := os.Remove(output + f.Name())
+			if err != nil {
+				log.Fatal(err)
+			}
+		}
+	}
+	fmt.Printf("Delete %s \n", output)
+	return err
+}
+
+
 func HandleWalk(output string, patentIndex int) error {
 	err := filepath.Walk(output, func(path string, info os.FileInfo, err error) error {
 
@@ -167,15 +211,15 @@ func HandleWalk(output string, patentIndex int) error {
 }
 
 // Unzip will unzip zip file and return unzip files dir path
-func Unzip(zipFilePath string,output string)  error {
+func Unzip(zipFilePath string, output string) error {
 	// 1. create tempDir to save unzip files
-	err := os.Mkdir(output,777)
+	err := os.MkdirAll(output, 777)
 	if err != nil {
-		return  err
+		return err
 	}
 	err = pkg.UnZip(zipFilePath, output)
 	if err != nil {
-		return  err
+		return err
 	}
 	return nil
 }
