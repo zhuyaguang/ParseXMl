@@ -72,19 +72,20 @@ func extractingXml(dirPath string, output string) error {
 							if strings.Contains(patentzip, ".zip") || strings.Contains(patentzip, ".ZIP") {
 								fmt.Println("file-zip", patentzip)
 								src := dirPath + "/" + patentType + "/" + patentdir + "/" + patentzip
-								if strings.Contains(patentType, "IMGS-30-S") {
-									// 解压 压缩包至 output 目录
-									outputS := output + "/30-S/" + patentdir + "/"
-									err = Unzip(src, outputS)
-									if err != nil {
-										log.Fatal(err)
-									}
-									//err := HandleWalk(output, 0)
-									//if err != nil {
-									//	return err
-									//}
-
-								} else if strings.Contains(patentType, "TXTS-10-A") {
+								//if strings.Contains(patentType, "IMGS-30-S") {
+								//	// 解压 压缩包至 output 目录
+								//	outputS := output + "/30-S/" + patentdir + "/"
+								//	err = Unzip(src, outputS)
+								//	if err != nil {
+								//		log.Fatal(err)
+								//	}
+								//	//err := HandleWalk(output, 0)
+								//	//if err != nil {
+								//	//	return err
+								//	//}
+								//
+								//} //else
+								if strings.Contains(patentType, "TXTS-10-A") {
 									outputA := output + "/10-A/" + patentdir + "/"
 									err = Unzip(src, outputA)
 									if err != nil {
@@ -94,27 +95,28 @@ func extractingXml(dirPath string, output string) error {
 									//if err != nil {
 									//	return err
 									//}
-								} else if strings.Contains(patentType, "TXTS-10-B") {
-									outputB := output + "/10-B/" + patentdir + "/"
-									err = Unzip(src, outputB)
-									if err != nil {
-										log.Fatal(err)
-									}
-									//err := HandleWalk(output, 2)
-									//if err != nil {
-									//	return err
-									//}
-								} else if strings.Contains(patentType, "TXTS-20-U") {
-									outputU := output + "/20-U/" + patentdir + "/"
-									err = Unzip(src, outputU)
-									if err != nil {
-										log.Fatal(err)
-									}
-									//err := HandleWalk(output, 3)
-									//if err != nil {
-									//	return err
-									//}
 								}
+								//else if strings.Contains(patentType, "TXTS-10-B") {
+								//	outputB := output + "/10-B/" + patentdir + "/"
+								//	err = Unzip(src, outputB)
+								//	if err != nil {
+								//		log.Fatal(err)
+								//	}
+								//	//err := HandleWalk(output, 2)
+								//	//if err != nil {
+								//	//	return err
+								//	//}
+								//} else if strings.Contains(patentType, "TXTS-20-U") {
+								//	outputU := output + "/20-U/" + patentdir + "/"
+								//	err = Unzip(src, outputU)
+								//	if err != nil {
+								//		log.Fatal(err)
+								//	}
+								//	//err := HandleWalk(output, 3)
+								//	//if err != nil {
+								//	//	return err
+								//	//}
+								//}
 
 							}
 
