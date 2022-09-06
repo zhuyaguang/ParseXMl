@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"github.com/beevik/etree"
 	"io/ioutil"
-	"log"
-	"net/http"
 	"patentExtr/pkg"
 	"path/filepath"
 	"sort"
@@ -26,7 +24,8 @@ func Par0Xml(xmlPath, output string, patentIndex int) error {
 
 	doc := etree.NewDocument()
 	if err := doc.ReadFromFile(xmlPath); err != nil {
-		panic(err)
+		fmt.Println(err, "解析失败手动处理========", xmlPath)
+		return nil
 	}
 	root := doc.SelectElement("PatentDocumentAndRelated")
 	fmt.Println("ROOT element:", root.Tag)
@@ -115,6 +114,10 @@ func Par1Xml(xmlPath, output string, patentIndex int) error {
 		return nil
 	}
 	root := doc.SelectElement("PatentDocumentAndRelated")
+	if root == nil {
+		fmt.Println("root is nil")
+		return nil
+	}
 	fmt.Println("ROOT element:", root.Tag)
 
 	resName := ""
@@ -447,53 +450,53 @@ func CombineStr(arr []string) string {
 	return tmp
 }
 
-func FileToBase64(filePath string) string {
-	fmt.Println("=======", filePath)
-	base64String := ""
-	files, err := ioutil.ReadDir(filePath)
-	if err != nil {
-		log.Fatal(err)
-	}
-	for _, f := range files {
-		if strings.HasSuffix(f.Name(), "JPG") || strings.HasSuffix(f.Name(), "TIF") {
-			picFile := filePath + "/" + f.Name()
-			base64String = base64String + ConvertToBase64(picFile) + ","
-		}
-	}
-	return base64String
-
-}
+//func FileToBase64(filePath string) string {
+//	fmt.Println("=======", filePath)
+//	base64String := ""
+//	files, err := ioutil.ReadDir(filePath)
+//	if err != nil {
+//		log.Fatal(err)
+//	}
+//	for _, f := range files {
+//		if strings.HasSuffix(f.Name(), "JPG") || strings.HasSuffix(f.Name(), "TIF") {
+//			picFile := filePath + "/" + f.Name()
+//			base64String = base64String + ConvertToBase64(picFile) + ","
+//		}
+//	}
+//	return base64String
+//
+//}
 
 func toBase64(b []byte) string {
 	return base64.StdEncoding.EncodeToString(b)
 }
 
-func ConvertToBase64(filePath string) string {
-	// Read the entire file into a byte slice
-	bytes, err := ioutil.ReadFile(filePath)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	var base64Encoding string
-
-	// Determine the content type of the image file
-	mimeType := http.DetectContentType(bytes)
-
-	// Prepend the appropriate URI scheme header depending
-	// on the MIME type
-	switch mimeType {
-	case "image/jpeg":
-		base64Encoding += "data:image/jpeg;base64,"
-	case "image/png":
-		base64Encoding += "data:image/png;base64,"
-	}
-
-	// Append the base64 encoded output
-	base64Encoding += toBase64(bytes)
-
-	// Print the full base64 representation of the image
-	//fmt.Println(base64Encoding)
-
-	return base64Encoding
-}
+//func ConvertToBase64(filePath string) string {
+//	// Read the entire file into a byte slice
+//	bytes, err := ioutil.ReadFile(filePath)
+//	if err != nil {
+//		log.Fatal(err)
+//	}
+//
+//	var base64Encoding string
+//
+//	// Determine the content type of the image file
+//	mimeType := http.DetectContentType(bytes)
+//
+//	// Prepend the appropriate URI scheme header depending
+//	// on the MIME type
+//	switch mimeType {
+//	case "image/jpeg":
+//		base64Encoding += "data:image/jpeg;base64,"
+//	case "image/png":
+//		base64Encoding += "data:image/png;base64,"
+//	}
+//
+//	// Append the base64 encoded output
+//	base64Encoding += toBase64(bytes)
+//
+//	// Print the full base64 representation of the image
+//	//fmt.Println(base64Encoding)
+//
+//	return base64Encoding
+//}

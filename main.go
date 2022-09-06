@@ -175,7 +175,7 @@ func removeDIR(output string) error {
 func HandleWalk(output string, patentIndex int) error {
 	err := filepath.Walk(output, func(path string, info os.FileInfo, err error) error {
 
-		if strings.HasSuffix(path,"XML"){
+		if strings.HasSuffix(path, "XML") {
 			fmt.Printf("%s \n", path)
 			// parse xml
 			switch patentIndex {
