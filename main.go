@@ -25,7 +25,7 @@ func main() {
 	duration := time.Since(start)
 
 	// 把专利数据解压到 output 目录
-	extractingXml(*dataAdd, *outputAdd)
+	// extractingXml(*dataAdd, *outputAdd)
 
 	fmt.Println(duration)
 
@@ -87,9 +87,10 @@ func extractingXml(dirPath string, output string) error {
 								//} //else
 								if strings.Contains(patentType, "TXTS-10-A") {
 									outputA := output + "/10-A/" + patentdir + "/"
+									fmt.Println("解压中...")
 									err = Unzip(src, outputA)
 									if err != nil {
-										fmt.Println(err)
+										fmt.Println(err, "解压失败手动处理=====", src)
 									}
 									//err := HandleWalk(output, 1)
 									//if err != nil {
@@ -137,13 +138,16 @@ func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
 
 	for i, v := range outputArr {
-		output := output + v
-		fmt.Println(output)
-		err := HandleWalk(output, i)
-		if err != nil {
-			return err
+		if v == "/10-A" {
+			output := output + v
+			fmt.Println(output)
+			err := HandleWalk(output, i)
+			if err != nil {
+				return err
+			}
+			removeDIR(output)
 		}
-		removeDIR(output)
+
 	}
 
 	return nil
