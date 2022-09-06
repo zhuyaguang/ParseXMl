@@ -115,7 +115,7 @@ func Par1Xml(xmlPath, output string, patentIndex int) error {
 	}
 	root := doc.SelectElement("PatentDocumentAndRelated")
 	if root == nil {
-		fmt.Println("root is nil")
+		fmt.Println("root is nil，解析失败手动处理========",xmlPath)
 		return nil
 	}
 	fmt.Println("ROOT element:", root.Tag)
