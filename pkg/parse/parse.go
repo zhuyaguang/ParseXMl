@@ -112,6 +112,7 @@ func Par1Xml(xmlPath, output string, patentIndex int) error {
 	doc := etree.NewDocument()
 	if err := doc.ReadFromFile(xmlPath); err != nil {
 		fmt.Println(err, "解析失败手动处理========", xmlPath)
+		return nil
 	}
 	root := doc.SelectElement("PatentDocumentAndRelated")
 	fmt.Println("ROOT element:", root.Tag)
