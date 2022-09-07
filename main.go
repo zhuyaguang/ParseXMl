@@ -95,9 +95,10 @@ func extractingXml(dirPath string, output string) error {
 								//} else
 								if strings.Contains(patentType, "TXTS-10-B") {
 									outputB := output + "/10-B/" + patentdir + "/"
+									fmt.Println("解压中...")
 									err = Unzip(src, outputB)
 									if err != nil {
-										log.Fatal(err)
+										fmt.Println(err, "解压失败手动处理=====", src)
 									}
 
 								}
