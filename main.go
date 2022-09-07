@@ -93,26 +93,24 @@ func extractingXml(dirPath string, output string) error {
 								//		fmt.Println(err, "解压失败手动处理=====", src)
 								//	}
 								//} else
-								if strings.Contains(patentType, "TXTS-10-B") {
-									outputB := output + "/10-B/" + patentdir + "/"
+								//if strings.Contains(patentType, "TXTS-10-B") {
+								//	outputB := output + "/10-B/" + patentdir + "/"
+								//	fmt.Println("解压中...")
+								//	err = Unzip(src, outputB)
+								//	if err != nil {
+								//		fmt.Println(err, "解压失败手动处理=====", src)
+								//	}
+								//
+								//} else
+								if strings.Contains(patentType, "TXTS-20-U") {
+									outputU := output + "/20-U/" + patentdir + "/"
 									fmt.Println("解压中...")
-									err = Unzip(src, outputB)
+									err = Unzip(src, outputU)
 									if err != nil {
 										fmt.Println(err, "解压失败手动处理=====", src)
 									}
 
 								}
-								//else if strings.Contains(patentType, "TXTS-20-U") {
-								//	outputU := output + "/20-U/" + patentdir + "/"
-								//	err = Unzip(src, outputU)
-								//	if err != nil {
-								//		log.Fatal(err)
-								//	}
-								//	//err := HandleWalk(output, 3)
-								//	//if err != nil {
-								//	//	return err
-								//	//}
-								//}
 
 							}
 
@@ -133,7 +131,7 @@ func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
 
 	for i, v := range outputArr {
-		if v == "/10-B" {
+		if v == "/20-U" {
 			output := output + v
 			fmt.Println(output)
 			err := HandleWalk(output, i)
