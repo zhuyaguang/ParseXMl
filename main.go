@@ -85,29 +85,23 @@ func extractingXml(dirPath string, output string) error {
 								//	//}
 								//
 								//} //else
-								if strings.Contains(patentType, "TXTS-10-A") {
-									outputA := output + "/10-A/" + patentdir + "/"
-									fmt.Println("解压中...")
-									err = Unzip(src, outputA)
-									if err != nil {
-										fmt.Println(err, "解压失败手动处理=====", src)
-									}
-									//err := HandleWalk(output, 1)
-									//if err != nil {
-									//	return err
-									//}
-								}
-								//else if strings.Contains(patentType, "TXTS-10-B") {
-								//	outputB := output + "/10-B/" + patentdir + "/"
-								//	err = Unzip(src, outputB)
+								//if strings.Contains(patentType, "TXTS-10-A") {
+								//	outputA := output + "/10-A/" + patentdir + "/"
+								//	fmt.Println("解压中...")
+								//	err = Unzip(src, outputA)
 								//	if err != nil {
-								//		log.Fatal(err)
+								//		fmt.Println(err, "解压失败手动处理=====", src)
 								//	}
-								//	//err := HandleWalk(output, 2)
-								//	//if err != nil {
-								//	//	return err
-								//	//}
-								//} else if strings.Contains(patentType, "TXTS-20-U") {
+								//} else
+								if strings.Contains(patentType, "TXTS-10-B") {
+									outputB := output + "/10-B/" + patentdir + "/"
+									err = Unzip(src, outputB)
+									if err != nil {
+										log.Fatal(err)
+									}
+
+								}
+								//else if strings.Contains(patentType, "TXTS-20-U") {
 								//	outputU := output + "/20-U/" + patentdir + "/"
 								//	err = Unzip(src, outputU)
 								//	if err != nil {
@@ -138,7 +132,7 @@ func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
 
 	for i, v := range outputArr {
-		if v == "/10-A" {
+		if v == "/10-B" {
 			output := output + v
 			fmt.Println(output)
 			err := HandleWalk(output, i)
@@ -162,6 +156,7 @@ func removeDIR(output string) error {
 	}
 	for _, f := range files {
 		if f.IsDir() {
+			fmt.Println("deleting ...",f.Name())
 			err := os.RemoveAll(output + "/" + f.Name())
 			if err != nil {
 				log.Fatal(err)
