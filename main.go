@@ -124,10 +124,18 @@ func extractingXml(dirPath string, output string) error {
 
 }
 
+const SData = ""
+const AData = ""
+const BData = ""
+const UData = ""
+
+
 func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
+	endTime := []string{"","","",""}
 
 	for i, v := range outputArr {
+		eTime :=""
 		if v == "/30-S" {
 			output := output + v
 			fmt.Println(output)
@@ -135,17 +143,22 @@ func findXML(output string) error {
 			if err != nil {
 				return err
 			}
-			removeDIR(output)
+			eTime ,err =removeDIR(output)
+			if err != nil {
+				return err
+			}
 		}
-
+		endTime[i]=eTime
 	}
+	fmt.Println("解析结束，下次从这里开始",endTime)
 
 	return nil
 
 }
 
-func removeDIR(output string) error {
+func removeDIR(output string) (string,error) {
 	// 解析完，清理下原始数据 output/30-S/日期目录
+	lastDir :=""
 	files, err := ioutil.ReadDir(output)
 	if err != nil {
 		log.Fatal(err)
@@ -157,10 +170,11 @@ func removeDIR(output string) error {
 			if err != nil {
 				log.Fatal(err)
 			}
+			lastDir = f.Name()
 		}
 	}
 	fmt.Printf("Delete %s \n", output)
-	return err
+	return lastDir,nil
 }
 
 func HandleWalk(output string, patentIndex int) error {
