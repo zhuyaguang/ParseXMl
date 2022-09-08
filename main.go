@@ -72,19 +72,16 @@ func extractingXml(dirPath string, output string) error {
 							if strings.Contains(patentzip, ".zip") || strings.Contains(patentzip, ".ZIP") {
 								fmt.Println("file-zip", patentzip)
 								src := dirPath + "/" + patentType + "/" + patentdir + "/" + patentzip
-								//if strings.Contains(patentType, "IMGS-30-S") {
-								//	// 解压 压缩包至 output 目录
-								//	outputS := output + "/30-S/" + patentdir + "/"
-								//	err = Unzip(src, outputS)
-								//	if err != nil {
-								//		log.Fatal(err)
-								//	}
-								//	//err := HandleWalk(output, 0)
-								//	//if err != nil {
-								//	//	return err
-								//	//}
-								//
-								//} //else
+								if strings.Contains(patentType, "IMGS-30-S") {
+									// 解压 压缩包至 output 目录
+									outputS := output + "/30-S/" + patentdir + "/"
+									fmt.Println("解压中...")
+									err = Unzip(src, outputS)
+									if err != nil {
+										fmt.Println(err, "解压失败手动处理=====", src)
+									}
+
+								} //else
 								//if strings.Contains(patentType, "TXTS-10-A") {
 								//	outputA := output + "/10-A/" + patentdir + "/"
 								//	fmt.Println("解压中...")
@@ -102,15 +99,15 @@ func extractingXml(dirPath string, output string) error {
 								//	}
 								//
 								//} else
-								if strings.Contains(patentType, "TXTS-20-U") {
-									outputU := output + "/20-U/" + patentdir + "/"
-									fmt.Println("解压中...")
-									err = Unzip(src, outputU)
-									if err != nil {
-										fmt.Println(err, "解压失败手动处理=====", src)
-									}
-
-								}
+								//if strings.Contains(patentType, "TXTS-20-U") {
+								//	outputU := output + "/20-U/" + patentdir + "/"
+								//	fmt.Println("解压中...")
+								//	err = Unzip(src, outputU)
+								//	if err != nil {
+								//		fmt.Println(err, "解压失败手动处理=====", src)
+								//	}
+								//
+								//}
 
 							}
 
@@ -131,7 +128,7 @@ func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
 
 	for i, v := range outputArr {
-		if v == "/20-U" {
+		if v == "/30-S" {
 			output := output + v
 			fmt.Println(output)
 			err := HandleWalk(output, i)
