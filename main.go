@@ -15,10 +15,10 @@ import (
 	"time"
 )
 
-var endTime = [4]string{"","","",""}
+var endTime = [4]string{"", "", "", ""}
 var EngineMysqlGORM *gorm.DB
 
-func init()  {
+func init() {
 	EngineMysqlGORM = zgorm.ConnectMysql()
 }
 
@@ -31,14 +31,14 @@ func main() {
 	UStart := flag.String("u-start", "20220101", "output xml address")
 	flag.Parse()
 
-	fmt.Println(*dataAdd, *outputAdd,*SStart,*AStart,*BStart,*UStart)
+	fmt.Println(*dataAdd, *outputAdd, *SStart, *AStart, *BStart, *UStart)
 
 	start := time.Now()
 	// Code to measure
 	duration := time.Since(start)
 
 	// 把专利数据解压到 output 目录
-	 extractingXml(*dataAdd, *outputAdd)
+	extractingXml(*dataAdd, *outputAdd)
 
 	fmt.Println(duration)
 
@@ -90,40 +90,49 @@ func extractingXml(dirPath string, output string) error {
 									// 解压 压缩包至 output 目录
 									outputS := output + "/30-S/" + patentdir + "/"
 									fmt.Println("解压中...")
-									if patentdir <= endTime[0]{
+									if patentdir <= endTime[0] {
 										fmt.Println("该压缩包已经解压过了，跳过。")
-									}else{
+									} else {
 										err = Unzip(src, outputS)
 										if err != nil {
 											fmt.Println(err, "解压失败手动处理=====", src)
 										}
 									}
 
-
-								} else
-								if strings.Contains(patentType, "TXTS-10-A") {
+								} else if strings.Contains(patentType, "TXTS-10-A") {
 									outputA := output + "/10-A/" + patentdir + "/"
 									fmt.Println("解压中...")
-									err = Unzip(src, outputA)
-									if err != nil {
-										fmt.Println(err, "解压失败手动处理=====", src)
-									}
-								} else
-								if strings.Contains(patentType, "TXTS-10-B") {
-									outputB := output + "/10-B/" + patentdir + "/"
-									fmt.Println("解压中...")
-									err = Unzip(src, outputB)
-									if err != nil {
-										fmt.Println(err, "解压失败手动处理=====", src)
+									if patentdir <= endTime[1] {
+										fmt.Println("该压缩包已经解压过了，跳过。")
+									} else{
+										err = Unzip(src, outputA)
+										if err != nil {
+											fmt.Println(err, "解压失败手动处理=====", src)
+										}
 									}
 
-								} else
-								if strings.Contains(patentType, "TXTS-20-U") {
+								} else if strings.Contains(patentType, "TXTS-10-B") {
+									outputB := output + "/10-B/" + patentdir + "/"
+									fmt.Println("解压中...")
+									if patentdir <= endTime[2] {
+										fmt.Println("该压缩包已经解压过了，跳过。")
+									} else{
+										err = Unzip(src, outputB)
+										if err != nil {
+											fmt.Println(err, "解压失败手动处理=====", src)
+										}
+									}
+
+								} else if strings.Contains(patentType, "TXTS-20-U") {
 									outputU := output + "/20-U/" + patentdir + "/"
 									fmt.Println("解压中...")
-									err = Unzip(src, outputU)
-									if err != nil {
-										fmt.Println(err, "解压失败手动处理=====", src)
+									if patentdir <= endTime[2] {
+										fmt.Println("该压缩包已经解压过了，跳过。")
+									} else{
+										err = Unzip(src, outputU)
+										if err != nil {
+											fmt.Println(err, "解压失败手动处理=====", src)
+										}
 									}
 
 								}
@@ -143,43 +152,40 @@ func extractingXml(dirPath string, output string) error {
 
 }
 
-
-
 func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
 
 	for i, v := range outputArr {
-		eTime :=""
-		if v == "/30-S" {
-			output := output + v
-			fmt.Println(output)
-			err := HandleWalk(output, i)
-			if err != nil {
-				return err
-			}
-			eTime ,err =removeDIR(output)
-			if err != nil {
-				return err
-			}
+		eTime := ""
+		output := output + v
+		fmt.Println(output)
+		err := HandleWalk(output, i)
+		if err != nil {
+			return err
 		}
-		endTime[i]=eTime
+		eTime, err = removeDIR(output)
+		if err != nil {
+			return err
+		}
+
+		endTime[i] = eTime
 	}
-	fmt.Println("解析结束，下次从这里开始",endTime)
+	fmt.Println("解析结束，下次从这里开始", endTime)
 
 	return nil
 
 }
 
-func removeDIR(output string) (string,error) {
+func removeDIR(output string) (string, error) {
 	// 解析完，清理下原始数据 output/30-S/日期目录
-	lastDir :=""
+	lastDir := ""
 	files, err := ioutil.ReadDir(output)
 	if err != nil {
 		log.Fatal(err)
 	}
 	for _, f := range files {
 		if f.IsDir() {
-			fmt.Println("deleting ...",f.Name())
+			fmt.Println("deleting ...", f.Name())
 			err := os.RemoveAll(output + "/" + f.Name())
 			if err != nil {
 				log.Fatal(err)
@@ -188,7 +194,7 @@ func removeDIR(output string) (string,error) {
 		}
 	}
 	fmt.Printf("Delete %s \n", output)
-	return lastDir,nil
+	return lastDir, nil
 }
 
 func HandleWalk(output string, patentIndex int) error {
@@ -199,23 +205,23 @@ func HandleWalk(output string, patentIndex int) error {
 			// parse xml
 			switch patentIndex {
 			case 0:
-				err := parse.Par0Xml(path, output, patentIndex,EngineMysqlGORM)
+				err := parse.Par0Xml(path, output, patentIndex, EngineMysqlGORM)
 				if err != nil {
 					return err
 				}
 			case 1:
-				err := parse.Par1Xml(path, output, patentIndex)
+				err := parse.Par1Xml(path, output, patentIndex, EngineMysqlGORM)
 				if err != nil {
 					return err
 				}
 
 			case 2:
-				err := parse.Par1Xml(path, output, patentIndex)
+				err := parse.Par1Xml(path, output, patentIndex, EngineMysqlGORM)
 				if err != nil {
 					return err
 				}
 			case 3:
-				err := parse.Par1Xml(path, output, patentIndex)
+				err := parse.Par1Xml(path, output, patentIndex, EngineMysqlGORM)
 				if err != nil {
 					return err
 				}
