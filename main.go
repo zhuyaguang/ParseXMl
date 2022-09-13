@@ -3,22 +3,35 @@ package main
 import (
 	"flag"
 	"fmt"
+	"gorm.io/gorm"
 	"io/ioutil"
 	"log"
 	"os"
 	"patentExtr/pkg"
+	zgorm "patentExtr/pkg/gorm"
 	"patentExtr/pkg/parse"
 	"path/filepath"
 	"strings"
 	"time"
 )
 
+var endTime = [4]string{"","","",""}
+var EngineMysqlGORM *gorm.DB
+
+func init()  {
+	EngineMysqlGORM = zgorm.ConnectMysql()
+}
+
 func main() {
 	dataAdd := flag.String("data", "/data/sipo", "source data address")
 	outputAdd := flag.String("output", "/data/output", "output xml address")
+	SStart := flag.String("s-start", "20220101", "30-s start parse time")
+	AStart := flag.String("a-start", "20220101", "output xml address")
+	BStart := flag.String("b-start", "20220101", "output xml address")
+	UStart := flag.String("u-start", "20220101", "output xml address")
 	flag.Parse()
 
-	fmt.Println(*dataAdd, *outputAdd)
+	fmt.Println(*dataAdd, *outputAdd,*SStart,*AStart,*BStart,*UStart)
 
 	start := time.Now()
 	// Code to measure
@@ -72,42 +85,48 @@ func extractingXml(dirPath string, output string) error {
 							if strings.Contains(patentzip, ".zip") || strings.Contains(patentzip, ".ZIP") {
 								fmt.Println("file-zip", patentzip)
 								src := dirPath + "/" + patentType + "/" + patentdir + "/" + patentzip
+
 								if strings.Contains(patentType, "IMGS-30-S") {
 									// 解压 压缩包至 output 目录
 									outputS := output + "/30-S/" + patentdir + "/"
 									fmt.Println("解压中...")
-									err = Unzip(src, outputS)
+									if patentdir <= endTime[0]{
+										fmt.Println("该压缩包已经解压过了，跳过。")
+									}else{
+										err = Unzip(src, outputS)
+										if err != nil {
+											fmt.Println(err, "解压失败手动处理=====", src)
+										}
+									}
+
+
+								} else
+								if strings.Contains(patentType, "TXTS-10-A") {
+									outputA := output + "/10-A/" + patentdir + "/"
+									fmt.Println("解压中...")
+									err = Unzip(src, outputA)
+									if err != nil {
+										fmt.Println(err, "解压失败手动处理=====", src)
+									}
+								} else
+								if strings.Contains(patentType, "TXTS-10-B") {
+									outputB := output + "/10-B/" + patentdir + "/"
+									fmt.Println("解压中...")
+									err = Unzip(src, outputB)
 									if err != nil {
 										fmt.Println(err, "解压失败手动处理=====", src)
 									}
 
-								} //else
-								//if strings.Contains(patentType, "TXTS-10-A") {
-								//	outputA := output + "/10-A/" + patentdir + "/"
-								//	fmt.Println("解压中...")
-								//	err = Unzip(src, outputA)
-								//	if err != nil {
-								//		fmt.Println(err, "解压失败手动处理=====", src)
-								//	}
-								//} else
-								//if strings.Contains(patentType, "TXTS-10-B") {
-								//	outputB := output + "/10-B/" + patentdir + "/"
-								//	fmt.Println("解压中...")
-								//	err = Unzip(src, outputB)
-								//	if err != nil {
-								//		fmt.Println(err, "解压失败手动处理=====", src)
-								//	}
-								//
-								//} else
-								//if strings.Contains(patentType, "TXTS-20-U") {
-								//	outputU := output + "/20-U/" + patentdir + "/"
-								//	fmt.Println("解压中...")
-								//	err = Unzip(src, outputU)
-								//	if err != nil {
-								//		fmt.Println(err, "解压失败手动处理=====", src)
-								//	}
-								//
-								//}
+								} else
+								if strings.Contains(patentType, "TXTS-20-U") {
+									outputU := output + "/20-U/" + patentdir + "/"
+									fmt.Println("解压中...")
+									err = Unzip(src, outputU)
+									if err != nil {
+										fmt.Println(err, "解压失败手动处理=====", src)
+									}
+
+								}
 
 							}
 
@@ -124,15 +143,10 @@ func extractingXml(dirPath string, output string) error {
 
 }
 
-const SData = ""
-const AData = ""
-const BData = ""
-const UData = ""
 
 
 func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
-	endTime := []string{"","","",""}
 
 	for i, v := range outputArr {
 		eTime :=""
@@ -185,7 +199,7 @@ func HandleWalk(output string, patentIndex int) error {
 			// parse xml
 			switch patentIndex {
 			case 0:
-				err := parse.Par0Xml(path, output, patentIndex)
+				err := parse.Par0Xml(path, output, patentIndex,EngineMysqlGORM)
 				if err != nil {
 					return err
 				}

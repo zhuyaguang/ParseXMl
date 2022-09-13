@@ -1,5 +1,7 @@
 package pkg
 
+import "gorm.io/gorm"
+
 const PATENT1 = "中国外观设计专利授权公告标准化著录项目及切图数据" //30-S
 const PATENT2 = "中国发明专利申请公布标准化全文文本数据"      //10-A
 const PATENT3 = "中国发明专利授权公告标准化全文文本数据"      //10-B
@@ -8,10 +10,11 @@ const PATENT4 = "中国实用新型专利授权公告标准化全文文本数据
 var PatentType = [4]string{"中国外观设计专利授权公告标准化著录项目及切图数据", "中国发明专利申请公布标准化全文文本数据", "中国发明专利授权公告标准化全文文本数据", "中国实用新型专利授权公告标准化全文文本数据"}
 
 type Patent struct {
+	gorm.Model
 	Name                   string
 	ApplicationNO          string
 	ApplicationDate        string
-	PublicationNO          string
+	PublicationNO          string `gorm:"index:idx_public_no,unique"`
 	PublicationDate        string
 	Applicant              string
 	ApplicantAddress       string
@@ -30,6 +33,32 @@ type Patent struct {
 	Implementation         string
 	InstructionPic         string
 	AbstractPic            string
+}
+
+type mysqlPatent struct {
+	gorm.Model
+	Name                   string `json:"name" json:"name,omitempty"`
+	ApplicationNO          string `json:"application_no" json:"application_no,omitempty"`
+	ApplicationDate        string `json:"application_date,omitempty"`
+	PublicationNO          string `json:"publication_no,omitempty"`
+	PublicationDate        string `json:"publication_date,omitempty"`
+	Applicant              string `json:"applicant,omitempty"`
+	ApplicantAddress       string `json:"applicant_address,omitempty"`
+	Inventors              string `json:"inventors,omitempty"`
+	Abstract               string `json:"abstract,omitempty"`
+	Claim                  string `json:"claim,omitempty"`
+	MainClassificationNO   string `json:"main_classification_no,omitempty"`
+	ClassificationNO       string `json:"classification_no,omitempty"`
+	Agency                 string `json:"agency,omitempty"`
+	Agent                  string `json:"agent,omitempty"`
+	PatentType             string `json:"patent_type,omitempty"`
+	TechnicalField         string `json:"technical_field,omitempty"`
+	TechnicalBackground    string `json:"technical_background,omitempty"`
+	Context                string `json:"context,omitempty"`
+	InstructionWithPicture string `json:"instruction_with_picture,omitempty"`
+	Implementation         string `json:"implementation,omitempty"`
+	InstructionPic         string `json:"instruction_pic,omitempty"`
+	AbstractPic            string `json:"abstract_pic,omitempty"`
 }
 
 //`name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL COMMENT '名称',

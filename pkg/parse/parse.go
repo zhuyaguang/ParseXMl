@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/beevik/etree"
+	"gorm.io/gorm"
 	"io/ioutil"
 	"patentExtr/pkg"
+	zgorm "patentExtr/pkg/gorm"
 	"path/filepath"
 	"sort"
 	"strings"
@@ -15,7 +17,7 @@ import (
 var NUM = 0
 
 // Par0Xml 主要解析 30-S 类型的专利
-func Par0Xml(xmlPath, output string, patentIndex int) error {
+func Par0Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
 	fmt.Println("xml path -----", xmlPath, output, patentIndex)
 
 	// 得到 XML 文件的名称，比如：CN302021000671538CN00003070960400SDBPZH20220201CN00M
@@ -95,6 +97,7 @@ func Par0Xml(xmlPath, output string, patentIndex int) error {
 	if err != nil {
 		return err
 	}
+	zgorm.Create(patentOBJ,db)
 	NUM++
 	fmt.Println("parse done!", NUM)
 
@@ -102,7 +105,7 @@ func Par0Xml(xmlPath, output string, patentIndex int) error {
 }
 
 // Par1Xml 主要解析 10-A 10-B 20-U 类型的专利
-func Par1Xml(xmlPath, output string, patentIndex int) error {
+func Par1Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
 	fmt.Println("xml path -----", xmlPath, output, patentIndex)
 
 	fileName := filepath.Base(xmlPath)
@@ -346,6 +349,8 @@ func Par1Xml(xmlPath, output string, patentIndex int) error {
 	if err != nil {
 		return err
 	}
+
+	zgorm.Create(patentObj,db)
 	NUM++
 	fmt.Println("parse done!", NUM)
 
