@@ -97,6 +97,8 @@ func Par0Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
 	if err != nil {
 		return err
 	}
+	patentOBJ.PatentType=pkg.PatentType[patentIndex]
+
 	zgorm.Create(patentOBJ,db)
 	NUM++
 	fmt.Println("parse done!", NUM)

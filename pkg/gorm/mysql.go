@@ -22,12 +22,11 @@ func ConnectMysql() *gorm.DB {
 }
 
 func Create(p pkg.Patent, db *gorm.DB)  {
-	db.AutoMigrate(&p)
 	result :=db.Clauses(clause.OnConflict{
 		Columns:   []clause.Column{{Name: "publication_no"}},
 		DoNothing: true,
-	}).Create(&p)
-	fmt.Println(result.RowsAffected)
+	}).Create(&p).Error
+	fmt.Println("RowsAffected==",result.Error())
 }
 
 func Search(db *gorm.DB)  {

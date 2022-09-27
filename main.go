@@ -20,6 +20,7 @@ var EngineMysqlGORM *gorm.DB
 
 func init() {
 	EngineMysqlGORM = zgorm.ConnectMysql()
+	EngineMysqlGORM.AutoMigrate(&pkg.Patent{})
 }
 
 func main() {
