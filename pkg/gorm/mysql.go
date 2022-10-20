@@ -25,8 +25,8 @@ func Create(p pkg.Patent, db *gorm.DB)  {
 	result :=db.Clauses(clause.OnConflict{
 		Columns:   []clause.Column{{Name: "publication_no"}},
 		DoNothing: true,
-	}).Create(&p).Error
-	fmt.Println("RowsAffected==",result.Error())
+	}).Create(&p)
+	fmt.Println("RowsAffected==",result.RowsAffected)
 }
 
 func Search(db *gorm.DB)  {

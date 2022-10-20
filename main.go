@@ -27,12 +27,13 @@ func main() {
 	dataAdd := flag.String("data", "/data/sipo", "source data address")
 	outputAdd := flag.String("output", "/data/output", "output xml address")
 	SStart := flag.String("s-start", "20220101", "30-s start parse time")
-	AStart := flag.String("a-start", "20220101", "output xml address")
-	BStart := flag.String("b-start", "20220101", "output xml address")
-	UStart := flag.String("u-start", "20220101", "output xml address")
+	AStart := flag.String("a-start", "20220101", "10-a start parse time")
+	BStart := flag.String("b-start", "20220101", "10-b start parse time")
+	UStart := flag.String("u-start", "20220101", "20-u start parse time")
 	flag.Parse()
 
 	fmt.Println(*dataAdd, *outputAdd, *SStart, *AStart, *BStart, *UStart)
+	endTime = [4]string{*SStart,*AStart, *BStart, *UStart}
 
 	start := time.Now()
 	// Code to measure
@@ -90,7 +91,7 @@ func extractingXml(dirPath string, output string) error {
 								if strings.Contains(patentType, "IMGS-30-S") {
 									// 解压 压缩包至 output 目录
 									outputS := output + "/30-S/" + patentdir + "/"
-									fmt.Println("解压中...")
+									fmt.Println("解压中...",patentdir,endTime[0])
 									if patentdir <= endTime[0] {
 										fmt.Println("该压缩包已经解压过了，跳过。")
 									} else {
