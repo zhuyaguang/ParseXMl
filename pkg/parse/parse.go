@@ -17,7 +17,7 @@ import (
 var NUM = 0
 
 // Par0Xml 主要解析 30-S 类型的专利
-func Par0Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
+func Par0Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 	fmt.Println("xml path -----", xmlPath, output, patentIndex)
 
 	// 得到 XML 文件的名称，比如：CN302021000671538CN00003070960400SDBPZH20220201CN00M
@@ -97,9 +97,9 @@ func Par0Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
 	if err != nil {
 		return err
 	}
-	patentOBJ.PatentType=pkg.PatentType[patentIndex]
+	patentOBJ.PatentType = pkg.PatentType[patentIndex]
 
-	zgorm.Create(patentOBJ,db)
+	zgorm.Create(patentOBJ, db)
 	NUM++
 	fmt.Println("parse done!", NUM)
 
@@ -107,7 +107,7 @@ func Par0Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
 }
 
 // Par1Xml 主要解析 10-A 10-B 20-U 类型的专利
-func Par1Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
+func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 	fmt.Println("xml path -----", xmlPath, output, patentIndex)
 
 	fileName := filepath.Base(xmlPath)
@@ -120,7 +120,7 @@ func Par1Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
 	}
 	root := doc.SelectElement("PatentDocumentAndRelated")
 	if root == nil {
-		fmt.Println("root is nil，解析失败手动处理========",xmlPath)
+		fmt.Println("root is nil，解析失败手动处理========", xmlPath)
 		return nil
 	}
 	fmt.Println("ROOT element:", root.Tag)
@@ -251,10 +251,15 @@ func Par1Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
 	describe := doc.FindElements("./PatentDocumentAndRelated/Description/Paragraphs")
 
 	// 单独字段，但是有子字段
+	// 技术领域
 	tfE := doc.FindElements("./PatentDocumentAndRelated/Description/TechnicalField/Paragraphs")
+	// 技术背景
 	baE := doc.FindElements("./PatentDocumentAndRelated/Description/BackgroundArt/Paragraphs")
+	// 发明内容
 	disE := doc.FindElements("./PatentDocumentAndRelated/Description/Disclosure/Paragraphs")
+	// 附图说明
 	ddE := doc.FindElements("./PatentDocumentAndRelated/Description/DrawingsDescription/Paragraphs")
+	// 具体实施方式
 	imE := doc.FindElements("./PatentDocumentAndRelated/Description/InventionMode/Paragraphs")
 
 	if descriptionE != nil {
@@ -314,6 +319,15 @@ func Par1Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
 				}
 				implementation = strings.Join(imEArr, ",")
 			}
+			// 附图说明
+			if len(ddE) != 0 {
+				var ddEArr []string
+				for _, v := range ddE {
+					g := v.Text()
+					ddEArr = append(ddEArr, g)
+				}
+				implementation = strings.Join(ddEArr, ",")
+			}
 
 		}
 	}
@@ -352,7 +366,7 @@ func Par1Xml(xmlPath, output string, patentIndex int,db *gorm.DB) error {
 		return err
 	}
 
-	zgorm.Create(patentObj,db)
+	zgorm.Create(patentObj, db)
 	NUM++
 	fmt.Println("parse done!", NUM)
 

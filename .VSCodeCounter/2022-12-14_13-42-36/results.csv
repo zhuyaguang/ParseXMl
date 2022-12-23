@@ -1,0 +1,19 @@
+"filename", "language", "XML", "Go", "Markdown", "Go Module File", "Go Checksum File", "comment", "blank", "total"
+"/Users/zhuyaguang/ParseXMl/.idea/awesomeProject.iml", "XML", 9, 0, 0, 0, 0, 0, 0, 9
+"/Users/zhuyaguang/ParseXMl/.idea/dataSources.xml", "XML", 12, 0, 0, 0, 0, 0, 0, 12
+"/Users/zhuyaguang/ParseXMl/.idea/misc.xml", "XML", 6, 0, 0, 0, 0, 0, 0, 6
+"/Users/zhuyaguang/ParseXMl/.idea/modules.xml", "XML", 8, 0, 0, 0, 0, 0, 0, 8
+"/Users/zhuyaguang/ParseXMl/.idea/vcs.xml", "XML", 6, 0, 0, 0, 0, 0, 0, 6
+"/Users/zhuyaguang/ParseXMl/README.md", "Markdown", 0, 0, 24, 0, 0, 0, 12, 36
+"/Users/zhuyaguang/ParseXMl/go.mod", "Go Module File", 0, 0, 0, 12, 0, 0, 4, 16
+"/Users/zhuyaguang/ParseXMl/go.sum", "Go Checksum File", 0, 0, 0, 0, 13, 0, 1, 14
+"/Users/zhuyaguang/ParseXMl/main.go", "Go", 0, 207, 0, 0, 0, 12, 37, 256
+"/Users/zhuyaguang/ParseXMl/pkg/gorm/mysql.go", "Go", 0, 29, 0, 0, 0, 2, 7, 38
+"/Users/zhuyaguang/ParseXMl/pkg/gorm/mysql_test.go", "Go", 0, 33, 0, 0, 0, 1, 3, 37
+"/Users/zhuyaguang/ParseXMl/pkg/parse/parse.go", "Go", 0, 383, 0, 0, 0, 62, 65, 510
+"/Users/zhuyaguang/ParseXMl/pkg/parse/parse_desribe.go", "Go", 0, 1, 0, 0, 0, 39, 2, 42
+"/Users/zhuyaguang/ParseXMl/pkg/parse/parse_test.go", "Go", 0, 5, 0, 0, 0, 0, 3, 8
+"/Users/zhuyaguang/ParseXMl/pkg/parse/typexml.go", "Go", 0, 12, 0, 0, 0, 0, 5, 17
+"/Users/zhuyaguang/ParseXMl/pkg/type.go", "Go", 0, 57, 0, 0, 0, 22, 7, 86
+"/Users/zhuyaguang/ParseXMl/pkg/zip.go", "Go", 0, 106, 0, 0, 0, 0, 22, 128
+"Total", "-", 41, 833, 24, 12, 13, 138, 168, 1229

@@ -1,0 +1,49 @@
+Date : 2022-12-14 13:42:36
+Directory : /Users/zhuyaguang/ParseXMl
+Total : 17 files,  923 codes, 138 comments, 168 blanks, all 1229 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| Go               |          9 |        833 |        138 |        151 |      1,122 |
+| XML              |          5 |         41 |          0 |          0 |         41 |
+| Markdown         |          1 |         24 |          0 |         12 |         36 |
+| Go Checksum File |          1 |         13 |          0 |          1 |         14 |
+| Go Module File   |          1 |         12 |          0 |          4 |         16 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                  | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                     |         17 |        923 |        138 |        168 |      1,229 |
+| .idea                                                 |          5 |         41 |          0 |          0 |         41 |
+| pkg                                                   |          8 |        626 |        126 |        114 |        866 |
+| pkg/gorm                                              |          2 |         62 |          3 |         10 |         75 |
+| pkg/parse                                             |          4 |        401 |        101 |         75 |        577 |
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                              | language         | code       | comment    | blank      | total      |
++-------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /Users/zhuyaguang/ParseXMl/.idea/awesomeProject.iml   | XML              |          9 |          0 |          0 |          9 |
+| /Users/zhuyaguang/ParseXMl/.idea/dataSources.xml      | XML              |         12 |          0 |          0 |         12 |
+| /Users/zhuyaguang/ParseXMl/.idea/misc.xml             | XML              |          6 |          0 |          0 |          6 |
+| /Users/zhuyaguang/ParseXMl/.idea/modules.xml          | XML              |          8 |          0 |          0 |          8 |
+| /Users/zhuyaguang/ParseXMl/.idea/vcs.xml              | XML              |          6 |          0 |          0 |          6 |
+| /Users/zhuyaguang/ParseXMl/README.md                  | Markdown         |         24 |          0 |         12 |         36 |
+| /Users/zhuyaguang/ParseXMl/go.mod                     | Go Module File   |         12 |          0 |          4 |         16 |
+| /Users/zhuyaguang/ParseXMl/go.sum                     | Go Checksum File |         13 |          0 |          1 |         14 |
+| /Users/zhuyaguang/ParseXMl/main.go                    | Go               |        207 |         12 |         37 |        256 |
+| /Users/zhuyaguang/ParseXMl/pkg/gorm/mysql.go          | Go               |         29 |          2 |          7 |         38 |
+| /Users/zhuyaguang/ParseXMl/pkg/gorm/mysql_test.go     | Go               |         33 |          1 |          3 |         37 |
+| /Users/zhuyaguang/ParseXMl/pkg/parse/parse.go         | Go               |        383 |         62 |         65 |        510 |
+| /Users/zhuyaguang/ParseXMl/pkg/parse/parse_desribe.go | Go               |          1 |         39 |          2 |         42 |
+| /Users/zhuyaguang/ParseXMl/pkg/parse/parse_test.go    | Go               |          5 |          0 |          3 |          8 |
+| /Users/zhuyaguang/ParseXMl/pkg/parse/typexml.go       | Go               |         12 |          0 |          5 |         17 |
+| /Users/zhuyaguang/ParseXMl/pkg/type.go                | Go               |         57 |         22 |          7 |         86 |
+| /Users/zhuyaguang/ParseXMl/pkg/zip.go                 | Go               |        106 |          0 |         22 |        128 |
+| Total                                                 |                  |        923 |        138 |        168 |      1,229 |
++-------------------------------------------------------+------------------+------------+------------+------------+------------+
