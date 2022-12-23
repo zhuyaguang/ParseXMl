@@ -326,7 +326,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 					g := v.Text()
 					ddEArr = append(ddEArr, g)
 				}
-				implementation = strings.Join(ddEArr, ",")
+				instructionWithPicture = strings.Join(ddEArr, ",")
 			}
 
 		}
