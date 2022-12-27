@@ -356,6 +356,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 		//InstructionPic: FileToBase64(filepath.Dir(xmlPath)), NLP模型训练中图片无法处理，暂时不放图片
 		AbstractPic: "",
 	}
+	fmt.Println(instructionWithPicture)
 	file, err := json.MarshalIndent(patentObj, "", " ")
 	if err != nil {
 		return err

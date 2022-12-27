@@ -23,6 +23,7 @@ const PATENT4 = "中国实用新型专利授权公告标准化全文文本数据
 启动命令：
 nohup ./patentExtr --data="/data/sipo" --output="/data/output1" --s-start="20220909" --a-start="20220104" --b-start="20220816" --u-start="20220816" > log.log 2>&1 &
 
+nohup ./patentExtr --data="/data/sipo" --output="/data/output1"  --a-start="20220104" > log.log 2>&1 &
 
 ## 未插入数据库
 // /data/output/10-B/20220816/9/CN102022000190631CN00001142615810BFULZH20220513CN00R/CN102022000190631CN00001142615810BFULZH20220513CN00R.XML
