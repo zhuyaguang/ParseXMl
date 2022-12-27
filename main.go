@@ -33,7 +33,7 @@ func main() {
 	flag.Parse()
 
 	fmt.Println(*dataAdd, *outputAdd, *SStart, *AStart, *BStart, *UStart)
-	endTime = [4]string{*SStart,*AStart, *BStart, *UStart}
+	endTime = [4]string{*SStart, *AStart, *BStart, *UStart}
 
 	start := time.Now()
 	// Code to measure
@@ -91,9 +91,9 @@ func extractingXml(dirPath string, output string) error {
 								if strings.Contains(patentType, "IMGS-30-S") {
 									// 解压 压缩包至 output 目录
 									outputS := output + "/30-S/" + patentdir + "/"
-									fmt.Println("解压中...",patentdir,endTime[0])
+									fmt.Println("解压中...", patentdir, endTime[0])
 									if patentdir <= endTime[0] {
-										fmt.Println("该压缩包已经解压过了，跳过。")
+										fmt.Println("该压缩包已经处理过了，跳过。")
 									} else {
 										err = Unzip(src, outputS)
 										if err != nil {
@@ -105,8 +105,8 @@ func extractingXml(dirPath string, output string) error {
 									outputA := output + "/10-A/" + patentdir + "/"
 									fmt.Println("解压中...")
 									if patentdir <= endTime[1] {
-										fmt.Println("该压缩包已经解压过了，跳过。")
-									} else{
+										fmt.Println("该压缩包已经处理过了，跳过。")
+									} else {
 										err = Unzip(src, outputA)
 										if err != nil {
 											fmt.Println(err, "解压失败手动处理=====", src)
@@ -117,8 +117,8 @@ func extractingXml(dirPath string, output string) error {
 									outputB := output + "/10-B/" + patentdir + "/"
 									fmt.Println("解压中...")
 									if patentdir <= endTime[2] {
-										fmt.Println("该压缩包已经解压过了，跳过。")
-									} else{
+										fmt.Println("该压缩包已经处理过了，跳过。")
+									} else {
 										err = Unzip(src, outputB)
 										if err != nil {
 											fmt.Println(err, "解压失败手动处理=====", src)
@@ -129,8 +129,8 @@ func extractingXml(dirPath string, output string) error {
 									outputU := output + "/20-U/" + patentdir + "/"
 									fmt.Println("解压中...")
 									if patentdir <= endTime[2] {
-										fmt.Println("该压缩包已经解压过了，跳过。")
-									} else{
+										fmt.Println("该压缩包已经处理过了，跳过。")
+									} else {
 										err = Unzip(src, outputU)
 										if err != nil {
 											fmt.Println(err, "解压失败手动处理=====", src)

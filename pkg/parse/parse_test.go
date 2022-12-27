@@ -1,7 +1,13 @@
 package parse
 
-import "testing"
+import (
+	"patentExtr/pkg"
+	zgorm "patentExtr/pkg/gorm"
+	"testing"
+)
 
 func TestPar1Xml(t *testing.T) {
-	 Par1Xml("test2.XML","./",1,nil)
+	EngineMysqlGORM := zgorm.ConnectMysql()
+	EngineMysqlGORM.AutoMigrate(&pkg.Patent{})
+	Par1Xml("test2.XML", "./", 1, EngineMysqlGORM)
 }
