@@ -21,7 +21,7 @@ const PATENT4 = "中国实用新型专利授权公告标准化全文文本数据
 保存成 CN102020000545134CN00001138834480AFULZH20220104CN00A.json 文件
 
 启动命令：
-nohup ./patentExtr --data="/data/sipo" --output="/data/output1" --s-start="20220909" --a-start="20220104" --b-start="20220816" --u-start="20220816" > log.log 2>&1 &
+nohup ./patentExtr --data="/data/sipo" --output="/data/output1" --s-start="20220909" --a-start="20220823" --b-start="20220816" --u-start="20220816" > log.log 2>&1 &
 
 nohup ./patentExtr --data="/data/sipo" --output="/data/output1"  --a-start="20220104" > log.log 2>&1 &
 

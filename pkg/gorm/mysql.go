@@ -26,7 +26,7 @@ func Create(p pkg.Patent, db *gorm.DB) {
 		DoUpdates: clause.AssignmentColumns([]string{"instruction_with_picture"}),
 		//DoNothing: true,
 	}).Create(&p)
-	fmt.Println("RowsAffected==", result.RowsAffected)
+	log.Println("RowsAffected==", result.RowsAffected)
 }
 
 func Search(db *gorm.DB) {
