@@ -7,6 +7,7 @@ import (
 	"github.com/beevik/etree"
 	"gorm.io/gorm"
 	"io/ioutil"
+	"log"
 	"patentExtr/pkg"
 	zgorm "patentExtr/pkg/gorm"
 	"path/filepath"
@@ -18,7 +19,7 @@ var NUM = 0
 
 // Par0Xml 主要解析 30-S 类型的专利
 func Par0Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
-	fmt.Println("xml path -----", xmlPath, output, patentIndex)
+	log.Println("xml path -----", xmlPath, output, patentIndex)
 
 	// 得到 XML 文件的名称，比如：CN302021000671538CN00003070960400SDBPZH20220201CN00M
 	fileName := filepath.Base(xmlPath)
@@ -26,11 +27,11 @@ func Par0Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 
 	doc := etree.NewDocument()
 	if err := doc.ReadFromFile(xmlPath); err != nil {
-		fmt.Println(err, "解析失败手动处理========", xmlPath)
+		log.Println(err, "解析失败手动处理========", xmlPath)
 		return nil
 	}
 	root := doc.SelectElement("PatentDocumentAndRelated")
-	fmt.Println("ROOT element:", root.Tag)
+	log.Println("ROOT element:", root.Tag)
 
 	patentOBJ := pkg.Patent{}
 
@@ -101,29 +102,29 @@ func Par0Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 
 	zgorm.Create(patentOBJ, db)
 	NUM++
-	fmt.Println("parse done!", NUM)
+	log.Println("parse done!", NUM)
 
 	return nil
 }
 
 // Par1Xml 主要解析 10-A 10-B 20-U 类型的专利
 func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
-	fmt.Println("xml path -----", xmlPath, output, patentIndex)
+	log.Println("xml path -----", xmlPath, output, patentIndex)
 
 	fileName := filepath.Base(xmlPath)
 	fileName = strings.Split(fileName, ".")[0]
 
 	doc := etree.NewDocument()
 	if err := doc.ReadFromFile(xmlPath); err != nil {
-		fmt.Println(err, "解析失败手动处理========", xmlPath)
+		log.Println(err, "解析失败手动处理========", xmlPath)
 		return nil
 	}
 	root := doc.SelectElement("PatentDocumentAndRelated")
 	if root == nil {
-		fmt.Println("root is nil，解析失败手动处理========", xmlPath)
+		log.Println("root is nil，解析失败手动处理========", xmlPath)
 		return nil
 	}
-	fmt.Println("ROOT element:", root.Tag)
+	log.Println("ROOT element:", root.Tag)
 
 	resName := ""
 	resNameE := doc.FindElement("./PatentDocumentAndRelated/BibliographicData/InventionTitle")
@@ -280,7 +281,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 			}
 
 		} else {
-			println("该专利 有单独的技术领域、技术背景等字段", xmlPath)
+			log.Println("该专利 有单独的技术领域、技术背景等字段", xmlPath)
 			// 技术领域
 			if len(tfE) != 0 {
 				var tfEArr []string
@@ -356,7 +357,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 		//InstructionPic: FileToBase64(filepath.Dir(xmlPath)), NLP模型训练中图片无法处理，暂时不放图片
 		AbstractPic: "",
 	}
-	fmt.Println(instructionWithPicture)
+	log.Println(instructionWithPicture)
 	file, err := json.MarshalIndent(patentObj, "", " ")
 	if err != nil {
 		return err
@@ -369,7 +370,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 
 	zgorm.Create(patentObj, db)
 	NUM++
-	fmt.Println("parse done!", NUM)
+	log.Println("parse done!", NUM)
 
 	return nil
 }
