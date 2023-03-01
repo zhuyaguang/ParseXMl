@@ -5,11 +5,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/beevik/etree"
-	"gorm.io/gorm"
+	"github.com/colinmarc/hdfs"
 	"io/ioutil"
 	"log"
 	"patentExtr/pkg"
-	zgorm "patentExtr/pkg/gorm"
+	"patentExtr/pkg/Hadoop"
 	"path/filepath"
 	"sort"
 	"strings"
@@ -18,7 +18,7 @@ import (
 var NUM = 0
 
 // Par0Xml 主要解析 30-S 类型的专利
-func Par0Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
+func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error {
 	log.Println("xml path -----", xmlPath, output, patentIndex)
 
 	// 得到 XML 文件的名称，比如：CN302021000671538CN00003070960400SDBPZH20220201CN00M
@@ -88,19 +88,23 @@ func Par0Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 		// NLP模型训练中图片无法处理，暂时不放图片
 		// patentOBJ.InstructionPic = FileToBase64(filepath.Dir(xmlPath))
 	}
-
-	file, err := json.MarshalIndent(patentOBJ, "", " ")
-	if err != nil {
-		return err
-	}
-
-	err = ioutil.WriteFile(output+"/"+fileName+".json", file, 0644)
-	if err != nil {
-		return err
-	}
 	patentOBJ.PatentType = pkg.PatentType[patentIndex]
 
-	zgorm.Create(patentOBJ, db)
+	// 转换为JSON格式的字节数组
+	jsonBytes, err := json.Marshal(patentOBJ)
+	if err != nil {
+		fmt.Println(err)
+	}
+	src := output + "/" + fileName + ".json"
+	// 将字节数组写入文件
+	err = ioutil.WriteFile(src, jsonBytes, 0644)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
+	fmt.Println(src, dst)
+	Hadoop.UploadFile(src, dst, *client)
 	NUM++
 	log.Println("parse done!", NUM)
 
@@ -108,7 +112,7 @@ func Par0Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 }
 
 // Par1Xml 主要解析 10-A 10-B 20-U 类型的专利
-func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
+func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error {
 	log.Println("xml path -----", xmlPath, output, patentIndex)
 
 	fileName := filepath.Base(xmlPath)
@@ -358,17 +362,22 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 		AbstractPic: "",
 	}
 	log.Println(instructionWithPicture)
-	file, err := json.MarshalIndent(patentObj, "", " ")
+
+	// 转换为JSON格式的字节数组
+	jsonBytes, err := json.Marshal(patentObj)
 	if err != nil {
-		return err
+		fmt.Println(err)
+	}
+	src := output + "/" + fileName + ".json"
+	// 将字节数组写入文件
+	err = ioutil.WriteFile(src, jsonBytes, 0644)
+	if err != nil {
+		fmt.Println(err)
 	}
 
-	err = ioutil.WriteFile(output+"/"+fileName+".json", file, 0644)
-	if err != nil {
-		return err
-	}
-
-	zgorm.Create(patentObj, db)
+	dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
+	fmt.Println(src, dst)
+	Hadoop.UploadFile(src, dst, *client)
 	NUM++
 	log.Println("parse done!", NUM)
 
