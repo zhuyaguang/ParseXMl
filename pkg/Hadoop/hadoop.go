@@ -30,22 +30,25 @@ func ConnectHadoop() *hdfs.Client {
 	return client
 }
 
-func UploadFile(src, dst string, client hdfs.Client) {
+func UploadFile(src, dst string, client hdfs.Client) error {
 
 	// 上传文件
 
 	err := client.CopyToRemote(src, dst)
 	if err != nil {
 		log.Println(err)
+		return err
 	}
 
 	// 列出文件夹内容
 	infos, err := client.ReadDir(FOOTPATH)
 	if err != nil {
 		log.Fatal(err)
+		return err
 	}
 
 	for _, info := range infos {
 		fmt.Println(info.Name())
 	}
+	return nil
 }
