@@ -107,7 +107,6 @@ func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	err = Hadoop.UploadFile(src, dst, *client)
 	if err != nil {
 		fmt.Println(err)
-		log.Fatal(err)
 	}
 	NUM++
 	log.Println("parse done!", NUM)
@@ -381,7 +380,10 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 
 	dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
 	fmt.Println(src, dst)
-	Hadoop.UploadFile(src, dst, *client)
+	err = Hadoop.UploadFile(src, dst, *client)
+	if err != nil {
+		fmt.Println(err)
+	}
 	NUM++
 	log.Println("parse done!", NUM)
 

@@ -214,7 +214,6 @@ func HandleWalk(output string, patentIndex int) error {
 				if err != nil {
 					return err
 				}
-				log.Println("30-S 解析完毕")
 			case 1:
 				err := parse.Par1Xml(path, output, patentIndex, EngineHadoopGORM)
 				if err != nil {
