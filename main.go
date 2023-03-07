@@ -79,7 +79,7 @@ func extractingXml(dirPath string, output string) error {
 					// 进入 日期 目录
 					if f.IsDir() {
 						patentdir := f.Name()
-						log.Println("file-date", patentdir)
+						//log.Println("file-date", patentdir)
 						sub2files, err := ioutil.ReadDir(dirPath + "/" + patentType + "/" + patentdir)
 						if err != nil {
 							log.Fatal(err)
@@ -88,13 +88,13 @@ func extractingXml(dirPath string, output string) error {
 							patentzip := f.Name()
 
 							if strings.Contains(patentzip, ".zip") || strings.Contains(patentzip, ".ZIP") {
-								log.Println("file-zip", patentzip)
+								//log.Println("file-zip", patentzip)
 								src := dirPath + "/" + patentType + "/" + patentdir + "/" + patentzip
 
 								if strings.Contains(patentType, "IMGS-30-S") {
 									// 解压 压缩包至 output 目录
 									outputS := output + "/30-S/" + patentdir + "/"
-									log.Println("解压中...", patentdir, endTime[0])
+									//log.Println("解压中...", patentdir, endTime[0])
 									if patentdir <= endTime[0] {
 										log.Println("该压缩包已经处理过了，跳过。")
 									} else {
@@ -106,7 +106,7 @@ func extractingXml(dirPath string, output string) error {
 
 								} else if strings.Contains(patentType, "TXTS-10-A") {
 									outputA := output + "/10-A/" + patentdir + "/"
-									log.Println("解压中...")
+									//log.Println("解压中...")
 									if patentdir <= endTime[1] {
 										log.Println("该压缩包已经处理过了，跳过。")
 									} else {
@@ -118,7 +118,7 @@ func extractingXml(dirPath string, output string) error {
 
 								} else if strings.Contains(patentType, "TXTS-10-B") {
 									outputB := output + "/10-B/" + patentdir + "/"
-									log.Println("解压中...")
+									//log.Println("解压中...")
 									if patentdir <= endTime[2] {
 										log.Println("该压缩包已经处理过了，跳过。")
 									} else {
@@ -130,7 +130,7 @@ func extractingXml(dirPath string, output string) error {
 
 								} else if strings.Contains(patentType, "TXTS-20-U") {
 									outputU := output + "/20-U/" + patentdir + "/"
-									log.Println("解压中...")
+									//log.Println("解压中...")
 									if patentdir <= endTime[2] {
 										log.Println("该压缩包已经处理过了，跳过。")
 									} else {
@@ -207,7 +207,6 @@ func HandleWalk(output string, patentIndex int) error {
 	err := filepath.Walk(output, func(path string, info os.FileInfo, err error) error {
 
 		if strings.HasSuffix(path, "XML") {
-			fmt.Printf("%s \n", path)
 			// parse xml
 			switch patentIndex {
 			case 0:

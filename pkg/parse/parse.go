@@ -19,7 +19,7 @@ var NUM = 0
 
 // Par0Xml 主要解析 30-S 类型的专利
 func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error {
-	log.Println("xml path -----", xmlPath, output, patentIndex)
+	log.Println("xml path ,output path type:", xmlPath, output, patentIndex)
 
 	// 得到 XML 文件的名称，比如：CN302021000671538CN00003070960400SDBPZH20220201CN00M
 	fileName := filepath.Base(xmlPath)
@@ -30,8 +30,8 @@ func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 		log.Println(err, "解析失败手动处理========", xmlPath)
 		return nil
 	}
-	root := doc.SelectElement("PatentDocumentAndRelated")
-	log.Println("ROOT element:", root.Tag)
+	doc.SelectElement("PatentDocumentAndRelated")
+	//log.Println("ROOT element:", root.Tag)
 
 	patentOBJ := pkg.Patent{}
 
