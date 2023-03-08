@@ -159,7 +159,6 @@ func extractingXml(dirPath string, output string) error {
 
 func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
-
 	for i, v := range outputArr {
 		eTime := ""
 		output := output + v

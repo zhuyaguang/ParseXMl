@@ -16,6 +16,7 @@ import (
 )
 
 var NUM = 0
+var MAXFILE = 500000
 
 // Par0Xml 主要解析 30-S 类型的专利
 func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error {
@@ -102,12 +103,17 @@ func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 		fmt.Println(err)
 	}
 
+	if NUM%MAXFILE == 0 {
+		Hadoop.CreateDic(*client)
+	}
+
 	dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
 	fmt.Println(src, dst)
 	err = Hadoop.UploadFile(src, dst, *client)
 	if err != nil {
 		fmt.Println(err)
 	}
+
 	NUM++
 	log.Println("parse done!", NUM)
 
@@ -131,7 +137,6 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 		log.Println("root is nil，解析失败手动处理========", xmlPath)
 		return nil
 	}
-	log.Println("ROOT element:", root.Tag)
 
 	resName := ""
 	resNameE := doc.FindElement("./PatentDocumentAndRelated/BibliographicData/InventionTitle")
@@ -288,7 +293,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 			}
 
 		} else {
-			log.Println("该专利 有单独的技术领域、技术背景等字段", xmlPath)
+			// 该专利 有单独的技术领域、技术背景等字段
 			// 技术领域
 			if len(tfE) != 0 {
 				var tfEArr []string
@@ -364,7 +369,6 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 		//InstructionPic: FileToBase64(filepath.Dir(xmlPath)), NLP模型训练中图片无法处理，暂时不放图片
 		AbstractPic: "",
 	}
-	log.Println(instructionWithPicture)
 
 	// 转换为JSON格式的字节数组
 	jsonBytes, err := json.Marshal(patentObj)
@@ -378,12 +382,17 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 		fmt.Println(err)
 	}
 
+	if NUM%MAXFILE == 0 {
+		Hadoop.CreateDic(*client)
+	}
+
 	dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
 	fmt.Println(src, dst)
 	err = Hadoop.UploadFile(src, dst, *client)
 	if err != nil {
 		fmt.Println(err)
 	}
+
 	NUM++
 	log.Println("parse done!", NUM)
 

@@ -17,17 +17,20 @@ func ConnectHadoop() *hdfs.Client {
 	if err != nil {
 		log.Fatal(err)
 	}
+	CreateDic(*client)
+	return client
+}
 
+func CreateDic(client hdfs.Client) {
 	now := time.Now()
 	// 将日期格式化为指定格式
 	dateStr := now.Format("200601021504")
 	// 创建文件夹
 	FileDic = filepath.Join(FOOTPATH + "/" + dateStr)
-	err = client.Mkdir(FileDic, 0777)
+	err := client.Mkdir(FileDic, 0777)
 	if err != nil {
 		log.Println(err)
 	}
-	return client
 }
 
 func UploadFile(src, dst string, client hdfs.Client) error {
