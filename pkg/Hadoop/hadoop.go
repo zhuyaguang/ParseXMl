@@ -27,6 +27,7 @@ func CreateDic(client hdfs.Client) {
 	dateStr := now.Format("200601021504")
 	// 创建文件夹
 	FileDic = filepath.Join(FOOTPATH + "/" + dateStr)
+	log.Println("create Dic", FileDic)
 	err := client.Mkdir(FileDic, 0777)
 	if err != nil {
 		log.Println(err)

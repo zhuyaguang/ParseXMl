@@ -1,7 +1,6 @@
 package parse
 
 import (
-	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"github.com/beevik/etree"
@@ -13,6 +12,7 @@ import (
 	"path/filepath"
 	"sort"
 	"strings"
+	"time"
 )
 
 var NUM = 0
@@ -20,7 +20,7 @@ var MAXFILE = 500000
 
 // Par0Xml 主要解析 30-S 类型的专利
 func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error {
-	log.Println("xml path ,output path type:", xmlPath, output, patentIndex)
+	// log.Println("xml path ,output path type:", xmlPath, output, patentIndex)
 
 	// 得到 XML 文件的名称，比如：CN302021000671538CN00003070960400SDBPZH20220201CN00M
 	fileName := filepath.Base(xmlPath)
@@ -104,25 +104,40 @@ func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	}
 
 	if NUM%MAXFILE == 0 {
+		log.Println("parse done!", NUM)
 		Hadoop.CreateDic(*client)
 	}
 
 	dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
-	fmt.Println(src, dst)
+	//fmt.Println(src, dst)
 	err = Hadoop.UploadFile(src, dst, *client)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("UploadFile error:", err)
 	}
 
 	NUM++
-	log.Println("parse done!", NUM)
+	// log.Println("parse done!", NUM)
 
 	return nil
 }
 
+func retryDo(src, dst string, client hdfs.Client) {
+
+	for {
+		err := Hadoop.UploadFile(src, dst, client)
+		if err == nil {
+			return
+		}
+		if err != nil {
+			fmt.Println("retry UploadFile", err)
+		}
+		time.Sleep(1000)
+	}
+}
+
 // Par1Xml 主要解析 10-A 10-B 20-U 类型的专利
 func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error {
-	log.Println("xml path -----", xmlPath, output, patentIndex)
+	// log.Println("xml path -----", xmlPath, output, patentIndex)
 
 	fileName := filepath.Base(xmlPath)
 	fileName = strings.Split(fileName, ".")[0]
@@ -383,18 +398,19 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	}
 
 	if NUM%MAXFILE == 0 {
+		log.Println("parse done!", NUM)
 		Hadoop.CreateDic(*client)
 	}
 
 	dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
-	fmt.Println(src, dst)
+	// fmt.Println(src, dst)
 	err = Hadoop.UploadFile(src, dst, *client)
 	if err != nil {
 		fmt.Println(err)
 	}
 
 	NUM++
-	log.Println("parse done!", NUM)
+	// log.Println("parse done!", NUM)
 
 	return nil
 }
@@ -439,7 +455,7 @@ func ParDescribeArr(DescribeArr []string, patentIndex int) (string1, string2, st
 
 	}
 
-	fmt.Println(patentIndex, index1, index2, index3, index4, index5)
+	// fmt.Println(patentIndex, index1, index2, index3, index4, index5)
 
 	var stringArr1, stringArr2, stringArr3, stringArr4, stringArr5 []string
 	if index1 != -1 && index2 != -1 && index3 != -1 && index4 != -1 && index5 != -1 {
@@ -496,54 +512,3 @@ func CombineStr(arr []string) string {
 	}
 	return tmp
 }
-
-//func FileToBase64(filePath string) string {
-//	fmt.Println("=======", filePath)
-//	base64String := ""
-//	files, err := ioutil.ReadDir(filePath)
-//	if err != nil {
-//		log.Fatal(err)
-//	}
-//	for _, f := range files {
-//		if strings.HasSuffix(f.Name(), "JPG") || strings.HasSuffix(f.Name(), "TIF") {
-//			picFile := filePath + "/" + f.Name()
-//			base64String = base64String + ConvertToBase64(picFile) + ","
-//		}
-//	}
-//	return base64String
-//
-//}
-
-func toBase64(b []byte) string {
-	return base64.StdEncoding.EncodeToString(b)
-}
-
-//func ConvertToBase64(filePath string) string {
-//	// Read the entire file into a byte slice
-//	bytes, err := ioutil.ReadFile(filePath)
-//	if err != nil {
-//		log.Fatal(err)
-//	}
-//
-//	var base64Encoding string
-//
-//	// Determine the content type of the image file
-//	mimeType := http.DetectContentType(bytes)
-//
-//	// Prepend the appropriate URI scheme header depending
-//	// on the MIME type
-//	switch mimeType {
-//	case "image/jpeg":
-//		base64Encoding += "data:image/jpeg;base64,"
-//	case "image/png":
-//		base64Encoding += "data:image/png;base64,"
-//	}
-//
-//	// Append the base64 encoded output
-//	base64Encoding += toBase64(bytes)
-//
-//	// Print the full base64 representation of the image
-//	//fmt.Println(base64Encoding)
-//
-//	return base64Encoding
-//}
