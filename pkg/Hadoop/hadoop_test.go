@@ -14,3 +14,4 @@ func TestConnectHadoop(t *testing.T) {
 		log.Fatal(err)
 	}
 }
+git

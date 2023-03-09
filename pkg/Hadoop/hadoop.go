@@ -40,7 +40,6 @@ func UploadFile(src, dst string, client hdfs.Client) error {
 
 	err := client.CopyToRemote(src, dst)
 	if err != nil {
-		log.Println(err)
 		return err
 	}
 

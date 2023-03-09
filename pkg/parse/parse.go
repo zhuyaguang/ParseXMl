@@ -17,6 +17,7 @@ import (
 
 var NUM = 0
 var MAXFILE = 500000
+var ERRORNUN = 0
 
 // Par0Xml 主要解析 30-S 类型的专利
 func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error {
@@ -112,7 +113,8 @@ func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	//fmt.Println(src, dst)
 	err = Hadoop.UploadFile(src, dst, *client)
 	if err != nil {
-		fmt.Println("UploadFile error:", err)
+		ERRORNUN++
+		fmt.Println("UploadFile error:", err, src, ERRORNUN)
 	}
 
 	NUM++
@@ -406,7 +408,8 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	// fmt.Println(src, dst)
 	err = Hadoop.UploadFile(src, dst, *client)
 	if err != nil {
-		fmt.Println(err)
+		ERRORNUN++
+		fmt.Println("UploadFile error:", err, src, ERRORNUN)
 	}
 
 	NUM++
