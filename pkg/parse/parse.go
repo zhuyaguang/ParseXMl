@@ -91,6 +91,7 @@ func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 		// patentOBJ.InstructionPic = FileToBase64(filepath.Dir(xmlPath))
 	}
 	patentOBJ.PatentType = pkg.PatentType[patentIndex]
+	patentOBJ.XMLPath = xmlPath
 
 	// 转换为JSON格式的字节数组
 	jsonBytes, err := json.Marshal(patentOBJ)
@@ -385,6 +386,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 		Implementation:         implementation,
 		//InstructionPic: FileToBase64(filepath.Dir(xmlPath)), NLP模型训练中图片无法处理，暂时不放图片
 		AbstractPic: "",
+		XMLPath:     xmlPath,
 	}
 
 	// 转换为JSON格式的字节数组

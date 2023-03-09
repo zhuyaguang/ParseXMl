@@ -43,7 +43,7 @@ func main() {
 	duration := time.Since(start)
 
 	// 把专利数据解压到 output 目录
-	extractingXml(*dataAdd, *outputAdd)
+	// extractingXml(*dataAdd, *outputAdd)
 
 	log.Println(duration)
 

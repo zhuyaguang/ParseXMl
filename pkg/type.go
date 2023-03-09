@@ -33,6 +33,7 @@ type Patent struct {
 	Implementation         string
 	InstructionPic         string
 	AbstractPic            string
+	XMLPath                string
 }
 
 type mysqlPatent struct {
