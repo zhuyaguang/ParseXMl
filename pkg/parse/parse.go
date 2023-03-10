@@ -114,8 +114,12 @@ func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	//fmt.Println(src, dst)
 	err = Hadoop.UploadFile(src, dst, *client)
 	if err != nil {
-		ERRORNUN++
-		fmt.Println("UploadFile error:", err, src, ERRORNUN)
+		if strings.Contains(err.Error(), "file already exists") {
+			ERRORNUN++
+		} else {
+			ERRORNUN++
+			log.Println("UploadFile error:", err, src, ERRORNUN)
+		}
 	}
 
 	NUM++
@@ -233,8 +237,10 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	claim := ""
 	if len(claimList) != 0 {
 		for _, v := range claimList {
-			g := v.SelectElement("ClaimText").Text()
-			claim = claim + g
+			for _, v2 := range v.ChildElements() {
+				g := v2.Text()
+				claim = claim + g
+			}
 		}
 	}
 
@@ -410,8 +416,12 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	// fmt.Println(src, dst)
 	err = Hadoop.UploadFile(src, dst, *client)
 	if err != nil {
-		ERRORNUN++
-		fmt.Println("UploadFile error:", err, src, ERRORNUN)
+		if strings.Contains(err.Error(), "file already exists") {
+			ERRORNUN++
+		} else {
+			ERRORNUN++
+			log.Println("UploadFile error:", err, src, ERRORNUN)
+		}
 	}
 
 	NUM++

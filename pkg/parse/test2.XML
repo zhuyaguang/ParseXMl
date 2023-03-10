@@ -1,64 +1,116 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE business:PatentDocumentAndRelated SYSTEM "/DTDS/ExternalStandards/ipphdb-entities.dtd"[]>
-<business:PatentDocumentAndRelated xmlns:base="http://www.sipo.gov.cn/XMLSchema/base" xmlns:business="http://www.sipo.gov.cn/XMLSchema/business" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:tbl="http://oasis-open.org/specs/soextblx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sipo.gov.cn/XMLSchema/business /DTDS/PatentDocument/Elements/OtherElements.xsd" xsdVersion="V2.2.1" file="CN102020000636064CN00001138899910AFULZH20220104CN00M.XML" dateProduced="20220101" status="C" lang="zh" country="CN" docNumber="113889991" kind="A" datePublication="20220104">
+<business:PatentDocumentAndRelated xmlns:base="http://www.sipo.gov.cn/XMLSchema/base" xmlns:business="http://www.sipo.gov.cn/XMLSchema/business" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:tbl="http://oasis-open.org/specs/soextblx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sipo.gov.cn/XMLSchema/business /DTDS/PatentDocument/Elements/OtherElements.xsd" xsdVersion="V2.2.1" file="CN102022001153013CN00001156161070AFULZH20230117CN00X.XML" dateProduced="20230114" status="C" lang="zh" country="CN" docNumber="115616107" kind="A" datePublication="20230117">
     <business:BibliographicData>
         <business:PublicationReference dataFormat="original" sequence="1" sourceDB="national office">
             <base:DocumentID>
                 <base:WIPOST3Code>CN</base:WIPOST3Code>
-                <base:DocNumber>113889991</base:DocNumber>
+                <base:DocNumber>115616107</base:DocNumber>
                 <base:Kind>A</base:Kind>
-                <base:Date>20220104</base:Date>
+                <base:Date>20230117</base:Date>
             </base:DocumentID>
         </business:PublicationReference>
         <business:PublicationReference dataFormat="standard" sequence="1">
             <base:DocumentID>
                 <base:WIPOST3Code>CN</base:WIPOST3Code>
-                <base:DocNumber>113889991</base:DocNumber>
+                <base:DocNumber>115616107</base:DocNumber>
                 <base:Kind>A</base:Kind>
-                <base:Date>20220104</base:Date>
+                <base:Date>20230117</base:Date>
             </base:DocumentID>
         </business:PublicationReference>
         <business:PublicAvailabilityDate>
             <business:GazetteReference>
-                <business:GazetteNumber>38-0101</business:GazetteNumber>
-                <base:Date>20220104</base:Date>
+                <business:GazetteNumber>39-0301</business:GazetteNumber>
+                <base:Date>20230117</base:Date>
             </business:GazetteReference>
         </business:PublicAvailabilityDate>
         <business:ApplicationReference applType="10" dataFormat="original" sequence="1" sourceDB="national office">
             <base:DocumentID>
                 <base:WIPOST3Code>CN</base:WIPOST3Code>
-                <base:DocNumber>202010636064.6</base:DocNumber>
-                <base:Date>20200703</base:Date>
+                <base:DocNumber>202211153013.3</base:DocNumber>
+                <base:Date>20220921</base:Date>
             </base:DocumentID>
         </business:ApplicationReference>
         <business:ApplicationReference applType="10" dataFormat="standard" sequence="1">
             <base:DocumentID>
                 <base:WIPOST3Code>CN</base:WIPOST3Code>
-                <base:DocNumber>102020000636064</base:DocNumber>
-                <base:Date>20200703</base:Date>
+                <base:DocNumber>102022001153013</base:DocNumber>
+                <base:Date>20220921</base:Date>
             </base:DocumentID>
         </business:ApplicationReference>
         <business:ClassificationIPCRDetails creator="03" processingType="original">
             <business:ClassificationIPCR sequence="1">
                 <business:IPCVersionDate>20060101</business:IPCVersionDate>
-                <business:Section>H</business:Section>
-                <business:MainClass>02</business:MainClass>
-                <business:Subclass>H</business:Subclass>
-                <business:MainGroup>9</business:MainGroup>
+                <business:Section>G</business:Section>
+                <business:MainClass>01</business:MainClass>
+                <business:Subclass>N</business:Subclass>
+                <business:MainGroup>30</business:MainGroup>
                 <business:Subgroup>02</business:Subgroup>
                 <business:GeneratingOffice>
                     <base:WIPOST3Code>CN</base:WIPOST3Code>
                 </business:GeneratingOffice>
                 <business:ClassificationDataSource>H</business:ClassificationDataSource>
-                <base:Text>H02H    9/02    (2006.01)</base:Text>
+                <base:Text>G01N   30/02    (2006.01)</base:Text>
+            </business:ClassificationIPCR>
+            <business:ClassificationIPCR sequence="2">
+                <business:IPCVersionDate>20060101</business:IPCVersionDate>
+                <business:Section>G</business:Section>
+                <business:MainClass>01</business:MainClass>
+                <business:Subclass>N</business:Subclass>
+                <business:MainGroup>30</business:MainGroup>
+                <business:Subgroup>06</business:Subgroup>
+                <business:GeneratingOffice>
+                    <base:WIPOST3Code>CN</base:WIPOST3Code>
+                </business:GeneratingOffice>
+                <business:ClassificationDataSource>H</business:ClassificationDataSource>
+                <base:Text>G01N   30/06    (2006.01)</base:Text>
+            </business:ClassificationIPCR>
+            <business:ClassificationIPCR sequence="3">
+                <business:IPCVersionDate>20060101</business:IPCVersionDate>
+                <business:Section>G</business:Section>
+                <business:MainClass>01</business:MainClass>
+                <business:Subclass>N</business:Subclass>
+                <business:MainGroup>30</business:MainGroup>
+                <business:Subgroup>14</business:Subgroup>
+                <business:GeneratingOffice>
+                    <base:WIPOST3Code>CN</base:WIPOST3Code>
+                </business:GeneratingOffice>
+                <business:ClassificationDataSource>H</business:ClassificationDataSource>
+                <base:Text>G01N   30/14    (2006.01)</base:Text>
+            </business:ClassificationIPCR>
+            <business:ClassificationIPCR sequence="4">
+                <business:IPCVersionDate>20060101</business:IPCVersionDate>
+                <business:Section>G</business:Section>
+                <business:MainClass>01</business:MainClass>
+                <business:Subclass>N</business:Subclass>
+                <business:MainGroup>30</business:MainGroup>
+                <business:Subgroup>34</business:Subgroup>
+                <business:GeneratingOffice>
+                    <base:WIPOST3Code>CN</base:WIPOST3Code>
+                </business:GeneratingOffice>
+                <business:ClassificationDataSource>H</business:ClassificationDataSource>
+                <base:Text>G01N   30/34    (2006.01)</base:Text>
+            </business:ClassificationIPCR>
+            <business:ClassificationIPCR sequence="5">
+                <business:IPCVersionDate>20060101</business:IPCVersionDate>
+                <business:Section>G</business:Section>
+                <business:MainClass>01</business:MainClass>
+                <business:Subclass>N</business:Subclass>
+                <business:MainGroup>30</business:MainGroup>
+                <business:Subgroup>86</business:Subgroup>
+                <business:GeneratingOffice>
+                    <base:WIPOST3Code>CN</base:WIPOST3Code>
+                </business:GeneratingOffice>
+                <business:ClassificationDataSource>H</business:ClassificationDataSource>
+                <base:Text>G01N   30/86    (2006.01)</base:Text>
             </business:ClassificationIPCR>
         </business:ClassificationIPCRDetails>
-        <business:InventionTitle lang="zh" dataFormat="original" sourceDB="national office" processingType="original" creator="03">短路保护电路及短路保护方法</business:InventionTitle>
+        <business:InventionTitle lang="zh" dataFormat="original" sourceDB="national office" processingType="original" creator="03">一种骨康制剂的特征图谱构建方法及其特征图谱</business:InventionTitle>
         <business:Parties>
             <business:ApplicantDetails representative="1">
                 <business:Applicant sequence="1" appType="applicant" dataFormat="original" sourceDB="national office" lang="zh" creator="03" processingType="original">
                     <base:AddressBook lang="zh">
-                        <base:Name>圣邦微电子（北京）股份有限公司</base:Name>
+                        <base:Name>贵州维康子帆药业股份有限公司</base:Name>
                         <base:Address>
                             <base:AddressLine>0</base:AddressLine>
                             <base:AddressMailCode>0</base:AddressMailCode>
@@ -68,12 +120,12 @@
                             <base:AddressBuilding>0</base:AddressBuilding>
                             <base:Street>0</base:Street>
                             <base:AddressCity>0</base:AddressCity>
-                            <base:County>海淀区</base:County>
-                            <base:City>市辖区</base:City>
-                            <base:Province>北京市</base:Province>
-                            <base:PostCode>100089</base:PostCode>
+                            <base:County>修文县</base:County>
+                            <base:City>贵阳市</base:City>
+                            <base:Province>贵州省</base:Province>
+                            <base:PostCode>550000</base:PostCode>
                             <base:WIPOST3Code>CN</base:WIPOST3Code>
-                            <base:Text>100089 北京市海淀区西三环北路87号13层3-1301</base:Text>
+                            <base:Text>550000 贵州省贵阳市修文县扎佐医药工业园区</base:Text>
                         </base:Address>
                     </base:AddressBook>
                     <business:OrganizationCode createDate="00000000" creator="00">0000000000</business:OrganizationCode>
@@ -82,212 +134,368 @@
             <business:InventorDetails>
                 <business:Inventor sequence="1" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
                     <base:AddressBook lang="zh">
-                        <base:Name>崔先宇</base:Name>
+                        <base:Name>贺赫赫</base:Name>
+                    </base:AddressBook>
+                </business:Inventor>
+                <business:Inventor sequence="2" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+                    <base:AddressBook lang="zh">
+                        <base:Name>曾庆梅</base:Name>
+                    </base:AddressBook>
+                </business:Inventor>
+                <business:Inventor sequence="3" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+                    <base:AddressBook lang="zh">
+                        <base:Name>陈玉和</base:Name>
+                    </base:AddressBook>
+                </business:Inventor>
+                <business:Inventor sequence="4" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+                    <base:AddressBook lang="zh">
+                        <base:Name>龙彦泽</base:Name>
+                    </base:AddressBook>
+                </business:Inventor>
+                <business:Inventor sequence="5" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+                    <base:AddressBook lang="zh">
+                        <base:Name>沈万燕</base:Name>
+                    </base:AddressBook>
+                </business:Inventor>
+                <business:Inventor sequence="6" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+                    <base:AddressBook lang="zh">
+                        <base:Name>李勇军</base:Name>
+                    </base:AddressBook>
+                </business:Inventor>
+                <business:Inventor sequence="7" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+                    <base:AddressBook lang="zh">
+                        <base:Name>周安琪</base:Name>
+                    </base:AddressBook>
+                </business:Inventor>
+                <business:Inventor sequence="8" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+                    <base:AddressBook lang="zh">
+                        <base:Name>胡中润</base:Name>
+                    </base:AddressBook>
+                </business:Inventor>
+                <business:Inventor sequence="9" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+                    <base:AddressBook lang="zh">
+                        <base:Name>韦艳萍</base:Name>
                     </base:AddressBook>
                 </business:Inventor>
             </business:InventorDetails>
             <business:AgentDetails>
-                <business:CustomerNumber>11710</business:CustomerNumber>
+                <business:CustomerNumber>52114</business:CustomerNumber>
                 <business:Agent sequence="1" lang="zh" dataFormat="original" sourceDB="national office" repType="agent" processingType="original" creator="03">
                     <business:Agency>
                         <base:AddressBook lang="zh">
-                            <base:OrganizationName>北京开阳星知识产权代理有限公司 11710</base:OrganizationName>
+                            <base:OrganizationName>贵州派腾知识产权代理有限公司 52114</base:OrganizationName>
                         </base:AddressBook>
                     </business:Agency>
                     <base:AddressBook lang="zh">
-                        <base:Name>安伟</base:Name>
+                        <base:Name>龙远宁</base:Name>
                     </base:AddressBook>
                 </business:Agent>
             </business:AgentDetails>
         </business:Parties>
     </business:BibliographicData>
     <business:Abstract dataFormat="original" lang="zh" sourceDB="national office" processingType="original" creator="03">
-        <base:Paragraphs num="0001">本公开涉及一种短路保护电路及短路保护方法，短路保护电路包括电流补偿电路，用于根据输入的电源电压信号调节第一补偿电流和第二补偿电流；时钟振荡电路，与电流补偿电路连接，用于根据第一补偿电流调节输出的第一时钟信号，以及用于根据第二补偿电流调节输出的第二时钟信号；其中，第一时钟信号的周期和第二时钟信号的周期反向变化；打嗝短路保护电路与时钟振荡电路连接，用于根据第一时钟信号调节输出的打嗝短路保护信号的有效电平持续时间，以及用于根据第二时钟信号调节输出的打嗝短路保护信号的周期。通过本公开的技术方案，降低了芯片短路功耗，以确保芯片在高电源电压短路工作时不会被烧毁。</base:Paragraphs>
+        <base:Paragraphs num="0001">本发明涉及药物检测技术领域，具体是一种骨康制剂的特征图谱构建方法及其特征图谱。本发明对供试品、对照品分别制备后，建立适合的色谱条件：以0.1％磷酸水溶液为流动相A，乙腈为流动相B，建立特定的流动相系统，并按特定程序进行梯度洗脱，采用HPLC法进行测定，最终获得适用于骨康制剂质量检测的特征图谱。本发明获得了36个共有峰，并指认了其中8‑18个特征峰，并对所指认的化学成分进行了来源归属，可以较为全面、客观、准确的检测和评价骨康胶囊及其他剂型的质量。</base:Paragraphs>
         <business:AbstractFigure>
             <base:Figure num="0001">
-                <base:Image he="473" wi="1000" file="202010636064.JPG" imgContent="undefined" imgFormat="JPEG" />
+                <base:Image he="423" wi="1000" file="202211153013.JPG" imgContent="undefined" imgFormat="JPEG" />
             </base:Figure>
         </business:AbstractFigure>
     </business:Abstract>
     <business:Description lang="zh" dataFormat="original" sourceDB="national office" creator="03">
-        <business:InventionTitle id="title1">短路保护电路及短路保护方法</business:InventionTitle>
+        <business:InventionTitle id="title1">一种骨康制剂的特征图谱构建方法及其特征图谱</business:InventionTitle>
         <business:TechnicalField id="technical-field001">
             <base:Paragraphs id="p0001">技术领域</base:Paragraphs>
-            <base:Paragraphs id="p0002" num="n0001">本公开涉及电子电路技术领域，尤其涉及一种短路保护电路及短路保护方法。</base:Paragraphs>
+            <base:Paragraphs id="p0002" num="n0001">本发明涉及药品检测技术领域，具体是一种骨康制剂的特征图谱构建方法及其特征图谱。</base:Paragraphs>
         </business:TechnicalField>
         <business:BackgroundArt id="background-art001">
             <base:Paragraphs id="p0003">背景技术</base:Paragraphs>
-            <base:Paragraphs id="p0004" num="n0002">一般芯片在短路时会产生较大的短路电流，如果此时施加于芯片上的电源电压较高，会由于芯片整体功率过大而导致芯片烧毁。目前可以通过降低芯片短路电流来降低高电源电压时芯片烧毁的概率，但是由于特定原因导致芯片的短路电流无法降低或者需要保持较大的芯片短路电流时，会引入hiccup逻辑，即打嗝逻辑来防止芯片短路时被烧毁。</base:Paragraphs>
-            <base:Paragraphs id="p0005" num="n0003">目前的打嗝短路保护电路，其输出的hiccup信号，即打嗝短路保护信号中的有效电平持续时间和打嗝短路保护信号的周期只能同步变化，如果施加于芯片的电源电压过高，同步变化的打嗝短路保护信号的有效电平持续时间和周期会导致芯片短路功耗增加，且施加于芯片的电源电压越高，芯片的短路功耗越大，导致芯片短路时容易被烧毁。</base:Paragraphs>
+            <base:Paragraphs id="p0004" num="n0002">骨康胶囊是贵州维康子帆药业股份有限公司自主研发治疗骨科疾病的全国独家品种，是在苗族民间验方基础上采用现代科技制药手段研制而成的独家新型民族药，收载于国家中成药标准汇编骨伤科分册和国家药监局单页标准(2005)，现标准号为：WS-10464(ZD-0464)-2005-2012Z。本方所选药材均为贵州苗族习用药材，按照苗族医药中“纲、经、症、疾”等理论，在芭蕉根、续断、酢浆草等具有消肿止痛、活血化瘀、舒筋通络、补肾壮骨功效的民间验方基础上，由公司科研人员加以临床验证筛选，组方确定为芭蕉根、酢浆草、续断、补骨脂、三七。其具有滋补肝肾，强筋壮骨，通络止痛之功效，用于治疗骨折、骨性关节炎、骨质疏松症属肝肾不足、经络瘀阻者。</base:Paragraphs>
+            <base:Paragraphs id="p0005" num="n0003">目前，在骨康胶囊质量控制方面未见其有特征图谱的建立，对于骨康胶囊的研究侧重于临床用药研究以及含量测定等研究，大多是通过不同的方法及参数测定骨康胶囊中单一成分的含量，例如，①高效液相色谱法测定骨康胶囊中淫羊藿苷的含量，李美琴等，海峡药学，2007-02-28；其方法是:十八烷基键合硅胶为填充剂；流动相:甲醇-2％冰醋酸(1∶1)；检测波长:246nm；柱温:室温；流速:1.0m L/min；②反相高效液相色谱(RP-HPLC)法测定骨康胶囊中丹参酮ⅡA含量的方法，孙建宇等，医药导报，2007-04-01；其方法是：选用Symmetry C18色谱柱(4.6mm×250mm,5μm),以甲醇-水(82:18)为流动相,流速为1.0mL/min,检测波长为270nm；③LC-MS法同时测定骨康胶囊中6种主要成分(三七皂苷R1、人参皂苷Rg1、人参皂苷Rb1、川续断皂苷Ⅵ、补骨脂素和异补骨脂素)的含量，杨洁芳，中国药房，2012-9-12；其方法是:采用液相色谱-质谱联用技术。LC条件：色谱柱为Agilent ZorbaxSB-C18(150mm×4.6mm,5μm),流动相为甲醇-水(梯度洗脱),柱温为25℃，流速为0.25mL/min，分析时间为30min。</base:Paragraphs>
+            <base:Paragraphs id="p0006" num="n0004">又或者是只针对骨康胶囊中所用的单一药材的特征图谱，例如①三七不同来源指纹图谱数字化研究，童湘伟等，医学信息，2021-07-15；其方法是：采用高效液相色谱法建立三七药材指纹图谱,色谱柱InertSustainTMAQ-C18,流动相为乙腈-0.1％磷酸溶液,梯度洗脱,流速1.0ml/min,检测波长203nm,柱温25℃,进样量10μl,记录时间70min,进行方法学考察；②续断HPLC特征图谱及3种活性成分的含量测定，陈璞等，中药材，2017-07-04；其方法是：采用Thermo BDS Hypersil C18(250mm×4.6mm,5μm)色谱柱,以乙腈-0.1％磷酸溶液为流动相进行梯度洗脱,流速1.0mL/min,柱温30℃,检测波长220nm。结果:不同产地10批续断样品的HPLC谱图具有很好的一致性,标定了12个共有峰；③补骨脂药材UPLC指纹图谱建立及12种主要成分含量测定，王娟等，中草药，2021-01-20；其方法是：采用Shim-pack GIST-HP色谱柱(100mm×2.1mm,1.9μm)；以水和乙腈为流动相,梯度洗脱,同时测定了补骨脂药材中12种成分的含量。结果：建立了补骨脂药材的UPLC指纹图谱,29批药材的相似度在0.827～0.989,共标定出21个共有峰,并指认出其中12个色谱峰。</base:Paragraphs>
+            <base:Paragraphs id="p0007" num="n0005">目前针对骨康产品的图谱及检测方法(CN201310382486.5骨康药物的质量控制方法)，也只是针对酢浆草中的刺槐素-6-C-β-D-葡萄糖苷，以其作为骨康胶囊中的含量测定指标性成分，但是并没有针对骨康胶囊中多种药物的整体特征图谱及构建方法，分析方向较为单一，无法充分对骨康胶囊的质量进行全面控制提供依据。</base:Paragraphs>
+            <base:Paragraphs id="p0008" num="n0006">因此，为了客观真实的反应骨康胶囊及相同药材制成的片剂、颗粒剂、口服液等口服剂型中所含化学成分的种类与数量，可以较为全面、客观、准确的检测和评价骨康胶囊及其他剂型的质量，目前急需提供一种全面的骨康制剂特征图谱的检测方法，其最好具有方法简便、稳定性好、精密度高等优点，可有效为骨康胶囊及其他制剂的质量控制提供参考。</base:Paragraphs>
         </business:BackgroundArt>
         <business:Disclosure id="disclosure001">
-            <base:Paragraphs id="p0006">发明内容</base:Paragraphs>
-            <base:Paragraphs id="p0007" num="n0004">为了解决上述技术问题或者至少部分地解决上述技术问题，本公开提供了一种短路保护电路及短路保护方法，降低了芯片短路功耗，以确保芯片在高电源电压短路工作时不会被烧毁。</base:Paragraphs>
-            <base:Paragraphs id="p0008" num="n0005">本公开实施例提供了一种短路保护电路，包括：</base:Paragraphs>
-            <base:Paragraphs id="p0009" num="n0006">电流补偿电路，用于根据输入的电源电压信号调节第一补偿电流和第二补偿电流；</base:Paragraphs>
-            <base:Paragraphs id="p0010" num="n0007">时钟振荡电路，与所述电流补偿电路连接，用于根据所述第一补偿电流调节输出的第一时钟信号，以及用于根据所述第二补偿电流调节输出的第二时钟信号；其中，所述第一时钟信号的周期和所述第二时钟信号的周期反向变化；</base:Paragraphs>
-            <base:Paragraphs id="p0011" num="n0008">打嗝短路保护电路与所述时钟振荡电路连接，用于根据所述第一时钟信号调节输出的打嗝短路保护信号的有效电平持续时间，以及用于根据所述第二时钟信号调节输出的所述打嗝短路保护信号的周期。</base:Paragraphs>
-            <base:Paragraphs id="p0012" num="n0009">可选地，所述时钟振荡电路包括：</base:Paragraphs>
-            <base:Paragraphs id="p0013" num="n0010">第一振荡器，用于根据第一设定电流与所述第一补偿电流的和值调节输出的所述第一时钟信号；</base:Paragraphs>
-            <base:Paragraphs id="p0014" num="n0011">第二振荡器，用于根据第二设定电流与所述第二补偿电流的差值调节输出的所述第二时钟信号；</base:Paragraphs>
-            <base:Paragraphs id="p0015" num="n0012">其中，所述第一补偿电流和所述第二补偿电流同向变化。</base:Paragraphs>
-            <base:Paragraphs id="p0016" num="n0013">可选地，所述时钟振荡电路还包括：</base:Paragraphs>
-            <base:Paragraphs id="p0017" num="n0014">第一恒流源和第一电容，所述第一恒流源同向接入所述第一补偿电流并向所述第一电容充电，所述第一振荡器用于根据所述第一电容的充电电流调节输出的所述第一时钟信号；</base:Paragraphs>
-            <base:Paragraphs id="p0018" num="n0015">第二恒流源和第二电容，所述第二恒流源反向接入所述第二补偿电流并向所述第二电容充电，所述第二振荡器用于根据所述第二电容的充电电流调节输出的所述第二时钟信号。</base:Paragraphs>
-            <base:Paragraphs id="p0019" num="n0016">可选地，所述第一恒流源的正端接入第一电源信号，所述第一恒流源的负端分别与所述第一振荡器的充电控制端和所述第一电容的第一端连接并用于输入所述第一补偿电流，所述第一电容的第二端接入第二电源信号；</base:Paragraphs>
-            <base:Paragraphs id="p0020" num="n0017">所述第二恒流源的正端接入第一电源信号，所述第二恒流源的负端分别与所述第二振荡器的充电控制端和所述第二电容的第一端连接并用于输出所述第二补偿电流，所述第二电容的第二端接入第二电源信号。</base:Paragraphs>
-            <base:Paragraphs id="p0021" num="n0018">可选地，所述电流补偿电路包括：</base:Paragraphs>
-            <base:Paragraphs id="p0022" num="n0019">比较器、第一补偿控制电路和第二补偿控制电路，所述第一补偿控制电路与所述第二补偿控制电路连接；</base:Paragraphs>
-            <base:Paragraphs id="p0023" num="n0020">所述比较器用于比较所述电源电压信号与参考信号，并根据比较结果调节输出的比较信号；</base:Paragraphs>
-            <base:Paragraphs id="p0024" num="n0021">所述第一补偿控制电路用于根据所述比较信号调节所述第一补偿电流；</base:Paragraphs>
-            <base:Paragraphs id="p0025" num="n0022">所述第二补偿控制电路用于根据所述比较信号调节所述第二补偿电流。</base:Paragraphs>
-            <base:Paragraphs id="p0026" num="n0023">可选地，所述比较器与所述第一补偿控制电路连接；</base:Paragraphs>
-            <base:Paragraphs id="p0027" num="n0024">所述比较器的正向输入端接入所述参考信号，所述比较器的反向输入端接入所述电源电压信号；</base:Paragraphs>
-            <base:Paragraphs id="p0028" num="n0025">所述第一补偿控制电路包括第一P型电流镜和第二P型电流镜，所述第一P型电流镜用于根据所述比较信号调节输出的所述第一补偿电流，所述第二P型电流镜用于输出所述比较信号至所述第二补偿控制电路；</base:Paragraphs>
-            <base:Paragraphs id="p0029" num="n0026">所述第二补偿控制电路包括N型电流镜，所述N型电流镜用于根据所述比较信号调节输入的所述第二补偿电流。</base:Paragraphs>
-            <base:Paragraphs id="p0030" num="n0027">可选地，所述比较器与所述第二补偿控制电路连接；</base:Paragraphs>
-            <base:Paragraphs id="p0031" num="n0028">所述比较器的正向输入端接入所述电源电压信号，所述比较器的反向输入端接入所述参考信号；</base:Paragraphs>
-            <base:Paragraphs id="p0032" num="n0029">所述第二补偿控制电路包括第一N型电流镜和第二N型电流镜，所述第一N型电流镜用于根据所述比较信号调节输入的所述第二补偿电流，所述第二N型电流镜用于输出所述比较信号至所述第一补偿控制电路；</base:Paragraphs>
-            <base:Paragraphs id="p0033" num="n0030">所述第一补偿控制电路包括P型电流镜，所述P型电流镜用于根据所述比较信号调节输出的所述第一补偿电流。</base:Paragraphs>
-            <base:Paragraphs id="p0034" num="n0031">可选地，所述第一补偿控制电路配置有第一限流源，所述第一限流源用于限制所述第一补偿控制电路输出的所述第一补偿电流不超过第一限流值；和/或，</base:Paragraphs>
-            <base:Paragraphs id="p0035" num="n0032">所述第二补偿控制电路配置有第二限流源，所述第二限流源用于限制所述第二补偿控制电路输入的所述第二补偿电流不超过第二限流值。</base:Paragraphs>
-            <base:Paragraphs id="p0036" num="n0033">本公开实施例还提供了一种短路保护方法，包括：</base:Paragraphs>
-            <base:Paragraphs id="p0037" num="n0034">根据电源电压信号调节第一补偿电流和第二补偿电流；</base:Paragraphs>
-            <base:Paragraphs id="p0038" num="n0035">根据所述第一补偿电流调节第一时钟信号，根据所述第二补偿电流调节第二时钟信号；其中，所述第一时钟信号的周期和所述第二时钟信号的周期反向变化；</base:Paragraphs>
-            <base:Paragraphs id="p0039" num="n0036">根据所述第一时钟信号调节打嗝短路保护信号的有效电平持续时间，以及根据所述第二时钟信号所述调节打嗝短路保护信号的周期。</base:Paragraphs>
-            <base:Paragraphs id="p0040" num="n0037">可选地，所述的短路保护方法具体包括：</base:Paragraphs>
-            <base:Paragraphs id="p0041" num="n0038">当所述电源电压信号的电平值大于参考信号的电平值且所述电源电压信号的电平值增加时，控制所述第一补偿电流和所述第二补偿电流增加，以及控制所述第一时钟信号的周期减小，所述第二时钟信号的周期增加，以控制所述打嗝短路保护信号的有效电平持续时间减小，所述打嗝短路保护信号的周期增加；</base:Paragraphs>
-            <base:Paragraphs id="p0042" num="n0039">当所述电源电压信号的电平值小于所述参考信号的电平值时，控制所述第一补偿电流和所述第二补偿电流截止。</base:Paragraphs>
-            <base:Paragraphs id="p0043" num="n0040">本公开实施例提供的技术方案与现有技术相比具有如下优点：</base:Paragraphs>
-            <base:Paragraphs id="p0044" num="n0041">本公开实施例设置短路保护电路包括电流补偿电路和时钟振荡电路，时钟振荡电路分别与电流补偿电路和打嗝保护电路连接，电流补偿电路根据输入的电源电压信号调节第一补偿电流和第二补偿电流，时钟振荡电路根据第一补偿电流调节输出的第一时钟信号，以及根据第二补偿电流调节输出的第二时钟信号，打嗝保护电路根据第一时钟信号调节输出的打嗝短路保护信号的有效电平持续时间，以及根据第二时钟信号调节输出的打嗝短路保护信号的周期，设置第一时钟信号的周期与第二时钟信号的周期反向变化，即可以实现第一时钟信号的周期减小的同时第二时钟信号的周期增加，进而有利于实现打嗝短路保护信号的有效电平持续时间减小的同时，打嗝短路保护信号的周期增加，在电源电压信号较大时降低芯片短路电流的持续时间以及降低芯片短路情况出现的频率，进而降低芯片短路功耗，以确保芯片在高电源电压短路工作时不会被烧毁。</base:Paragraphs>
+            <base:Paragraphs id="p0009">发明内容</base:Paragraphs>
+            <base:Paragraphs id="p0010" num="n0007">为了解决现有技术中存在的上述技术问题，本发明提供了一种骨康制剂的特征图谱构建方法及其特征图谱，具体如下：</base:Paragraphs>
+            <base:Paragraphs id="p0011" num="n0008">一种骨康制剂的特征图谱构建方法，所述骨康制剂由芭蕉根、酢浆草、续断、补骨脂和三七共5味药材制成，所述特征图谱是对制剂中续断、补骨脂、三七、酢浆草药材，以十八烷基硅烷键合硅胶为填充剂，以0.1％磷酸水溶液为流动相A，乙腈为流动相B，进行梯度洗脱的HPLC法特征图谱构建过程；其中，梯度洗脱条件如下：</base:Paragraphs>
+            <base:Paragraphs id="p0012" num="n0009">
+                <base:Image he="428" wi="1000" file="BDA0003857132230000041.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0013" num="n0010">上述骨康制剂的特征图谱构建方法，步骤如下：</base:Paragraphs>
+            <base:Paragraphs id="p0014" num="n0011">(1)检测条件</base:Paragraphs>
+            <base:Paragraphs id="p0015" num="n0012">以十八烷基硅烷键合硅胶为填充剂，以0.1％磷酸水溶液为流动相A，乙腈为流动相B，进行梯度洗脱；理论板数按异补骨脂素峰计算应不低于100000；</base:Paragraphs>
+            <base:Paragraphs id="p0016" num="n0013">所述梯度洗脱条件为：</base:Paragraphs>
+            <base:Paragraphs id="p0017" num="n0014">
+                <base:Image he="424" wi="1000" file="BDA0003857132230000042.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0018" num="n0015">(2)参照物溶液的制备</base:Paragraphs>
+            <base:Paragraphs id="p0019" num="n0016">分别取新绿原酸、绿原酸、隐绿原酸、补骨脂苷、异补骨脂苷、异绿原酸B、异绿原酸A、异绿原酸C、三七皂苷R<base:Sub>1</base:Sub>、人参皂苷Rg<base:Sub>1</base:Sub>和人参皂苷Re、补骨脂素、异补骨脂素、川续断皂苷Ⅵ、人参皂苷Rb<base:Sub>1</base:Sub>、人参皂苷Rd、补骨脂酚和马钱苷对照品，加70％甲醇制成每1ml各含0.25mg的混合对照品溶液，作为对照品参照物溶液；</base:Paragraphs>
+            <base:Paragraphs id="p0020" num="n0017">(3)供试品溶液的制备</base:Paragraphs>
+            <base:Paragraphs id="p0021" num="n0018">取骨康制剂内容物，至于容器中，加70％甲醇后密塞静置，然后超声处理1-3次，放冷，用甲醇补足减失的重量，摇匀，滤过，取续滤液即得；</base:Paragraphs>
+            <base:Paragraphs id="p0022" num="n0019">(4)测定法</base:Paragraphs>
+            <base:Paragraphs id="p0023" num="n0020">分别精密吸取参照物溶液和供试品溶液各1μL，注入高效液相色谱仪，测定；</base:Paragraphs>
+            <base:Paragraphs id="p0024" num="n0021">(5)特征图谱的建立：进行多批次供试品测定，记录色谱图，分别考察各供试品溶液的色谱图特征峰，从骨康制剂供试品溶液的共有峰中选取各药材中具有代表性的化合物峰为特征峰，并进行色谱峰的化学成分指认及归属确定，得到骨康胶囊特征图谱。</base:Paragraphs>
+            <base:Paragraphs id="p0025" num="n0022">进一步的，所述特征图谱构建方法，具体步骤如下：</base:Paragraphs>
+            <base:Paragraphs id="p0026" num="n0023">(1)检测条件——色谱条件与系统适用性试验</base:Paragraphs>
+            <base:Paragraphs id="p0027" num="n0024">以十八烷基硅烷键合硅胶为填充剂，柱长为100mm，内径为2.1mm，粒径为1.6μm；以0.1％磷酸水溶液为流动相A，乙腈为流动相B，进行梯度洗脱；流速为每分钟0.3ml；柱温为45℃；检测波长为203nm；理论板数按异补骨脂素峰计算应不低于100000；</base:Paragraphs>
+            <base:Paragraphs id="p0028" num="n0025">所述梯度洗脱条件为：</base:Paragraphs>
+            <base:Paragraphs id="p0029" num="n0026">
+                <base:Image he="342" wi="1000" file="BDA0003857132230000051.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0030" num="n0027">
+                <base:Image he="96" wi="1000" file="BDA0003857132230000061.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0031" num="n0028">(2)参照物溶液的制备</base:Paragraphs>
+            <base:Paragraphs id="p0032" num="n0029">分别取新绿原酸、绿原酸、隐绿原酸、补骨脂苷、异补骨脂苷、异绿原酸B、异绿原酸A、异绿原酸C、三七皂苷R<base:Sub>1</base:Sub>、人参皂苷Rg<base:Sub>1</base:Sub>和人参皂苷Re、补骨脂素、异补骨脂素、川续断皂苷Ⅵ、人参皂苷Rb<base:Sub>1</base:Sub>、人参皂苷Rd、补骨脂酚和马钱苷对照品，加70％甲醇制成每1ml各含0.25mg的混合对照品溶液，作为对照品参照物溶液；</base:Paragraphs>
+            <base:Paragraphs id="p0033" num="n0030">(3)供试品溶液的制备</base:Paragraphs>
+            <base:Paragraphs id="p0034" num="n0031">取骨康制剂内容物，至于容器中，加70％甲醇后密塞静置10-15小时，所述骨康制剂内容物和70％甲醇的质量体积比为1：12.5；然后取静置后的供试品溶液，在功率200W、频率40kHz的条件下，超声处理25-40分钟，静置40-80分钟，再超声处理25-40分钟，放冷，再称定重量，用70％甲醇补足减失的重量，摇匀，滤过，取续滤，即得；</base:Paragraphs>
+            <base:Paragraphs id="p0035" num="n0032">(4)测定法</base:Paragraphs>
+            <base:Paragraphs id="p0036" num="n0033">分别精密吸取参照物溶液和供试品溶液各1μL，注入高效液相色谱仪，测定；</base:Paragraphs>
+            <base:Paragraphs id="p0037" num="n0034">(5)特征图谱的建立：进行多批次供试品测定，记录色谱图，分别考察各供试品溶液的色谱图特征峰，从骨康制剂供试品溶液的共有峰中选取各药材中具有代表性的化合物峰为特征峰，并进行色谱峰的化学成分指认及归属确定，得到骨康胶囊特征图谱。</base:Paragraphs>
+            <base:Paragraphs id="p0038" num="n0035">所述骨康制剂可以是按照国家药品标准、标准号为：WS-10464(ZD-0464)-2005-2012Z)制备得到的骨康胶囊，也可以是按照如下方法制成的片剂、颗粒、口服液或其他口服剂型：芭蕉根600g、酢浆草400g、补骨脂600g、续断300g、三七150g，以上五味，取芭蕉根30g和三七分别粉碎成细粉，剩余芭蕉根与其余补骨脂、酢浆草、续断三味加水煎煮三次，每次1小时，合并煎液，滤过，滤液浓缩至60℃时相对密度为1.31～1.35的稠膏，加入上述细粉，混匀，干燥，粉碎成细粉，混匀，然后加入药学上可接受的口服剂型所需辅料，制成片剂、颗粒、口服液或其他口服剂型。</base:Paragraphs>
+            <base:Paragraphs id="p0039" num="n0036">所述步骤(3)供试品溶液的制备中，还包括离心步骤，是将超声后的续滤液置离心管中，以12000转/分钟离心5-20分钟。</base:Paragraphs>
+            <base:Paragraphs id="p0040" num="n0037">在步骤(5)特征图谱的建立时，还包括阴性供试品溶液的制备、单味药材供试品溶液的制备步骤，以便进行色谱峰的指认及归属确定：阴性供试品溶液的制备：按骨康制剂制备方法，分别制备缺芭蕉根、酢浆草、补骨脂、续断和缺三七的阴性对照样品，然后按照步骤(3)方法制备各味药材阴性样品溶液；单味药材供试品溶液的制备：按骨康制剂制备方法，分别制备芭蕉根、酢浆草、补骨脂、续断和三七各单味药样品，然后按照步骤(3)方法制备单味药材样品溶液。</base:Paragraphs>
+            <base:Paragraphs id="p0041" num="n0038">所述步骤(5)特征图谱的建立，是在分别考察多批次供试品溶液的色谱图特征峰后，共获得36个共有峰，从该36个共有峰中拟定8-18个特征峰，并进行色谱峰的化学成分指认及归属确定，得到骨康制剂特征图谱。</base:Paragraphs>
+            <base:Paragraphs id="p0042" num="n0039">进一步的，所述步骤(5)中特征峰的拟定，是从该36个共有峰中选取各药材中具有代表性的化合物16个峰和酢浆草中1个峰为特征峰，共拟定了17个特征峰；所述色谱峰的化学成分指认及归属确定，是对骨康供试品溶液、单独各味药供试品溶液、缺各味药的阴性对照溶液及70％甲醇的空白溶液与对照品参照物溶液中化学对照品的色谱行为及光谱进行比较，指认了其中18个峰，峰1：新绿原酸；峰2：绿原酸；峰3：隐绿原酸；峰A：马钱苷；峰4：补骨脂苷；峰5：异补骨脂苷；峰7：异绿原酸B；峰8：异绿原酸A；峰9：异绿原酸C；峰10：三七皂苷R1；峰11：人参皂苷Rg<base:Sub>1</base:Sub>和人参皂苷Re；峰12：补骨脂素；峰13(S)：异补骨脂素；峰14：川续断皂苷Ⅵ；峰15：人参皂苷Rb1；峰16：人参皂苷Rd；峰17：补骨脂酚；所述峰1-峰3、峰A、峰7-峰9、峰14共8个特征峰来源于续断；峰4、峰5、峰12、峰13(S)和峰17共5个峰来源于补骨脂；峰10、峰11、峰15、峰16共4个峰来源于三七。</base:Paragraphs>
+            <base:Paragraphs id="p0043" num="n0040">利用前述骨康制剂的特征图谱构建方法构建得到的特征图谱，如图2所示。</base:Paragraphs>
+            <base:Paragraphs id="p0044" num="n0041">上述的骨康制剂的特征图谱构建方法或骨康制剂特征图谱，在骨康胶囊产品的鉴定和质量控制中的应用。</base:Paragraphs>
+            <base:Paragraphs id="p0045" num="n0042">上述的骨康胶囊的特征图谱构建方法及特征图谱，均可以用于可以较为全面、客观、准确的检测和评价骨康胶囊的质量，有效为骨康胶囊质量控制提供参考。</base:Paragraphs>
+            <base:Paragraphs id="p0046" num="n0043">在确定本研究色谱条件之前，申请人进行了较多实验，本申请中的具体条件及参数是综合比较各实验结果后，最终选择得到本研究的色谱条件，探究过程中的具体实验及结果如下：</base:Paragraphs>
+            <base:Paragraphs id="p0047" num="n0044">1.高效液相色谱仪和超高液相色谱仪的选择</base:Paragraphs>
+            <base:Paragraphs id="p0048" num="n0045">实验分别采用高效液相色谱仪和超高液相色谱仪进行骨康胶囊特征图谱研究，结果表明超高液相色谱仪较高效液相色谱仪耗时短、分离度较好，因此采用超高液相色谱仪进行研究。</base:Paragraphs>
+            <base:Paragraphs id="p0049" num="n0046">2.色谱柱的考察</base:Paragraphs>
+            <base:Paragraphs id="p0050" num="n0047">考察了①CORTECSTM C18(4.6mm×150mm,2.7μm)、②CORTECSTM C18+(4.6mm×150mm,2.7μm)、③Agilent Eclipse Plus C18 RRHD(2.1mm×150mm,1.8μm)、④CORTECSUPLC T3(2.1mm×100mm,1.6μm)色谱柱，柱①和柱②与柱③和柱④相比，柱①和柱②色谱峰的分离效果较差，柱③与柱④比较色谱峰的检出和分离度略有差异，柱④的色谱峰分���效果、峰形更好、基线更为平稳，因此选用柱④CORTECS UPLC T3(2.1mm×100mm,1.6μm)色谱柱进行分析。</base:Paragraphs>
+            <base:Paragraphs id="p0051" num="n0048">3.流动相的考察</base:Paragraphs>
+            <base:Paragraphs id="p0052" num="n0049">实验采用以下流动相系统进行考察，以色谱峰数目、分离效果、基线平稳、色谱峰峰形等为评价指标选取最佳流动相系统。</base:Paragraphs>
+            <base:Paragraphs id="p0053" num="n0050">a.A相：0.1％甲酸水，B相：0.1％甲酸乙腈；</base:Paragraphs>
+            <base:Paragraphs id="p0054" num="n0051">b.A相：0.1％甲酸水，B相：0.1％甲酸甲醇；</base:Paragraphs>
+            <base:Paragraphs id="p0055" num="n0052">c.A相：0.1％甲酸水溶液，B相：乙腈；</base:Paragraphs>
+            <base:Paragraphs id="p0056" num="n0053">d.A相：0.1％磷酸水溶液，B相：乙腈；</base:Paragraphs>
+            <base:Paragraphs id="p0057" num="n0054">实验结果表明，a、b条件相比，b条件下有部分色谱峰成分未检出，而a条件的色谱峰的数目较多，所以选用乙腈作为有机相，a、c、d三个条件相比，0.1％磷酸水作为水相、乙腈为有机相时，色谱峰数目最多、色谱峰分离效果较好，基线也较为平稳，所以选用d条件进行分析。</base:Paragraphs>
+            <base:Paragraphs id="p0058" num="n0055">4.流速、柱温的考察</base:Paragraphs>
+            <base:Paragraphs id="p0059" num="n0056">实验采用不同流速(0.25ml/min、0.3ml/min、0.35ml/min)、不同柱温(35℃、40℃、45℃)进行考察，结果表明流速为0.25ml/min、0.35ml/min、柱温35℃、40℃为时个别色谱峰之间的分离度未达到要求，采用0.3ml/min的流速、柱温为45℃时色谱峰的分离度达到最佳，因此选用流速为0.3ml/min流速、柱温为45℃进行分析。</base:Paragraphs>
+            <base:Paragraphs id="p0060" num="n0057">5.波长的考察</base:Paragraphs>
+            <base:Paragraphs id="p0061" num="n0058">实验进行了紫外全波长扫描，选取203、210、230、254、280、300、330、350nm波长进行比较，结果表明波长为203nm时色谱峰数目最多，能够更全面地反映骨康胶囊组方中各味药材的信息，各个色谱峰的响应值较高，基线平稳。因此选用波长203nm检测。</base:Paragraphs>
+            <base:Paragraphs id="p0062" num="n0059">6.色谱时间的优化</base:Paragraphs>
+            <base:Paragraphs id="p0063" num="n0060">实验进行色谱分析时间的优化，采用下表中的梯度洗脱程序，综合考量各个色谱峰的分离效果、峰形以及基线平稳，较为全面的兼顾骨康胶囊组方各单味药材的信息，且阴性样品无干扰，确定骨康胶囊特征图谱的梯度洗脱程序为方法四，最终确定骨康胶囊特征图谱的色谱条件为：色谱柱为CORTECS UPLC T3(2.1mm×100mm,1.6μm)；0.1％磷酸水溶液为流动相A；乙腈为流动相B；流速为0.3mL/min；柱温为45℃；检测波长为203nm；按方法四进行梯度洗脱。</base:Paragraphs>
+            <base:Paragraphs id="p0064" num="n0061">表1梯度洗脱程序</base:Paragraphs>
+            <base:Paragraphs id="p0065" num="n0062">
+                <base:Image he="846" wi="1000" file="BDA0003857132230000111.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0066" num="n0063">与现有技术相比，本发明创造的技术效果体现在：</base:Paragraphs>
+            <base:Paragraphs id="p0067" num="n0064">本发明对骨康供试品溶液的特征图谱进行了充分研究，得到了一种骨康制剂的特征图谱构建方法，通过该方法，明确了骨康制剂的36个共有峰，并指认了8-18个特征峰的化学成分，包括新绿原酸、绿原酸、隐绿原酸、马钱苷、异绿原酸B、异绿原酸A、异绿原酸C、川续断皂苷Ⅵ、补骨脂苷、异补骨脂苷、补骨脂素、异补骨脂素、补骨脂酚、三七皂苷R1、人参皂苷Rg1、人参皂苷Re、人参皂苷Rb1、人参皂苷Rd等，并对所指认的成分进行了来源归属。</base:Paragraphs>
+            <base:Paragraphs id="p0068" num="n0065">本申请的一种骨康制剂的特征图谱构建方法及其特征图谱，客观真实的反应了骨康胶囊及其他口服剂型所含化学成分的种类与数量，可以较为全面、客观、准确的检测和评价骨康制剂尤其是骨康胶囊的质量，本申请提供的骨康制剂特征图谱的检测方法，具有方法简便、稳定性好、精密度高等优点，并对骨康胶囊进行多批次的考察，发现该制剂工艺稳定，产品质量可靠。可有效为骨康胶囊及其他口服剂型的质量控制提供参考。</base:Paragraphs>
         </business:Disclosure>
         <business:DrawingsDescription id="description-of-drawings001">
-            <base:Paragraphs id="p0045">附图说明</base:Paragraphs>
-            <base:Paragraphs id="p0046" num="n0042">此处的附图被并入说明书中并构成本说明书的一部分，示出了符合本公开的实施例，并与说明书一起用于解释本公开的原理。</base:Paragraphs>
-            <base:Paragraphs id="p0047" num="n0043">为了更清楚地说明本公开实施例或现有技术中的技术方案，下面将对实施例或现有技术描述中所需要使用的附图作简单地介绍，显而易见地，对于本领域普通技术人员而言，在不付出创造性劳动性的前提下，还可以根据这些附图获得其他的附图。</base:Paragraphs>
-            <base:Paragraphs id="p0048" num="n0044">图1为本公开实施例提供的一种短路保护电路的结构示意图；</base:Paragraphs>
-            <base:Paragraphs id="p0049" num="n0045">图2为本公开实施例提供的一种改进前后的打嗝短路保护信号的时序仿真图；</base:Paragraphs>
-            <base:Paragraphs id="p0050" num="n0046">图3为本公开实施例提供的一种时钟振荡电路的结构示意图；</base:Paragraphs>
-            <base:Paragraphs id="p0051" num="n0047">图4为本公开实施例提供的一种电流补偿电路的结构示意图；</base:Paragraphs>
-            <base:Paragraphs id="p0052" num="n0048">图5为本公开实施例提供的另一种电流补偿电路的结构示意图；</base:Paragraphs>
-            <base:Paragraphs id="p0053" num="n0049">图6为本公开实施例提供的一种短路保护方法的流程示意图。</base:Paragraphs>
+            <base:Paragraphs id="p0069">附图说明</base:Paragraphs>
+            <base:Paragraphs id="p0070" num="n0066">图1是35批次骨康胶囊典型色谱图，其中观察到36共有峰；</base:Paragraphs>
+            <base:Paragraphs id="p0071" num="n0067">图2是35批次骨康胶囊特征图谱，其中拟定了17个特征峰；</base:Paragraphs>
+            <base:Paragraphs id="p0072" num="n0068">图3是对照品参照物溶液特征图谱，其中峰1：新绿原酸；峰2：绿原酸；峰3：隐绿原酸；峰A：马钱苷峰4：补骨脂苷；峰5：异补骨脂苷；峰7：异绿原酸B；峰8：异绿原酸A；峰9：异绿原酸C；峰10：三七皂苷R1；峰11：人参皂苷Rg1和人参皂苷Re；峰12：补骨脂素；峰13(S)：异补骨脂素；峰14：川续断皂苷Ⅵ；峰15：人参皂苷Rb1；峰16：人参皂苷Rd；峰17：补骨脂酚；</base:Paragraphs>
+            <base:Paragraphs id="p0073" num="n0069">图4是空白溶液(70％甲醇)色谱图；</base:Paragraphs>
+            <base:Paragraphs id="p0074" num="n0070">图5是骨康胶囊和单味药UPLC图谱；</base:Paragraphs>
+            <base:Paragraphs id="p0075" num="n0071">图6是骨康胶囊和各单味药阴性UPLC图谱；</base:Paragraphs>
+            <base:Paragraphs id="p0076" num="n0072">图7是本申请的方法得到的骨康胶囊色谱图；</base:Paragraphs>
+            <base:Paragraphs id="p0077" num="n0073">图8是照对比例1方法得到的骨康胶囊色谱图；</base:Paragraphs>
+            <base:Paragraphs id="p0078" num="n0074">图9是照对比例2方法得到的骨康胶囊色谱图；</base:Paragraphs>
+            <base:Paragraphs id="p0079" num="n0075">图10是照对比例3方法得到的骨康胶囊色谱图；</base:Paragraphs>
+            <base:Paragraphs id="p0080" num="n0076">图11是照对比例4方法得到的骨康胶囊色谱图。</base:Paragraphs>
         </business:DrawingsDescription>
         <business:InventionMode id="mode-for-invention001">
-            <base:Paragraphs id="p0054">具体实施方式</base:Paragraphs>
-            <base:Paragraphs id="p0055" num="n0050">为了能够更清楚地理解本公开的上述目的、特征和优点，下面将对本公开的方案进行进一步描述。需要说明的是，在不冲突的情况下，本公开的实施例及实施例中的特征可以相互组合。</base:Paragraphs>
-            <base:Paragraphs id="p0056" num="n0051">在下面的描述中阐述了很多具体细节以便于充分理解本公开，但本公开还可以采用其他不同于在此描述的方式来实施；显然，说明书中的实施例只是本公开的一部分实施例，而不是全部的实施例。</base:Paragraphs>
-            <base:Paragraphs id="p0057" num="n0052">图1为本公开实施例提供的一种短路保护电路的结构示意图。如图1所示，短路保护电路包括电流补偿电路1和时钟振荡电路2，时钟振荡电路2分别与电流补偿电路1和打嗝短路保护电路3连接。</base:Paragraphs>
-            <base:Paragraphs id="p0058" num="n0053">电流补偿电路1用于根据输入的电源电压信号调节第一补偿电流Iosc1和第二补偿电流Iosc2，时钟振荡电路2获取到第一补偿电流Iosc1和第二补偿电流Iosc2，并根据第一补偿电流Iosc1调节输出的第一时钟信号CLK1，以及根据第二补偿电流Iosc2调节输出的第二时钟信号CLK2。打嗝短路保护电路3获取到时钟振荡电路2输出的第一时钟信号CLK1和第二时钟信号CLK2，并根据第一时钟信号CLK1调节输出的打嗝短路保护信号的有效电平持续时间，以及根据第二时钟信号CLK2调节输出的打嗝短路保护信号的周期。其中，第一时钟信号CLK1的周期和第二时钟信号CLK2的周期反向变化，即第一时钟信号CLK1的周期减小，第二时钟信号CLK2的周期则增加。</base:Paragraphs>
-            <base:Paragraphs id="p0059" num="n0054">一般芯片在短路时会产生较大的短路电流，如果此时施加于芯片上的电源电压较高，会由于芯片整体功率过大而导致芯片烧毁。目前可以通过降低芯片短路电流来降低高电源电压时芯片烧毁的概率，但是由于特定原因导致芯片的短路电流无法降低或者需要保持较大的芯片短路电流时，会引入hiccup逻辑，即打嗝逻辑来防止芯片短路时被烧毁。目前的打嗝短路保护电路，其输出的hiccup信号，即打嗝短路保护信号中的有效电平持续时间和打嗝短路保护信号的周期只能同步变化，如果施加于芯片的电源电压过高，同步变化的打嗝短路保护信号的有效电平持续时间和周期会导致芯片短路功耗增加，且施加于芯片的电源电压越高，芯片的短路功耗越大，导致芯片短路时容易被烧毁。</base:Paragraphs>
-            <base:Paragraphs id="p0060" num="n0055">本公开实施例利用电流补偿电路1输出的第一补偿电流Iosc1和第二补偿电流Iosc2，对时钟振荡电路2中的用于控制时钟信号周期的电流进行补偿，使得时钟振荡电路2输出的第一时钟信号CLK1的周期和第二时钟信号CLK2的周期反向变化，最终将第一时钟信号CLK1传输至打嗝短路保护电路3用于控制打嗝短路保护信号中有效电平持续时间的端口，将第二时钟信号CLK2传输至打嗝短路保护电路3用于控制打嗝短路保护信号周期的端口。</base:Paragraphs>
-            <base:Paragraphs id="p0061" num="n0056">这样，实现了第一时钟信号CLK1的周期减小的同时，第二时钟信号CLK2的周期增加，第一时钟信号CLK1周期的减小使得打嗝短路保护信号的有效电平的持续时间减小，而打嗝短路保护信号的有效电平的持续时间与芯片短路电流的持续时间成正比，进而使得芯片短路电流的持续时间减小。同时，第二时钟信号CLK2周期的增加使得打嗝短路保护信号的周期增加，而打嗝短路保护信号的周期与芯片短路电流出现的频率成反比，进而使得芯片短路情况出现的频率降低，即可以在电源电压信号较大时同时降低芯片短路电流的持续时间以及降低芯片短路情况出现的频率，进而降低芯片短路功耗，以确保芯片在高电源电压短路工作时不会被烧毁。</base:Paragraphs>
-            <base:Paragraphs id="p0062" num="n0057">图2为本公开实施例提供的一种改进前后的打嗝短路保护信号的时序仿真图。图2中上方为现有技术生成的打嗝短路保护信号A1的波形，下方为采用本公开实施例提供的短路保护电路生成的打嗝短路保护信A2的波形。以打嗝短路保护信号的有效电平为高电平为例，由图2可知，本公开实施例提供的短路保护电路使得打嗝短路保护信号的有效电平持续时间减小，即t2小于t1，打嗝短路保护信号的周期增加，即T2大于T1，即可以在电源电压信号较大时同时降低芯片短路电流的持续时间以及降低芯片短路情况出现的频率，进而降低芯片短路功耗，以确保芯片在高电源电压短路工作时不会被烧毁。需要说明的是，图2仅以打嗝短路保护信号的有效电平为高电平进行示例，也可以设置打嗝短路保护信号的有效电平为低电平，本公开实施例对此不作具体限定。</base:Paragraphs>
-            <base:Paragraphs id="p0063" num="n0058">图3为本公开实施例提供的一种时钟振荡电路的结构示意图。结合图1和图3，可以设置时钟振荡电路2包括第一振荡器OSC1和第二振荡器OSC2，第一振荡器OSC1用于根据第一设定电流与第一补偿电流Iosc1的和值调节输出的第一时钟信号CLK1，第二振荡器OSC2用于根据第二设定电流与第二补偿电流Iosc2的差值调节输出的第二时钟信号CLK2，第一补偿电流Iosc1和第二补偿电流Iosc2同向变化。</base:Paragraphs>
-            <base:Paragraphs id="p0064" num="n0059">具体地，第一补偿电流Iosc1和第二补偿电流Iosc2同向变化，即第一补偿电流Iosc1增加，则第二补偿电流Iosc2增加；第一补偿电流Iosc1减小，则第二补偿电流Iosc2减小。第一设定电流与第一补偿电流Iosc1的和值作用于第一振荡器OSC1，第一补偿电流Iosc1增加时，使得作用于第一振荡器OSC1的总电流增加；第二设定电流与第二补偿电流Iosc2的差值作用于第二振荡器OSC2，第一补偿电流Iosc1增加时，第二补偿电流Iosc2同步增加，使得作用于第二振荡器OSC2的总电流减小。</base:Paragraphs>
-            <base:Paragraphs id="p0065" num="n0060">可选地，结合图1和图3，时钟振荡电路2还可以包括第一恒流源I1和第一电容C1，以及第二恒流源I2和第二电容C2，第一恒流源I1同向接入第一补偿电流Iosc1并向第一电容C1充电，第一振荡器OSC1用于根据第一电容C1的充电电流调节输出的第一时钟信号CLK1。第二恒流源I2反向接入第二补偿电流Iosc2并向第二电容C2充电，第二振荡器OSC2用于根据第二电容C2的充电电流调节输出的第二时钟信号CLK2。</base:Paragraphs>
-            <base:Paragraphs id="p0066" num="n0061">具体地，第一恒流源I1提供的电流为第一设定电流，第一恒流源I1同向接入第一补偿电流Iosc1，即第一恒流源I1提供的第一设定电流与第一补偿电流Iosc1相对于第一振荡器OSC1的流向相同，进而使得第一设定电流与第一补偿电流Iosc1的总和作用于第一电容C1，通过调节第一电容C1的充电电流进而实现对第一振荡器OSC1输出的第一时钟信号CLK1的周期的调节。第二恒流源I2提供的电流为第二设定电流，第二恒流源I2反向接入第二补偿电流Iosc2，即第二恒流源I2提供的第二设定电流与第二补偿电流Iosc2相对于第二振荡器OSC2的流向相反，进而使得第二设定电流与第二补偿电流Iosc2的差值作用于第二电容C2，通过调节第二电容C2的充电电流进而实现对第二振荡器OSC2输出的第二时钟信号CLK2的周期的调节。</base:Paragraphs>
-            <base:Paragraphs id="p0067" num="n0062">可选地，结合图1和图3，可以设置第一恒流源I1的正端接入第一电源信号VDD，第一恒流源I1的负端分别与第一振荡器OSC1的充电控制端B1和第一电容C1的第一端连接，第一恒流源I1的负端同时用于输入第一补偿电流Iosc1，第一电容C1的第二端接入第二电源信号。第二恒流源I2的正端接入第一电源信号VDD，第二恒流源I2的负端分别与第二振荡器OSC2的充电控制端B2和第二电容C2的第一端连接，第二恒流源I2的负端同时用于输出第二补偿电流Iosc2，第二电容C2的第二端接入第二电源信号。</base:Paragraphs>
-            <base:Paragraphs id="p0068" num="n0063">示例性地，第一电源信号VDD例如可以为高电平电源信号，第二电源信号例如可以为地信号GND。具体地，第一振荡器OSC1输出的第一时钟信号CLK1的周期与第一振荡器OSC1的充电控制端B1的充电电流成反比，第二振荡器OSC2输出的第二时钟信号CLK2的周期同样与第二振荡器OSC2的充电控制端B2的充电电流成反比。</base:Paragraphs>
-            <base:Paragraphs id="p0069" num="n0064">这样，通过设置图3所示的连接关系，利用第一补偿电流Iosc1对第一设定电流进行补偿，二者的和值共同向第一电容C1充电，第一补偿电流Iosc1越大，第一电容C1的充电电流越大，使得第一振荡器OSC1输出的第一时钟信号CLK1的周期减小，第一时钟信号CLK1接入打嗝短路保护电路3用于控制打嗝短路保护信号的有效电平持续时间的端口，使得打嗝短路保护信号的有效电平持续时间减小，进而减小了芯片短路电流的持续时间。</base:Paragraphs>
-            <base:Paragraphs id="p0070" num="n0065">利用第二补偿电流Iosc2对第二设定电流进行补偿，二者的差值共同向第二电容C2充电，第二补偿电流Iosc2越大，第二电容C2的充电电流越小，使得第二振荡器OSC2输出的第二时钟信号CLK2的周期增加，第二时钟信号CLK2接入打嗝短路保护电路3用于控制打嗝短路保护信号的周期的端口，使得打嗝短路保护信号的周期增加，进而降低了芯片短路情况出现的频率，实现芯片短路功耗的降低，以确保芯片在高电源电压短路工作时不会被烧毁。</base:Paragraphs>
-            <base:Paragraphs id="p0071" num="n0066">另外，图3中的晶体管Mn4和Mn5分别用于使第一振荡器OSC1和第二振荡器OSC2形成闭环回路，使得第一振荡器OSC1和第二振荡器OSC2振荡以生成对应的时钟信号。</base:Paragraphs>
-            <base:Paragraphs id="p0072" num="n0067">图4为本公开实施例提供的一种电流补偿电路的结构示意图。结合图1至图4，可以设置电流补偿电路1包括比较器COMP、第一补偿控制电路11和第二补偿控制电路12，第一补偿控制电路11与第二补偿控制电路12连接。比较器COMP用于比较电源电压信号与参考信号Vref，并根据比较结果调节输出的比较信号，第一补偿控制电路11用于根据比较信号调节第一补偿电流Iosc1，第二补偿控制电路12用于根据比较信号调节第二补偿电流Iosc2。</base:Paragraphs>
-            <base:Paragraphs id="p0073" num="n0068">具体地，比较器COMP接入电源电压信号和参考信号Vref，并比较电源电压信号与参考信号Vref的大小。当电源电压信号的电平值小于参考信号Vref的电平值时，比较器COMP的输出电压很低，第一补偿电流Iosc1和第二补偿电流Iosc2截止。当电源电压信号的电平值大于参考信号Vref的电平值且电源电压信号的电平值逐渐增加时，比较器COMP的输出电压增加，第一补偿控制电路11生成的第一补偿电流Iosc1与第二补偿控制电路12生成的第二补偿电流Iosc2增加。</base:Paragraphs>
-            <base:Paragraphs id="p0074" num="n0069">参照上述对时钟振荡电路2工作原理的说明，第一补偿电流Iosc1与第二补偿电流Iosc2增加能够实现在电源电压信号较大，例如当电源电压信号的电平值大于参考信号Vref的电平值时，控制第一振荡器OSC1输出的第一时钟信号CLK1的周期减小，第二振荡器OSC2输出的第二时钟信号CLK2的周期增加，以控制打嗝短路保护信号的有效电平持续时间减小，打嗝短路保护信号的周期增加，即可以在电源电压信号较大时同时降低芯片短路电流的持续时间以及降低芯片短路情况出现的频率，进而降低芯片短路功耗，以确保芯片在高电源电压短路工作时不会被烧毁。</base:Paragraphs>
-            <base:Paragraphs id="p0075" num="n0070">示例性地，可以设置比较器COMP接入电源电压信号的分压Divider_Vin，由于短路保护电路整体为低压电路，较高的电源电压无法确保短路保护电路正常工作，因此采用电源电压信号的分压作为比对值，以提高短路保护电路的信号处理精度，相应地，参考信号Vref也可以对应分压比例适当减小。</base:Paragraphs>
-            <base:Paragraphs id="p0076" num="n0071">可选地，结合图1至图4，可以设置比较器COMP与第一补偿控制电路11连接，比较器COMP的正向输入端+接入参考信号Vref，比较器COMP的反向输入端-接入电源电压信号。第一补偿控制电路11包括第一P型电流镜和第二P型电流镜，第一P型电流镜用于根据比较信号调节输出的第一补偿电流Iosc1，第二P型电流镜用于输出比较信号至第二补偿控制电路12。第二补偿控制电路12包括N型电流镜，N型电流镜用于根据比较信号调节输入的第二补偿电流Iosc2。</base:Paragraphs>
-            <base:Paragraphs id="p0077" num="n0072">具体地，第一P型电流镜包括晶体管Mp1和Mp2，第二P型电流镜包括晶体管Mp1和Mp3，N型电流镜包括晶体管Mn1和Mn2，晶体管Mp1和Mp2用于产生第一补偿电流Iosc1，且随着电源电压信号的增加，即随着比较器COMP输出电压的增加，晶体管Mp1和Mp2产生的第一补偿电流Iosc1增加。晶体管Mp1和Mp3则用于向晶体管Mn1和Mn2提供电流源，晶体管Mn1和Mn2用于产生第二补偿电流Iosc2，且随着电源电压信号的增加，即随着比较器COMP输出电压的增加，晶体管Mn1和Mn2产生的第二补偿电流Iosc2增加，进而利用随着电源电压信号的增加而增加的第一补偿电流Iosc1和第二补偿电流Iosc2，分别对第一振荡器OSC1和第二振荡器OSC2对应的充电电流进行补偿。</base:Paragraphs>
-            <base:Paragraphs id="p0078" num="n0073">可选地，结合图1至图4，可以设置第一补偿控制电路11配置有第一限流源Ilimit_p，第一限流源Ilimit_p用于限制第一补偿控制电路11输出的第一补偿电流Iosc1不超过第一限流值；和/或，第二补偿控制电路12配置有第二限流源Ilimit_n，第二限流源Ilimit_n用于限制第二补偿控制电路12输入的第二补偿电流Iosc2不超过第二限流值。图4示例性地设置第一补偿控制电路11配置有第一限流源Ilimit_p，且第二补偿控制电路12配置有第二限流源Ilimit_n。</base:Paragraphs>
-            <base:Paragraphs id="p0079" num="n0074">具体地，可以将第一限流源Ilimit_p设置在第一P型电流镜中用于输出第一补偿电流Iosc1晶体管的源极，将第二限流源Ilimit_n设置在N型电流镜中用于输出第二补偿电流Iosc2晶体管的源极，进而达到对第一补偿电流Iosc1和第二补偿电流Iosc2的限流作用，避免电源电压信号过大产生过大的第一补偿电流Iosc1和第二补偿电流Iosc2，影响第一振荡器OSC1输出第一时钟信号CLK1和第二振荡器OSC2输出第二时钟信号CLK2的准确性。示例性地，可以根据比较器COMP产生的最大电流占第一振荡器OSC1或者第二振荡器OSC2原有充电电流的比例，对第一限流源Ilimit_p和第二限流源Ilimit_n的限流值进行具体设定。</base:Paragraphs>
-            <base:Paragraphs id="p0080" num="n0075">图5为本公开实施例提供的另一种电流补偿电路的结构示意图。结合图1至图3以及图5，可以设置比较器COMP与第二补偿控制电路12连接，比较器COMP的正向输入端+接入电源电压信号，比较器COMP的反向输入端-接入参考信号Vref。第二补偿控制电路12包括第一N型电流镜和第二N型电流镜，第一N型电流镜用于根据比较信号调节输入的第二补偿电流Iosc2，第二N型电流镜用于输出比较信号至第一补偿控制电路11。第一补偿控制电路11包括P型电流镜，P型电流镜用于根据比较信号调节输出的第一补偿电流Iosc1。</base:Paragraphs>
-            <base:Paragraphs id="p0081" num="n0076">具体地，第一N型电流镜包括晶体管Mn1和Mn2，第二N型电流镜包括晶体管Mn1和Mn3，P型电流镜包括晶体管Mp1和Mp2，晶体管Mn1和Mn2用于产生第二补偿电流Iosc2，且随着电源电压信号的增加，即随着比较器COMP输出电压的增加，晶体管Mn1和Mn2产生的第二补偿电流Iosc2增加。晶体管Mn1和Mn3则用于向晶体管Mp1和Mp2提供电流源，晶体管Mp1和Mp2用于产生第一补偿电流Iosc1，且随着电源电压信号的增加，即随着比较器COMP输出电压的增加，晶体管Mp1和Mp2产生的第一补偿电流Iosc1增加，进而利用随着电源电压信号的增加而增加的第一补偿电流Iosc1和第二补偿电流Iosc2，分别对第一振荡器OSC1和第二振荡器OSC2对应的充电电流进行补偿。</base:Paragraphs>
-            <base:Paragraphs id="p0082" num="n0077">可选地，结合图1至图3以及图5，同样可以设置第一补偿控制电路11配置有第一限流源Ilimit_p，第一限流源Ilimit_p用于限制第一补偿控制电路11输出的第一补偿电流Iosc1不超过第一限流值；和/或，第二补偿控制电路12配置有第二限流源Ilimit_n，第二限流源Ilimit_n用于限制第二补偿控制电路12输入的第二补偿电流Iosc2不超过第二限流值。图5示例性地设置第一补偿控制电路11配置有第一限流源Ilimit_p，且第二补偿控制电路12配置有第二限流源Ilimit_n。</base:Paragraphs>
-            <base:Paragraphs id="p0083" num="n0078">具体地，可以将第一限流源Ilimit_p设置在P型电流镜中用于输出第一补偿电流Iosc1晶体管的源极，将第二限流源Ilimit_n设置在第一N型电流镜中用于输出第二补偿电流Iosc2晶体管的源极，进而达到对第一补偿电流Iosc1和第二补偿电流Iosc2的限流作用，避免电源电压信号过大产生过大的第一补偿电流Iosc1和第二补偿电流Iosc2，影响第一振荡器OSC1输出第一时钟信号CLK1和第二振荡器OSC2输出第二时钟信号CLK2的准确性。</base:Paragraphs>
-            <base:Paragraphs id="p0084" num="n0079">本公开实施例还提供了一种短路保护方法。图6为本公开实施例提供的一种短路保护方法的流程示意图，短路保护方法可以应用在需要对芯片进行短路保护的场景，可以由上述实施例的短路保护电路执行。如图6所示，短路保护方法包括：</base:Paragraphs>
-            <base:Paragraphs id="p0085" num="n0080">S1、根据电源电压信号调节第一补偿电流和第二补偿电流。</base:Paragraphs>
-            <base:Paragraphs id="p0086" num="n0081">S2、根据第一补偿电流调节第一时钟信号，根据第二补偿电流调节第二时钟信号；其中，第一时钟信号的周期和第二时钟信号的周期反向变化。</base:Paragraphs>
-            <base:Paragraphs id="p0087" num="n0082">S3、根据第一时钟信号调节打嗝短路保护信号的有效电平持续时间，以及根据第二时钟信号调节打嗝短路保护信号的周期。</base:Paragraphs>
-            <base:Paragraphs id="p0088" num="n0083">可选地，结合图1至图5，短路保护方法具体可以包括当电源电压信号的电平值大于参考信号Vref的电平值且电源电压信号的电平值增加时，控制第一补偿电流Iosc1和第二补偿电流Iosc2增加，以及控制第一时钟信号CLK1的周期减小，第二时钟信号CLK2的周期增加，以控制打嗝短路保护信号的有效电平持续时间减小，打嗝短路保护信号的周期增加。当电源电压信号的电平值小于参考信号Vref的电平值时，控制第一补偿电流Iosc1和第二补偿电流Iosc2截止。</base:Paragraphs>
-            <base:Paragraphs id="p0089" num="n0084">这样，本公开实施例利用两个振荡器控制hiccup信号，即打嗝短路保护信号的有效电平持续时间和周期，可以在电源电压信号较大时同时降低芯片短路电流的持续时间以及降低芯片短路情况出现的频率，进而降低芯片短路功耗，以确保芯片在高电源电压短路工作时不会被烧毁。</base:Paragraphs>
-            <base:Paragraphs id="p0090" num="n0085">需要说明的是，在本文中，诸如“第一”和“第二”等之类的关系术语仅仅用来将一个实体或者操作与另一个实体或操作区分开来，而不一定要求或者暗示这些实体或操作之间存在任何这种实际的关系或者顺序。而且，术语“包括”、“包含”或者其任何其他变体意在涵盖非排他性的包含，从而使得包括一系列要素的过程、方法、物品或者设备不仅包括那些要素，而且还包括没有明确列出的其他要素，或者是还包括为这种过程、方法、物品或者设备所固有的要素。在没有更多限制的情况下，由语句“包括一个……”限定的要素，并不排除在包括要素的过程、方法、物品或者设备中还存在另外的相同要素。</base:Paragraphs>
-            <base:Paragraphs id="p0091" num="n0086">以上仅是本公开的具体实施方式，使本领域技术人员能够理解或实现本公开。对这些实施例的多种修改对本领域的技术人员来说将是显而易见的，本文中所定义的一般原理可以在不脱离本公开的精神或范围的情况下，在其它实施例中实现。因此，本公开将不会被限制于本文的这些实施例，而是要符合与本文所公开的原理和新颖特点相一致的最宽的范围。</base:Paragraphs>
+            <base:Paragraphs id="p0081">具体实施方式</base:Paragraphs>
+            <base:Paragraphs id="p0082" num="n0077">下面结合具体的实施方式来对本发明的技术方案做进一步的限定，但要求保护的范围不仅局限于所作的描述。</base:Paragraphs>
+            <base:Paragraphs id="p0083" num="n0078">实施例：</base:Paragraphs>
+            <base:Paragraphs id="p0084" num="n0079">骨康胶囊特征图谱构建方法</base:Paragraphs>
+            <base:Paragraphs id="p0085" num="n0080">1材料</base:Paragraphs>
+            <base:Paragraphs id="p0086" num="n0081">1.1仪器</base:Paragraphs>
+            <base:Paragraphs id="p0087" num="n0082">Agilent 1290InfinityⅡ超高液相色谱仪(美国安捷伦科技公司，包括输液泵、自动进样器、柱温箱、DAD检测器)；MettlerAE-240型电子天平(梅特勒-托利多国际贸易(上海)仪器有限公司)，KQ5200E型超声波清洗器(昆山市超声仪器有限公司)。</base:Paragraphs>
+            <base:Paragraphs id="p0088" num="n0083">1.2试药</base:Paragraphs>
+            <base:Paragraphs id="p0089" num="n0084">补骨脂苷(批号AF21031504)、补骨脂素(批号AF21042858)、异补骨脂苷(批号AF21031505)、异补骨脂素(批号AF21071801)、人参皂苷Re(批号AF20042104)购置成都埃法生物科技有限公司；补骨脂酚(批号wkq21041202)、川续断皂苷Ⅵ(批号wkq21010703)、马钱苷(批号wkq21071907)、三七皂苷R1(批号wkq21030407)、人参皂苷Rg1(批号wkq21020401)、人参皂苷Rb1(批号wkq21010701)、人参皂苷Rd(批号wkq21042607)，新绿原酸(3-咖啡酰基奎宁酸)(批号wkq21010802)、隐绿原酸(5-咖啡酰基奎宁酸)(批号wkq20082705)、异绿原酸A(3,5-O-二咖啡酰基奎宁酸)(批号wkq21020306)、异绿原酸B(3,4-O-二咖啡酰基奎宁酸)(批号wkq21022206)、异绿原酸C(4,5-O-二咖啡酰基奎宁酸)(批号wkq21012501)购置四川省维克奇生物科技有限公司，所有对照品纯度均大于98％。甲醇、乙腈为色谱纯(国药集团化学试剂有限公司)，水为超纯水。</base:Paragraphs>
+            <base:Paragraphs id="p0090" num="n0085">骨康胶囊由贵州维康药业有限公司提供，共35批，包含2018年-2021年4年产品，见表2。</base:Paragraphs>
+            <base:Paragraphs id="p0091" num="n0086">表2骨康胶囊样品信息</base:Paragraphs>
+            <base:Paragraphs id="p0092" num="n0087">
+                <base:Image he="613" wi="1000" file="BDA0003857132230000141.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0093" num="n0088">2方法</base:Paragraphs>
+            <base:Paragraphs id="p0094" num="n0089">2.1溶液的制备</base:Paragraphs>
+            <base:Paragraphs id="p0095" num="n0090">2.1.1供试品溶液的制备</base:Paragraphs>
+            <base:Paragraphs id="p0096" num="n0091">骨康胶囊由芭蕉根、酢浆草、补骨脂、续断和三七5味组方而成，方中芭蕉根所含主要成分有豆甾醇、2,3,4-三羟基黄酮等甾体、黄酮类化合物，酢浆草中主要化学成分有槲皮素、木犀草素等黄酮类化合物，续断中主要话学成分有川续断皂苷Ⅵ、马钱子苷、马钱苷酸等三萜皂苷、环烯醚萜类化合物，补骨脂中主要化学成分有补骨脂素、补骨脂苷、补骨脂酚、补骨脂异黄酮等香豆素、单萜酚、黄酮类化合物，三七中主要化学成分有人参皂苷Rb、人参皂苷Rg1、三七皂苷R1等皂苷类化合物。上述药材所含的化学成分可溶于甲醇、乙醇等溶剂的理化性质，采用不同浓度甲醇、甲醇回流、超声处理提取制剂中上述化学成分，实验结果表明用70％甲醇超声提取效果较好，方法简便，在考察了供试品取量、提取时间等基础上，确定了供试品溶液制备方法，即：取骨康胶囊内容物2g，置具塞锥形瓶中，精密称定，精密加70％甲醇25mL，称定重量，密塞，静置12小时，超声处理30分钟，静置1小时，再超声处理30分钟，放冷，再称定重量，用70％甲醇补足减失的重量，摇匀，滤过，取续滤液适量，置离心管中12000转/分钟离心10分钟，取上清液即得。</base:Paragraphs>
+            <base:Paragraphs id="p0097" num="n0092">2.1.2阴性供试品溶液的制备</base:Paragraphs>
+            <base:Paragraphs id="p0098" num="n0093">按骨康胶囊制备方法分别制备缺芭蕉根、酢浆草、补骨脂、续断和缺三七的阴性对照样品，照2.1.1项下方法制备各味药材阴性样品溶液。</base:Paragraphs>
+            <base:Paragraphs id="p0099" num="n0094">2.1.3单味药材供试品溶液的制备</base:Paragraphs>
+            <base:Paragraphs id="p0100" num="n0095">按骨康胶囊制备方法分别制备芭蕉根、酢浆草、补骨脂、续断和三七各单味药样品，照2.1.1项下方法制备单味药材样品溶液。</base:Paragraphs>
+            <base:Paragraphs id="p0101" num="n0096">2.1.4对照品参照物溶液制备</base:Paragraphs>
+            <base:Paragraphs id="p0102" num="n0097">分别精密取新绿原酸9.60mg、绿原酸9.78mg、隐绿原酸10.13mg、补骨脂苷9.86mg、异补骨脂苷9.61mg、异绿原酸B9.61mg、异绿原酸A9.66 mg、异绿原酸C 9.99mg、三七皂苷R110.18 mg、人参皂苷Rg110.02 mg和人参皂苷Re10.00 mg、补骨脂素10.69mg、异补骨脂素10.14mg、川续断皂苷Ⅵ10.00mg、人参皂苷Rb19.98 mg、人参皂苷Rd10.20 mg、补骨脂酚10.00mg和马钱苷10.56mg，分别置2ml量瓶中，用70％甲醇溶解并稀释至刻度，得上述18种对照品储备液，分别精密量取上述各对照品储备液100μL，置2mL量瓶中，加70％甲醇稀释至刻度，得分别为0.25mg/mL的混合对照品溶液，作为对照品参照物溶液。</base:Paragraphs>
+            <base:Paragraphs id="p0103" num="n0098">2.2色谱条件</base:Paragraphs>
+            <base:Paragraphs id="p0104" num="n0099">试验分别采用高效液相色谱仪和超高效液相色谱仪，并分别考察了CORTECSTMC18(4.6mm×150mm,2.7μm)、CORTECSTM C18+(4.6mm×150mm,2.7μm)、Agilent EclipsePlus C18 RRHD(2.1mm×150mm,1.8μm)、CORTECS UPLC T3(2.1mm×100mm,1.6μm)等色谱柱，结果以Waters公司的CORTECS UPLC T3(2.1mm×100mm,1.6μm)色谱柱分离效果最好，在选定色谱柱后优化了色谱条件，优化的色谱条件如下：</base:Paragraphs>
+            <base:Paragraphs id="p0105" num="n0100">色谱柱为CORTECS UPLC T3(2.1mm×100mm,1.6μm)；0.1％磷酸水溶液为流动相A，乙腈为流动相B，流速为0.3mL/min，按表3中规定的进行梯度洗脱；柱温为45℃；检测波长为203nm。</base:Paragraphs>
+            <base:Paragraphs id="p0106" num="n0101">表3骨康胶囊特征图谱梯度洗脱程序</base:Paragraphs>
+            <base:Paragraphs id="p0107" num="n0102">
+                <base:Image he="113" wi="1000" file="BDA0003857132230000161.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0108" num="n0103">
+                <base:Image he="407" wi="1000" file="BDA0003857132230000171.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0109" num="n0104">2.3骨康胶囊特征图谱研究</base:Paragraphs>
+            <base:Paragraphs id="p0110" num="n0105">2.3.1精密度试验</base:Paragraphs>
+            <base:Paragraphs id="p0111" num="n0106">按2.1.1拟定的方法，取批号为20210403骨康胶囊内容物，制备一份供试品溶液，按2.2项下确定的色谱条件，连续进样5次，记录色谱图。以13号峰(异补骨脂素)为参照峰，计算得到各特征峰的相对保留时间和相对峰面积，其相对保留时间RSD均小于0.068％，相对峰面积的RSD均小于2.6％，结果表明该仪器精密度良好，表4、表5。</base:Paragraphs>
+            <base:Paragraphs id="p0112" num="n0107">2.3.2重复性试验</base:Paragraphs>
+            <base:Paragraphs id="p0113" num="n0108">按2.1.1拟定的方法，取批号为20210403骨康胶囊内容物，分别制备5份供试品溶液，按2.2项下确定的色谱条件分别进样，记录色谱图。以13号峰(异补骨脂素)为参照峰，计算得到各特征峰的相对保留时间和相对峰面积，其相对保留时间RSD均小于0.23％，相对峰面积的RSD均小于3.2％，结果表明该方法重复性良好，表6、表7。</base:Paragraphs>
+            <base:Paragraphs id="p0114" num="n0109">2.3.3稳定性考察</base:Paragraphs>
+            <base:Paragraphs id="p0115" num="n0110">按2.1.1拟定的方法，取批号为20210403骨康胶囊内容物，制备一份供试品溶液，按2.2项下确定的色谱条件，分别于0、2、4、6、8、12、24h进样，记录色谱图，以13号峰(异补骨脂素)为参照峰，计算得到各特征峰的相对保留时间和相对峰面积，其相对保留时间的RSD均小于0.4％，相对峰面积的RSD均小于2.4％，表明供试品溶液在24h内稳定性良好，表8、表9。</base:Paragraphs>
+            <base:Paragraphs id="p0116" num="n0111">表4精密度试验(相对保留时间)</base:Paragraphs>
+            <base:Paragraphs id="p0117" num="n0112">
+                <base:Image he="526" wi="1000" file="BDA0003857132230000181.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0118" num="n0113">表5精密度试验(相对峰面积)</base:Paragraphs>
+            <base:Paragraphs id="p0119" num="n0114">
+                <base:Image he="465" wi="1000" file="BDA0003857132230000182.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0120" num="n0115">
+                <base:Image he="34" wi="1000" file="BDA0003857132230000191.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0121" num="n0116">表6重复性试验(相对保留时间)</base:Paragraphs>
+            <base:Paragraphs id="p0122" num="n0117">
+                <base:Image he="541" wi="1000" file="BDA0003857132230000192.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0123" num="n0118">表7重复性试验(相对峰面积)</base:Paragraphs>
+            <base:Paragraphs id="p0124" num="n0119">
+                <base:Image he="520" wi="1000" file="BDA0003857132230000193.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0125" num="n0120">表8稳定性试验(相对保留时间)</base:Paragraphs>
+            <base:Paragraphs id="p0126" num="n0121">
+                <base:Image he="498" wi="1000" file="BDA0003857132230000201.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0127" num="n0122">表9稳定性试验(相对峰面积)</base:Paragraphs>
+            <base:Paragraphs id="p0128" num="n0123">
+                <base:Image he="490" wi="1000" file="BDA0003857132230000202.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </base:Paragraphs>
+            <base:Paragraphs id="p0129" num="n0124">2.3.4特征图谱的建立</base:Paragraphs>
+            <base:Paragraphs id="p0130" num="n0125">取35批次的骨康胶囊内容物，照2.1.1拟定的供试品溶液制备方法制备供试品溶液，另取每1mL各含新绿原酸、绿原酸、隐绿原酸、马钱苷、补骨脂苷、异补骨脂苷、异绿原酸B、异绿原酸A、异绿原酸C、三七皂苷R1、人参皂苷Rg1和人参皂苷Re、补骨脂素、异补骨脂素、川续断皂苷Ⅵ、人参皂苷Rb1、人参皂苷Rd、补骨脂酚约0.25mg的对照品参照物溶液、单独各味药供试品溶液、缺各味药的阴性对照溶液及空白溶液(70％甲醇)，照2.2拟定的色谱条件，分别进样1μL，记录色谱图，分别考察各供试品溶液色谱图特征峰，典型色谱图见图1，其中异补骨脂素理论塔板数为183000，故规定异补骨脂素理论塔板数不得低于100000。从35批次骨康胶囊特征图谱中可以观察到36个共有峰(图1)，为简化特征图谱的判断，从36个共有峰中选取各药材中具有代表性的化合物16个峰和酢浆草中1个峰为特征峰，共拟定了17个特征峰(图2)，对照品参照物溶液和空白溶液(70％甲醇)色谱图见图3、图4。</base:Paragraphs>
+            <base:Paragraphs id="p0131" num="n0126">2.3.5骨康胶囊特征图谱中色谱峰的化学成分指认及归属</base:Paragraphs>
+            <base:Paragraphs id="p0132" num="n0127">经对骨康供试品溶液、单独各味药供试品溶液、缺各味药的阴性对照溶液及空白溶液(70％甲醇)与对照品参照物溶液中化学对照品的色谱行为及光谱进行比较，见图5、图6，指认了其中18个峰，峰1：新绿原酸；峰2：绿原酸；峰3：隐绿原酸；峰A：马钱苷；峰4：补骨脂苷；峰5：异补骨脂苷；峰7：异绿原酸B；峰8：异绿原酸A；峰9：异绿原酸C；峰10：三七皂苷R1；峰11：人参皂苷Rg1和人参皂苷Re；峰12：补骨脂素；峰13(S)：异补骨脂素；峰14：川续断皂苷Ⅵ；峰15：人参皂苷Rb1；峰16：人参皂苷Rd；峰17：补骨脂酚。</base:Paragraphs>
+            <base:Paragraphs id="p0133" num="n0128">其中峰1(新绿原酸)、峰2(绿原酸)、峰3(隐绿原酸)、峰A(马钱苷)、峰7(异绿原酸B)、峰8(异绿原酸A)、峰9(异绿原酸C)和峰14(川续断皂苷Ⅵ)8个特征峰来源于续断；峰4(补骨脂苷)、峰5(异补骨脂苷)、峰12(补骨脂素)、峰13(S)(异补骨脂素)和峰17(补骨脂酚)5个峰来源于补骨脂；峰10(三七皂苷R1)；峰11(人参皂苷Rg1和人参皂苷Re)；峰15(人参皂苷Rb1)；峰16(人参皂苷Rd)共4个峰来源于三七。由于制剂中峰A(马钱苷)较小，分离较差，不易辨识，故不纳入特征图谱共有峰，因此规定骨康胶囊特征图谱中峰1、峰2、峰3、峰4、峰5、峰7、峰8、峰9、峰10、峰11、峰12、峰13、峰14、峰15、峰16、峰17应分别与新绿原酸、绿原酸、隐绿原酸、补骨脂苷、异补骨脂苷、异绿原酸B、异绿原酸A、异绿原酸C、三七皂苷R1、人参皂苷Rg1和人参皂苷Re、补骨脂素、异补骨脂素、川续断皂苷Ⅵ、人参皂苷Rb1、人参皂苷Rd、补骨脂酚对照品参照物峰的保留时间相对应。</base:Paragraphs>
+            <base:Paragraphs id="p0134" num="n0129">峰6来源于酢浆草，由于酢浆草缺乏相应的对照品并且该色谱条件下信息量较少，35批次的骨康胶囊中均有来自于酢浆草的特征(峰6)，并且稳定，以特征图谱中特征峰保留时间居中，分离度、稳定性较好的异补骨脂素为S峰，计算酢浆草峰6的相对保留时间为0.645进行控制，根据35批次峰6相对保留时间范0.6437-0.6454之间，故规定其相对保留时间应在规定值的±10％之内。</base:Paragraphs>
+            <base:Paragraphs id="p0135" num="n0130">由于芭蕉根缺少相应的对照品并且供试品色谱中特征峰在各种色谱条件信息量很小，在该供试品溶液制备方法和色谱条件下无法反映其特征，有待进一步研究。</base:Paragraphs>
+            <base:Paragraphs id="p0136" num="n0131">在研究过程中，本研究人员在前期针对相关文献或专利报道的色谱条件进行探索，以得到更适合于骨康胶囊指纹图谱构建的色谱条件，部分研究过程罗列如下：</base:Paragraphs>
+            <base:Paragraphs id="p0137" num="n0132">研究对比例1：采用《三七不同来源指纹图谱数字化研究》(童湘伟,石坤连,梁业婷,沈颖,周蓓,易延逵.三七不同来源指纹图谱数字化研究[J].医学信息,2021,34(14):106-109+120.)中的色谱条件，对骨康胶囊制剂进行供试品溶液制备和高效液相色谱分析。</base:Paragraphs>
+            <base:Paragraphs id="p0138" num="n0133">研究对比例2：采用《续断HPLC特征图谱及3种活性成分的含量测定》(陈璞,赵华,贺雅琴,万定荣.续断HPLC特征图谱及3种活性成分的含量测定[J].中药材,2017,40(06):1373-1376.)中的色谱条件，对骨康胶囊制剂进行供试品溶液制备和高效液相色谱分析。</base:Paragraphs>
+            <base:Paragraphs id="p0139" num="n0134">研究对比例3：采用《补骨脂药材UPLC指纹图谱建立及12种主要成分含量测定》(王娟,周植星,杨莉,张玥,周昆,张军霞.补骨脂药材UPLC指纹图谱建立及12种主要成分含量测定[J].中草药,2021,52(02):552-557.)中的色谱条件，对骨康胶囊制剂进行供试品溶液制备和高效液相色谱分析。</base:Paragraphs>
+            <base:Paragraphs id="p0140" num="n0135">研究对比例4：采用LC-MS法同时测定骨康胶囊中6种主要成分的含量》(杨洁芳.LC-MS法同时测定骨康胶囊中6种主要成分的含量[J].中国药房,2012,23(35):3344-3346.)中的色谱条件，对骨康胶囊制剂进行供试品溶液制备和高效液相色谱分析。</base:Paragraphs>
+            <base:Paragraphs id="p0141" num="n0136">结果显示：</base:Paragraphs>
+            <base:Paragraphs id="p0142" num="n0137">1、按照对比例1-3中的方法和条件进行分析，情况如下：</base:Paragraphs>
+            <base:Paragraphs id="p0143" num="n0138">色谱分离差，无法指认方中含芭蕉根、酢浆草、补骨脂、续断、三七中各化学成分，不能全面地反应骨康胶囊制剂的质量。</base:Paragraphs>
+            <base:Paragraphs id="p0144" num="n0139">图8-10是照对比例1-3方法得到的骨康胶囊色谱图。</base:Paragraphs>
+            <base:Paragraphs id="p0145" num="n0140">2、按照对比例4中的方法和条件进行分析，情况如下：</base:Paragraphs>
+            <base:Paragraphs id="p0146" num="n0141">对比例4采用液质联用技术测定骨康胶囊中成分的含量，是在定量方面对骨康胶囊进行质量控制，且按照文献方法对骨康对骨康胶囊复方制剂进行分析，仅对人参皂苷Rb1这一成分得到较好的分离，其他成分均未得到很好的分离结果。</base:Paragraphs>
+            <base:Paragraphs id="p0147" num="n0142">图11是照对比例4方法得到的骨康胶囊色谱图。</base:Paragraphs>
+            <base:Paragraphs id="p0148" num="n0143">另外，按照骨康胶囊的制备思路，选择同样重量配比的5味药材，按骨康胶囊质量标准中装入胶囊前的制法获得干燥混匀的细粉，加入可压性淀粉、微晶纤维素、糊精、蔗糖、水等辅料，分别制成片剂、颗粒、口服液剂型，同法进行指纹图谱构建的研究，结果显示，各供试品溶液按本发明技术方案进行制备，按相同色谱条件进行HPLC法测定后，能够获得36个或以上色谱峰，且其中能够指认新绿原酸等8个特征峰来源于续断，补骨脂苷等5个特征峰来源于补骨脂，人参皂苷Rg<base:Sub>1</base:Sub>等4个特征峰来源于三七。这可能是由于各口服剂型原料组成相同，其他辅料、杂质对其质量评定干扰较低的缘故。</base:Paragraphs>
+            <base:Paragraphs id="p0149" num="n0144">最后，应当指出，以上实施例仅是本发明较有代表性的例子。显然，本发明的技术方案并不限于上述实施例，还可以有许多变形。本领域的普通技术人员能从本发明公开的内容直接导出或联想到的所有变形，均应认为是本发明的保护范围。</base:Paragraphs>
         </business:InventionMode>
     </business:Description>
     <business:Drawings lang="zh" sourceDB="national office">
         <base:Figure id="f0001" num="0001" figureLabels="图1">
-            <base:Image id="if0001" he="473" wi="1000" file="HDA0002569083910000011.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            <base:Image id="if0001" he="447" wi="1000" file="HDA0003857132240000011.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
         </base:Figure>
         <base:Figure id="f0002" num="0002" figureLabels="图2">
-            <base:Image id="if0002" he="845" wi="1000" file="HDA0002569083910000021.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            <base:Image id="if0002" he="423" wi="1000" file="HDA0003857132240000012.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
         </base:Figure>
         <base:Figure id="f0003" num="0003" figureLabels="图3">
-            <base:Image id="if0003" he="653" wi="1000" file="HDA0002569083910000031.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            <base:Image id="if0003" he="417" wi="1000" file="HDA0003857132240000013.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
         </base:Figure>
         <base:Figure id="f0004" num="0004" figureLabels="图4">
-            <base:Image id="if0004" he="654" wi="1000" file="HDA0002569083910000041.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            <base:Image id="if0004" he="431" wi="1000" file="HDA0003857132240000021.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
         </base:Figure>
         <base:Figure id="f0005" num="0005" figureLabels="图5">
-            <base:Image id="if0005" he="659" wi="1000" file="HDA0002569083910000051.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            <base:Image id="if0005" he="479" wi="1000" file="HDA0003857132240000022.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
         </base:Figure>
         <base:Figure id="f0006" num="0006" figureLabels="图6">
-            <base:Image id="if0006" he="719" wi="1000" file="HDA0002569083910000061.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            <base:Image id="if0006" he="456" wi="1000" file="HDA0003857132240000023.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+        </base:Figure>
+        <base:Figure id="f0007" num="0007" figureLabels="图7">
+            <base:Image id="if0007" he="357" wi="1000" file="HDA0003857132240000031.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+        </base:Figure>
+        <base:Figure id="f0008" num="0008" figureLabels="图8">
+            <base:Image id="if0008" he="323" wi="1000" file="HDA0003857132240000032.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+        </base:Figure>
+        <base:Figure id="f0009" num="0009" figureLabels="图9">
+            <base:Image id="if0009" he="362" wi="1000" file="HDA0003857132240000033.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+        </base:Figure>
+        <base:Figure id="f0010" num="0010" figureLabels="图10">
+            <base:Image id="if0010" he="422" wi="1000" file="HDA0003857132240000041.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+        </base:Figure>
+        <base:Figure id="f0011" num="0011" figureLabels="图11">
+            <base:Image id="if0011" he="890" wi="1000" file="HDA0003857132240000042.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
         </base:Figure>
     </business:Drawings>
     <business:Claims lang="zh" dataFormat="original" sourceDB="national office" creator="03">
         <business:Claim id="cl0001" num="0001">
-            <business:ClaimText>1.一种短路保护电路，其特征在于，包括：</business:ClaimText>
-            <business:ClaimText>电流补偿电路，用于根据输入的电源电压信号调节第一补偿电流和第二补偿电流；</business:ClaimText>
-            <business:ClaimText>时钟振荡电路，与所述电流补偿电路连接，用于根据所述第一补偿电流调节输出的第一时钟信号，以及用于根据所述第二补偿电流调节输出的第二时钟信号；其中，所述第一时钟信号的周期和所述第二时钟信号的周期反向变化；</business:ClaimText>
-            <business:ClaimText>打嗝短路保护电路与所述时钟振荡电路连接，用于根据所述第一时钟信号调节输出的打嗝短路保护信号的有效电平持续时间，以及用于根据所述第二时钟信号调节输出的所述打嗝短路保护信号的周期。</business:ClaimText>
+            <business:ClaimText>1.一种骨康制剂的特征图谱构建方法，所述骨康制剂由芭蕉根、酢浆草、续断、补骨脂和三七共5味药材制成，其特征在于，所述特征图谱是对制剂中续断、补骨脂、三七、酢浆草药材，以十八烷基硅烷键合硅胶为填充剂，以0.1％磷酸水溶液为流动相A，乙腈为流动相B，进行梯度洗脱的HPLC法特征图谱构建过程；其中，梯度洗脱条件如下：</business:ClaimText>
+            <business:ClaimText>
+                <base:Image id="icf0001" he="426" wi="1000" file="FDA0003857132220000011.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </business:ClaimText>
         </business:Claim>
         <business:Claim id="cl0002" num="0002">
-            <business:ClaimText>2.根据权利要求1所述的短路保护电路，其特征在于，所述时钟振荡电路包括：</business:ClaimText>
-            <business:ClaimText>第一振荡器，用于根据第一设定电流与所述第一补偿电流的和值调节输出的所述第一时钟信号；</business:ClaimText>
-            <business:ClaimText>第二振荡器，用于根据第二设定电流与所述第二补偿电流的差值调节输出的所述第二时钟信号；</business:ClaimText>
-            <business:ClaimText>其中，所述第一补偿电流和所述第二补偿电流同向变化。</business:ClaimText>
+            <business:ClaimText>2.如权利要求1所述的骨康制剂的特征图谱构建方法，其特征在于，特征图谱构建方法步骤如下：</business:ClaimText>
+            <business:ClaimText>(1)检测条件</business:ClaimText>
+            <business:ClaimText>以十八烷基硅烷键合硅胶为填充剂，以0.1％磷酸水溶液为流动相A，乙腈为流动相B，进行梯度洗脱；理论板数按异补骨脂素峰计算应不低于100000；</business:ClaimText>
+            <business:ClaimText>所述梯度洗脱条件为：</business:ClaimText>
+            <business:ClaimText>
+                <base:Image id="icf0002" he="260" wi="1000" file="FDA0003857132220000012.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </business:ClaimText>
+            <business:ClaimText>
+                <base:Image id="icf0003" he="178" wi="1000" file="FDA0003857132220000021.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </business:ClaimText>
+            <business:ClaimText>(2)参照物溶液的制备</business:ClaimText>
+            <business:ClaimText>分别取新绿原酸、绿原酸、隐绿原酸、补骨脂苷、异补骨脂苷、异绿原酸B、异绿原酸A、异绿原酸C、三七皂苷R<base:Sub>1</base:Sub>、人参皂苷Rg<base:Sub>1</base:Sub>和人参皂苷Re、补骨脂素、异补骨脂素、川续断皂苷Ⅵ、人参皂苷Rb<base:Sub>1</base:Sub>、人参皂苷Rd、补骨脂酚和马钱苷对照品，加70％甲醇制成每1ml各含0.25mg的混合对照品溶液，作为对照品参照物溶液；</business:ClaimText>
+            <business:ClaimText>(3)供试品溶液的制备</business:ClaimText>
+            <business:ClaimText>取骨康制剂内容物，至于容器中，加70％甲醇后密塞静置，然后超声处理1-3次，放冷，用甲醇补足减失的重量，摇匀，滤过，取续滤液即得；</business:ClaimText>
+            <business:ClaimText>(4)测定法</business:ClaimText>
+            <business:ClaimText>分别精密吸取参照物溶液和供试品溶液各1μL，注入高效液相色谱仪，测定；</business:ClaimText>
+            <business:ClaimText>(5)特征图谱的建立：进行多批次供试品测定，记录色谱图，分别考察各供试品溶液的色谱图特征峰，从骨康制剂供试品溶液的共有峰中选取各药材中具有代表性的化合物峰为特征峰，并进行色谱峰的化学成分指认及归属确定，得到骨康胶囊特征图谱。</business:ClaimText>
         </business:Claim>
         <business:Claim id="cl0003" num="0003">
-            <business:ClaimText>3.根据权利要求2所述的短路保护电路，其特征在于，所述时钟振荡电路还包括：</business:ClaimText>
-            <business:ClaimText>第一恒流源和第一电容，所述第一恒流源同向接入所述第一补偿电流并向所述第一电容充电，所述第一振荡器用于根据所述第一电容的充电电流调节输出的所述第一时钟信号；</business:ClaimText>
-            <business:ClaimText>第二恒流源和第二电容，所述第二恒流源反向接入所述第二补偿电流并向所述第二电容充电，所述第二振荡器用于根据所述第二电容的充电电流调节输出的所述第二时钟信号。</business:ClaimText>
+            <business:ClaimText>3.如权利要求2所述的骨康制剂的特征图谱构建方法，其特征在于，特征图谱构建方法步骤如下：</business:ClaimText>
+            <business:ClaimText>(1)检测条件——色谱条件与系统适用性试验</business:ClaimText>
+            <business:ClaimText>以十八烷基硅烷键合硅胶为填充剂，柱长为100mm，内径为2.1mm，粒径为1.6μm；以0.1％磷酸水溶液为流动相A，乙腈为流动相B，进行梯度洗脱；流速为每分钟0.3ml；柱温为45℃；检测波长为203nm；理论板数按异补骨脂素峰计算应不低于100000；</business:ClaimText>
+            <business:ClaimText>所述梯度洗脱条件为：</business:ClaimText>
+            <business:ClaimText>
+                <base:Image id="icf0004" he="424" wi="1000" file="FDA0003857132220000031.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+            </business:ClaimText>
+            <business:ClaimText>(2)参照物溶液的制备</business:ClaimText>
+            <business:ClaimText>分别取新绿原酸、绿原酸、隐绿原酸、补骨脂苷、异补骨脂苷、异绿原酸B、异绿原酸A、异绿原酸C、三七皂苷R<base:Sub>1</base:Sub>、人参皂苷Rg<base:Sub>1</base:Sub>和人参皂苷Re、补骨脂素、异补骨脂素、川续断皂苷Ⅵ、人参皂苷Rb<base:Sub>1</base:Sub>、人参皂苷Rd、补骨脂酚和马钱苷对照品，加70％甲醇制成每1ml各含0.25mg的混合对照品溶液，作为对照品参照物溶液；</business:ClaimText>
+            <business:ClaimText>(3)供试品溶液的制备</business:ClaimText>
+            <business:ClaimText>取骨康制剂内容物，至于容器中，加70％甲醇后密塞静置10-15小时，所述骨康制剂内容物和70％甲醇的质量体积比为1：12.5；然后取静置后的供试品溶液，在功率200W、频率40kHz的条件下，超声处理25-40分钟，静置40-80分钟，再超声处理25-40分钟，放冷，再称定重量，用70％甲醇补足减失的重量，摇匀，滤过，取续滤，即得；</business:ClaimText>
+            <business:ClaimText>(4)测定法</business:ClaimText>
+            <business:ClaimText>分别精密吸取参照物溶液和供试品溶液各1μL，注入高效液相色谱仪，测定；</business:ClaimText>
+            <business:ClaimText>(5)特征图谱的建立：进行多批次供试品测定，记录色谱图，分别考察各供试品溶液的色谱图特征峰，从骨康制剂供试品溶液的共有峰中选取各药材中具有代表性的化合物峰为特征峰，并进行色谱峰的化学成分指认及归属确定，得到骨康胶囊特征图谱。</business:ClaimText>
         </business:Claim>
         <business:Claim id="cl0004" num="0004">
-            <business:ClaimText>4.根据权利要求3所述的短路保护电路，其特征在于，所述第一恒流源的正端接入第一电源信号，所述第一恒流源的负端分别与所述第一振荡器的充电控制端和所述第一电容的第一端连接并用于输入所述第一补偿电流，所述第一电容的第二端接入第二电源信号；</business:ClaimText>
-            <business:ClaimText>所述第二恒流源的正端接入第一电源信号，所述第二恒流源的负端分别与所述第二振荡器的充电控制端和所述第二电容的第一端连接并用于输出所述第二补偿电流，所述第二电容的第二端接入第二电源信号。</business:ClaimText>
+            <business:ClaimText>4.如权利要求1-3任一项所述的骨康制剂的特征图谱构建方法，其特征在于，所述骨康制剂可以是按照国家药品标准、标准号为：WS-10464(ZD-0464)-2005-2012Z)制备得到的骨康胶囊，也可以是按照如下方法制成的片剂、颗粒、口服液或其他口服剂型：</business:ClaimText>
+            <business:ClaimText>芭蕉根600g、酢浆草400g、补骨脂600g、续断300g、三七150g，以上五味，取芭蕉根30g和三七分别粉碎成细粉，剩余芭蕉根与其余补骨脂、酢浆草、续断三味加水煎煮三次，每次1小时，合并煎液，滤过，滤液浓缩至60℃时相对密度为1.31～1.35的稠膏，加入上述细粉，混匀，干燥，粉碎成细粉，混匀，然后加入药学上可接受的口服剂型所需辅料，制成片剂、颗粒、口服液或其他口服剂型。</business:ClaimText>
         </business:Claim>
         <business:Claim id="cl0005" num="0005">
-            <business:ClaimText>5.根据权利要求1所述的短路保护电路，其特征在于，所述电流补偿电路包括：</business:ClaimText>
-            <business:ClaimText>比较器、第一补偿控制电路和第二补偿控制电路，所述第一补偿控制电路与所述第二补偿控制电路连接；</business:ClaimText>
-            <business:ClaimText>所述比较器用于比较所述电源电压信号与参考信号，并根据比较结果调节输出的比较信号；</business:ClaimText>
-            <business:ClaimText>所述第一补偿控制电路用于根据所述比较信号调节所述第一补偿电流；</business:ClaimText>
-            <business:ClaimText>所述第二补偿控制电路用于根据所述比较信号调节所述第二补偿电流。</business:ClaimText>
+            <business:ClaimText>5.如权利要求1-3任一项所述的骨康制剂的特征图谱构建方法，其特征在于，所述步骤(3)供试品溶液的制备中，还包括离心步骤，是将超声后的续滤液置离心管中，以12000转/分钟离心5-20分钟。</business:ClaimText>
         </business:Claim>
         <business:Claim id="cl0006" num="0006">
-            <business:ClaimText>6.根据权利要求5所述的短路保护电路，其特征在于，所述比较器与所述第一补偿控制电路连接；</business:ClaimText>
-            <business:ClaimText>所述比较器的正向输入端接入所述参考信号，所述比较器的反向输入端接入所述电源电压信号；</business:ClaimText>
-            <business:ClaimText>所述第一补偿控制电路包括第一P型电流镜和第二P型电流镜，所述第一P型电流镜用于根据所述比较信号调节输出的所述第一补偿电流，所述第二P型电流镜用于输出所述比较信号至所述第二补偿控制电路；</business:ClaimText>
-            <business:ClaimText>所述第二补偿控制电路包括N型电流镜，所述N型电流镜用于根据所述比较信号调节输入的所述第二补偿电流。</business:ClaimText>
+            <business:ClaimText>6.如权利要求1-3任一项所述的骨康制剂的特征图谱构建方法，其特征在于，在步骤(5)特征图谱的建立时，还包括阴性供试品溶液的制备、单味药材供试品溶液的制备步骤，以便进行色谱峰的指认及归属确定：</business:ClaimText>
+            <business:ClaimText>阴性供试品溶液的制备：按骨康制剂制备方法，分别制备缺芭蕉根、酢浆草、补骨脂、续断和缺三七的阴性对照样品，然后按照步骤(3)方法制备各味药材阴性样品溶液；</business:ClaimText>
+            <business:ClaimText>单味药材供试品溶液的制备：按骨康制剂制备方法，分别制备芭蕉根、酢浆草、补骨脂、续断和三七各单味药样品，然后按照步骤(3)方法制备单味药材样品溶液。</business:ClaimText>
         </business:Claim>
         <business:Claim id="cl0007" num="0007">
-            <business:ClaimText>7.根据权利要求5所述的短路保护电路，其特征在于，所述比较器与所述第二补偿控制电路连接；</business:ClaimText>
-            <business:ClaimText>所述比较器的正向输入端接入所述电源电压信号，所述比较器的反向输入端接入所述参考信号；</business:ClaimText>
-            <business:ClaimText>所述第二补偿控制电路包括第一N型电流镜和第二N型电流镜，所述第一N型电流镜用于根据所述比较信号调节输入的所述第二补偿电流，所述第二N型电流镜用于输出所述比较信号至所述第一补偿控制电路；</business:ClaimText>
-            <business:ClaimText>所述第一补偿控制电路包括P型电流镜，所述P型电流镜用于根据所述比较信号调节输出的所述第一补偿电流。</business:ClaimText>
+            <business:ClaimText>7.如权利要求1-3任一项所述的骨康制剂的特征图谱构建方法，其特征在于，所述步骤(5)特征图谱的建立，是在分别考察多批次供试品溶液的色谱图特征峰后，共获得36个共有峰，从该36个共有峰中拟定8-18个特征峰，并进行色谱峰的化学成分指认及归属确定，得到骨康制剂特征图谱。</business:ClaimText>
         </business:Claim>
         <business:Claim id="cl0008" num="0008">
-            <business:ClaimText>8.根据权利要求6或7所述的短路保护电路，其特征在于，所述第一补偿控制电路配置有第一限流源，所述第一限流源用于限制所述第一补偿控制电路输出的所述第一补偿电流不超过第一限流值；和/或，</business:ClaimText>
-            <business:ClaimText>所述第二补偿控制电路配置有第二限流源，所述第二限流源用于限制所述第二补偿控制电路输入的所述第二补偿电流不超过第二限流值。</business:ClaimText>
+            <business:ClaimText>8.如权利要求7所述的骨康制剂的特征图谱构建方法，其特征在于：</business:ClaimText>
+            <business:ClaimText>所述步骤(5)中特征峰的拟定，是从该36个共有峰中选取各药材中具有代表性的化合物16个峰和酢浆草中1个峰为特征峰，共拟定了17个特征峰；</business:ClaimText>
+            <business:ClaimText>所述色谱峰的化学成分指认及归属确定，是对骨康供试品溶液、单独各味药供试品溶液、缺各味药的阴性对照溶液及70％甲醇的空白溶液与对照品参照物溶液中化学对照品的色谱行为及光谱进行比较，指认了其中18个峰，峰1：新绿原酸；峰2：绿原酸；峰3：隐绿原酸；峰A：马钱苷；峰4：补骨脂苷；峰5：异补骨脂苷；峰7：异绿原酸B；峰8：异绿原酸A；峰9：异绿原酸C；峰10：三七皂苷R1；峰11：人参皂苷Rg<base:Sub>1</base:Sub>和人参皂苷Re；峰12：补骨脂素；峰13(S)：异补骨脂素；峰14：川续断皂苷Ⅵ；峰15：人参皂苷Rb1；峰16：人参皂苷Rd；峰17：补骨脂酚；</business:ClaimText>
+            <business:ClaimText>所述峰1-峰3、峰A、峰7-峰9、峰14共8个特征峰来源于续断；峰4、峰5、峰12、峰13(S)和峰17共5个峰来源于补骨脂；峰10、峰11、峰15、峰16共4个峰来源于三七。</business:ClaimText>
         </business:Claim>
         <business:Claim id="cl0009" num="0009">
-            <business:ClaimText>9.一种短路保护方法，其特征在于，包括：</business:ClaimText>
-            <business:ClaimText>根据电源电压信号调节第一补偿电流和第二补偿电流；</business:ClaimText>
-            <business:ClaimText>根据所述第一补偿电流调节第一时钟信号，根据所述第二补偿电流调节第二时钟信号；其中，所述第一时钟信号的周期和所述第二时钟信号的周期反向变化；</business:ClaimText>
-            <business:ClaimText>根据所述第一时钟信号调节打嗝短路保护信号的有效电平持续时间，以及根据所述第二时钟信号所述调节打嗝短路保护信号的周期。</business:ClaimText>
+            <business:ClaimText>9.利用权利要求1-8任一项所述的骨康制剂的特征图谱构建方法构建得到的特征图谱，其特征在于，如图2所示。</business:ClaimText>
         </business:Claim>
         <business:Claim id="cl0010" num="0010">
-            <business:ClaimText>10.根据权利要求9所述的短路保护方法，其特征在于，具体包括：</business:ClaimText>
-            <business:ClaimText>当所述电源电压信号的电平值大于参考信号的电平值且所述电源电压信号的电平值增加时，控制所述第一补偿电流和所述第二补偿电流增加，以及控制所述第一时钟信号的周期减小，所述第二时钟信号的周期增加，以控制所述打嗝短路保护信号的有效电平持续时间减小，所述打嗝短路保护信号的周期增加；</business:ClaimText>
-            <business:ClaimText>当所述电源电压信号的电平值小于所述参考信号的电平值时，控制所述第一补偿电流和所述第二补偿电流截止。</business:ClaimText>
+            <business:ClaimText>10.权利要求1-8任一项所述的骨康制剂的特征图谱构建方法或权利要求9所述的骨康制剂特征图谱，在骨康胶囊产品的鉴定和质量控制中的应用。</business:ClaimText>
         </business:Claim>
     </business:Claims>
 </business:PatentDocumentAndRelated>
