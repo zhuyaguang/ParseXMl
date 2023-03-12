@@ -98,7 +98,7 @@ func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	if err != nil {
 		fmt.Println(err)
 	}
-	src := output + "/" + fileName + ".json"
+	src := output + "/JSON" + "/" + fileName + ".json"
 	// 将字节数组写入文件
 	err = ioutil.WriteFile(src, jsonBytes, 0644)
 	if err != nil {
@@ -400,7 +400,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	if err != nil {
 		fmt.Println(err)
 	}
-	src := output + "/" + fileName + ".json"
+	src := output + "/JSON" + "/" + fileName + ".json"
 	// 将字节数组写入文件
 	err = ioutil.WriteFile(src, jsonBytes, 0644)
 	if err != nil {

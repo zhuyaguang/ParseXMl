@@ -161,7 +161,7 @@ func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
 	for i, v := range outputArr {
 		eTime := ""
-		output := output + "/JSON" + v
+		output := output + v
 		log.Println(output)
 		err := HandleWalk(output, i)
 		if err != nil {
