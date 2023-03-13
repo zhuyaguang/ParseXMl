@@ -1,14 +1,14 @@
 package parse
 
 import (
-	"encoding/json"
 	"fmt"
 	"github.com/beevik/etree"
 	"github.com/colinmarc/hdfs"
-	"io/ioutil"
+	"gorm.io/gorm"
 	"log"
 	"patentExtr/pkg"
 	"patentExtr/pkg/Hadoop"
+	zgorm "patentExtr/pkg/gorm"
 	"path/filepath"
 	"sort"
 	"strings"
@@ -19,8 +19,8 @@ var NUM = 0
 var MAXFILE = 500000
 var ERRORNUN = 0
 
-// Par0Xml 主要解析 30-S 类型的专利
-func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error {
+// Par0Xml 主要解析 30-S 类型的专利  client *hdfs.Client
+func Par0Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 	// log.Println("xml path ,output path type:", xmlPath, output, patentIndex)
 
 	// 得到 XML 文件的名称，比如：CN302021000671538CN00003070960400SDBPZH20220201CN00M
@@ -93,34 +93,36 @@ func Par0Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 	patentOBJ.PatentType = pkg.PatentType[patentIndex]
 	patentOBJ.XMLPath = xmlPath
 
+	zgorm.Create(patentOBJ, db)
+
 	// 转换为JSON格式的字节数组
-	jsonBytes, err := json.Marshal(patentOBJ)
-	if err != nil {
-		fmt.Println(err)
-	}
-	src := output + "/JSON" + "/" + fileName + ".json"
-	// 将字节数组写入文件
-	err = ioutil.WriteFile(src, jsonBytes, 0644)
-	if err != nil {
-		fmt.Println(err)
-	}
+	//jsonBytes, err := json.Marshal(patentOBJ)
+	//if err != nil {
+	//	fmt.Println(err)
+	//}
+	//src := output + "/JSON" + "/" + fileName + ".json"
+	//// 将字节数组写入文件
+	//err = ioutil.WriteFile(src, jsonBytes, 0644)
+	//if err != nil {
+	//	fmt.Println(err)
+	//}
 
-	if NUM%MAXFILE == 0 {
-		log.Println("parse done!", NUM)
-		Hadoop.CreateDic(*client)
-	}
-
-	dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
-	//fmt.Println(src, dst)
-	err = Hadoop.UploadFile(src, dst, *client)
-	if err != nil {
-		if strings.Contains(err.Error(), "file already exists") {
-			ERRORNUN++
-		} else {
-			ERRORNUN++
-			log.Println("UploadFile error:", err, src, ERRORNUN)
-		}
-	}
+	//if NUM%MAXFILE == 0 {
+	//	log.Println("parse done!", NUM)
+	//	Hadoop.CreateDic(*client)
+	//}
+	//
+	//dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
+	////fmt.Println(src, dst)
+	//err = Hadoop.UploadFile(src, dst, *client)
+	//if err != nil {
+	//	if strings.Contains(err.Error(), "file already exists") {
+	//		ERRORNUN++
+	//	} else {
+	//		ERRORNUN++
+	//		log.Println("UploadFile error:", err, src, ERRORNUN)
+	//	}
+	//}
 
 	NUM++
 	// log.Println("parse done!", NUM)
@@ -143,7 +145,7 @@ func retryDo(src, dst string, client hdfs.Client) {
 }
 
 // Par1Xml 主要解析 10-A 10-B 20-U 类型的专利
-func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error {
+func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 	// log.Println("xml path -----", xmlPath, output, patentIndex)
 
 	fileName := filepath.Base(xmlPath)
@@ -395,37 +397,39 @@ func Par1Xml(xmlPath, output string, patentIndex int, client *hdfs.Client) error
 		XMLPath:     xmlPath,
 	}
 
+	zgorm.Create(patentObj, db)
+
 	// 转换为JSON格式的字节数组
-	jsonBytes, err := json.Marshal(patentObj)
-	if err != nil {
-		fmt.Println(err)
-	}
-	src := output + "/JSON" + "/" + fileName + ".json"
-	// 将字节数组写入文件
-	err = ioutil.WriteFile(src, jsonBytes, 0644)
-	if err != nil {
-		fmt.Println(err)
-	}
+	//jsonBytes, err := json.Marshal(patentObj)
+	//if err != nil {
+	//	fmt.Println(err)
+	//}
+	//src := output + "/JSON" + "/" + fileName + ".json"
+	//// 将字节数组写入文件
+	//err = ioutil.WriteFile(src, jsonBytes, 0644)
+	//if err != nil {
+	//	fmt.Println(err)
+	//}
 
-	if NUM%MAXFILE == 0 {
-		log.Println("parse done!", NUM)
-		Hadoop.CreateDic(*client)
-	}
-
-	dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
-	// fmt.Println(src, dst)
-	err = Hadoop.UploadFile(src, dst, *client)
-	if err != nil {
-		if strings.Contains(err.Error(), "file already exists") {
-			ERRORNUN++
-		} else {
-			ERRORNUN++
-			log.Println("UploadFile error:", err, src, ERRORNUN)
-		}
-	}
+	// 写入 Hadoop
+	//if NUM%MAXFILE == 0 {
+	//	log.Println("parse done!", NUM)
+	//	Hadoop.CreateDic(*client)
+	//}
+	//
+	//dst := filepath.Join(Hadoop.FileDic + "/" + fileName + ".json")
+	//// fmt.Println(src, dst)
+	//err = Hadoop.UploadFile(src, dst, *client)
+	//if err != nil {
+	//	if strings.Contains(err.Error(), "file already exists") {
+	//		ERRORNUN++
+	//	} else {
+	//		ERRORNUN++
+	//		log.Println("UploadFile error:", err, src, ERRORNUN)
+	//	}
+	//}
 
 	NUM++
-	// log.Println("parse done!", NUM)
 
 	return nil
 }

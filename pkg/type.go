@@ -36,6 +36,10 @@ type Patent struct {
 	XMLPath                string
 }
 
+func (Patent) TableName() string {
+	return "patent-20230313"
+}
+
 type mysqlPatent struct {
 	gorm.Model
 	Name                   string `json:"name" json:"name,omitempty"`

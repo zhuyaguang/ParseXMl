@@ -9,7 +9,7 @@ import (
 	"log"
 	"os"
 	"patentExtr/pkg"
-	"patentExtr/pkg/Hadoop"
+	zgorm "patentExtr/pkg/gorm"
 	"patentExtr/pkg/parse"
 	"path/filepath"
 	"strings"
@@ -21,9 +21,9 @@ var EngineMysqlGORM *gorm.DB
 var EngineHadoopGORM *hdfs.Client
 
 func init() {
-	//EngineMysqlGORM = zgorm.ConnectMysql()
-	//EngineMysqlGORM.AutoMigrate(&pkg.Patent{})
-	EngineHadoopGORM = Hadoop.ConnectHadoop()
+	EngineMysqlGORM = zgorm.ConnectMysql()
+	EngineMysqlGORM.AutoMigrate(&pkg.Patent{})
+	//EngineHadoopGORM = Hadoop.ConnectHadoop()
 }
 
 func main() {
@@ -168,10 +168,10 @@ func findXML(output string) error {
 			return err
 		}
 		// 删除解压文件
-		eTime, err = removeDIR(output)
-		if err != nil {
-			return err
-		}
+		//eTime, err = removeDIR(output)
+		//if err != nil {
+		//	return err
+		//}
 
 		endTime[i] = eTime
 	}
@@ -209,23 +209,23 @@ func HandleWalk(output string, patentIndex int) error {
 			// parse xml
 			switch patentIndex {
 			case 0:
-				err := parse.Par0Xml(path, output, patentIndex, EngineHadoopGORM)
+				err := parse.Par0Xml(path, output, patentIndex, EngineMysqlGORM)
 				if err != nil {
 					return err
 				}
 			case 1:
-				err := parse.Par1Xml(path, output, patentIndex, EngineHadoopGORM)
+				err := parse.Par1Xml(path, output, patentIndex, EngineMysqlGORM)
 				if err != nil {
 					return err
 				}
 
 			case 2:
-				err := parse.Par1Xml(path, output, patentIndex, EngineHadoopGORM)
+				err := parse.Par1Xml(path, output, patentIndex, EngineMysqlGORM)
 				if err != nil {
 					return err
 				}
 			case 3:
-				err := parse.Par1Xml(path, output, patentIndex, EngineHadoopGORM)
+				err := parse.Par1Xml(path, output, patentIndex, EngineMysqlGORM)
 				if err != nil {
 					return err
 				}
