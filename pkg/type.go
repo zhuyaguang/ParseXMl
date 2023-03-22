@@ -37,7 +37,7 @@ type Patent struct {
 }
 
 func (Patent) TableName() string {
-	return "patent-20230313"
+	return "patent-20230322"
 }
 
 type mysqlPatent struct {

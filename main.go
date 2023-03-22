@@ -160,20 +160,23 @@ func extractingXml(dirPath string, output string) error {
 func findXML(output string) error {
 	outputArr := []string{"/30-S", "/10-A", "/10-B", "/20-U"}
 	for i, v := range outputArr {
-		eTime := ""
-		output := output + v
-		log.Println(output)
-		err := HandleWalk(output, i)
-		if err != nil {
-			return err
-		}
-		// 删除解压文件
-		//eTime, err = removeDIR(output)
-		//if err != nil {
-		//	return err
-		//}
+		if i == 1 {
 
-		endTime[i] = eTime
+			eTime := ""
+			output := output + v
+			log.Println(output)
+			err := HandleWalk(output, i)
+			if err != nil {
+				return err
+			}
+			// 删除解压文件
+			//eTime, err = removeDIR(output)
+			//if err != nil {
+			//	return err
+			//}
+
+			endTime[i] = eTime
+		}
 	}
 	log.Println("解析结束，下次从这里开始", endTime)
 

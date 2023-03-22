@@ -239,10 +239,18 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 	claim := ""
 	if len(claimList) != 0 {
 		for _, v := range claimList {
+			childClaim := ""
 			for _, v2 := range v.ChildElements() {
 				g := v2.Text()
-				claim = claim + g
+				if len(strings.TrimSpace(g)) == 0 {
+					continue
+				} else {
+					childClaim = childClaim + g
+				}
+
 			}
+			claim = claim + childClaim + "\n"
+
 		}
 	}
 
