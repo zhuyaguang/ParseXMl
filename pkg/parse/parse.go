@@ -335,7 +335,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 					g := v.Text()
 					tfEArr = append(tfEArr, g)
 				}
-				technicalField = strings.Join(tfEArr, ",")
+				technicalField = strings.Join(tfEArr, "\n")
 			}
 			// 技术背景
 			if len(baE) != 0 {
@@ -344,7 +344,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 					g := v.Text()
 					baEArr = append(baEArr, g)
 				}
-				technicalBackground = strings.Join(baEArr, ",")
+				technicalBackground = strings.Join(baEArr, "\n")
 			}
 			// 发明内容
 			if len(disE) != 0 {
@@ -353,7 +353,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 					g := v.Text()
 					disEArr = append(disEArr, g)
 				}
-				context = strings.Join(disEArr, ",")
+				context = strings.Join(disEArr, "\n")
 			}
 
 			// 具体实施方式
@@ -364,7 +364,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 					g := v.Text()
 					imEArr = append(imEArr, g)
 				}
-				implementation = strings.Join(imEArr, ",")
+				implementation = strings.Join(imEArr, "\n")
 			}
 			// 附图说明
 			if len(ddE) != 0 {
@@ -373,7 +373,7 @@ func Par1Xml(xmlPath, output string, patentIndex int, db *gorm.DB) error {
 					g := v.Text()
 					ddEArr = append(ddEArr, g)
 				}
-				instructionWithPicture = strings.Join(ddEArr, ",")
+				instructionWithPicture = strings.Join(ddEArr, "\n")
 			}
 
 		}
