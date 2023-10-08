@@ -66,6 +66,33 @@ type mysqlPatent struct {
 	AbstractPic            string `json:"abstract_pic,omitempty"`
 }
 
+type ESPatent struct {
+	Name                   string
+	ApplicationNO          string //申请号
+	ApplicationDate        string //申请日期
+	PublicationNO          string `gorm:"index:idx_public_no,unique"` // 公开号
+	PublicationDate        string // 公开日期
+	Applicant              string //申请人
+	ApplicantAddress       string //申请地址
+	Inventors              string //发明人
+	Abstract               string //摘要
+	Claim                  string //权利要求书
+	MainClassificationNO   string //主分类号
+	ClassificationNO       string //分类号
+	Agency                 string // 代理机构
+	Agent                  string // 代理人
+	PatentType             string // 专利类型
+	TechnicalField         string // 技术领域
+	TechnicalBackground    string // 背景技术
+	Context                string // 发明内容
+	InstructionWithPicture string // 附图说明
+	Implementation         string // 具体实施方法
+	InstructionPic         string // 说明书附图
+	AbstractPic            string // 摘要附图
+	XMLPath                string // 原 xml 文件地址
+	AreaCode               string // 国省代码
+}
+
 //`name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL COMMENT '名称',
 //`application_no` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL COMMENT '申请号',
 //`application_date` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL COMMENT '申请日期',
