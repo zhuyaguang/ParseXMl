@@ -65,6 +65,51 @@ type mysqlPatent struct {
 	InstructionPic         string `json:"instruction_pic,omitempty"`
 	AbstractPic            string `json:"abstract_pic,omitempty"`
 }
+type Document struct {
+	Timestamp      string `json:"@timestamp"`
+	Version        string `json:"@version"`
+	CreateTime     string `json:"create_time"`
+	UpdateTime     string `json:"update_time"`
+	ID             string `json:"id"`
+	AuthorizedDate string `json:"authorized_data"`
+	AuthorizedNO   string `json:"authorized_no"`
+	AreaCode       string `json:"area_code"` // 国省代码
+	InventorsID    string `json:"inventors_id"`
+	InventorsName  string `json:"inventors_name"`
+	InventorsUnit  string `json:"inventors_unit"`
+	KeyWords       string `json:"keywords"`
+	LegalStatus    string `json:"legal_status"`
+	Subject        string `json:"subject"`
+	UnitType       string `json:"unit_type"`
+	URL            string `json:"url"`
+	Year           string `json:"year"`
+	Tags           string `json:"tags"`
+
+	Name                 string `json:"name"`
+	Abstract             string `json:"abstract_ch"`            //摘要
+	Agency               string `json:"agency"`                 // 代理机构
+	Agent                string `json:"agent"`                  // 代理人
+	Applicant            string `json:"applicant"`              //申请人
+	ApplicantAddress     string `json:"applicant_address"`      //申请地址
+	ApplicationDate      string `json:"application_date"`       //申请日期
+	ApplicationNO        string `json:"application_no"`         //申请号
+	Claim                string `json:"claim"`                  //权利要求书
+	MainClassificationNO string `json:"main_classification_no"` //主分类号
+	ClassificationNO     string `json:"classification_no"`      //分类号
+	Inventors            string `json:"inventors"`              //发明人
+	PatentType           string `json:"patent_type"`            // 专利类型
+	PublicationNO        string `json:"publication_no"`         // 公开号
+	PublicationDate      string `json:"publication_date"`       // 公开日期
+
+	TechnicalField         string `json:"technical_field"`          // 技术领域
+	TechnicalBackground    string `json:"technical_background"`     // 背景技术
+	Context                string `json:"context"`                  // 发明内容
+	InstructionWithPicture string `json:"instruction_with_picture"` // 附图说明
+	Implementation         string `json:"implementation"`           // 具体实施方法
+	InstructionPic         string `json:"instruction_pic"`          // 说明书附图
+	AbstractPic            string `json:"abstract_pic"`             // 摘要附图
+	XMLPath                string `json:"xml_path"`                 // 原 xml 文件地址
+}
 
 type ESPatent struct {
 	Name                   string

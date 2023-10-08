@@ -1,0 +1,191 @@
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 3,
+      "number_of_replicas": 0,
+      "analysis": {
+        "analyzer": {
+          "my_hanlp_analyzer": {
+            "tokenizer": "my_hanlp"
+          }
+        },
+        "tokenizer": {
+          "my_hanlp": {
+            "enable_custom_config": "true",
+            "type": "hanlp_standard",
+            "enable_stop_dictionary": "true"
+          }
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "@version": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "abstract_ch": {
+        "type": "text",
+        "fields": {
+          "hanlp": {
+            "type": "text",
+            "analyzer": "my_hanlp_analyzer"
+          },
+          "ik": {
+            "type": "text",
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          }
+        }
+      },
+      "agency": {
+        "type": "keyword"
+      },
+      "agent": {
+        "type": "keyword"
+      },
+      "applicant": {
+        "type": "keyword",
+        "ignore_above": 256
+      },
+      "applicant_address": {
+        "type": "keyword",
+        "index": false,
+        "ignore_above": 256
+      },
+      "application_date": {
+        "type": "date"
+      },
+      "application_no": {
+        "type": "keyword"
+      },
+      "area_code": {
+        "type": "keyword"
+      },
+      "authorized_data": {
+        "type": "date"
+      },
+      "authorized_no": {
+        "type": "keyword"
+      },
+      "claim": {
+        "type": "text",
+        "fields": {
+          "hanlp": {
+            "type": "text",
+            "analyzer": "my_hanlp_analyzer"
+          },
+          "ik": {
+            "type": "text",
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          }
+        }
+      },
+      "classification_no": {
+        "type": "keyword"
+      },
+      "create_time": {
+        "type": "date"
+      },
+      "id": {
+        "type": "long"
+      },
+      "inventors": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "inventors_id": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "inventors_name": {
+        "type": "keyword"
+      },
+      "inventors_unit": {
+        "type": "keyword"
+      },
+      "keywords": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "legal_status": {
+        "type": "keyword"
+      },
+      "main_classification_no": {
+        "type": "keyword"
+      },
+      "name": {
+        "type": "text",
+        "fields": {
+          "hanlp": {
+            "type": "text",
+            "analyzer": "my_hanlp_analyzer"
+          },
+          "ik": {
+            "type": "text",
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          }
+        }
+      },
+      "patent_type": {
+        "type": "keyword"
+      },
+      "publication_date": {
+        "type": "date"
+      },
+      "publication_no": {
+        "type": "keyword"
+      },
+      "subject": {
+        "type": "keyword"
+      },
+      "tags": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "unit_type": {
+        "type": "keyword"
+      },
+      "update_time": {
+        "type": "date"
+      },
+      "url": {
+        "type": "text"
+      },
+      "year": {
+        "type": "long"
+      }
+    }
+  }
+}
